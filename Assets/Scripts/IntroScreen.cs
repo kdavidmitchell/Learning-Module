@@ -21,11 +21,14 @@ public class IntroScreen : MonoBehaviour
 	private Image bodyIcon3;
 	private List<Image> bodyIcons = new List<Image>();
 
+	private GameObject nextButton;
+
 	private int headerSize;
 	private int bodySize;
 
 	private float textDelay = 3f;
 	private int listIndex = 0;
+	private float buttonDelay = 12f;
 
 	// Use this for initialization
 	void Start () 
@@ -54,6 +57,7 @@ public class IntroScreen : MonoBehaviour
 		}
 
 		headerText = GameObject.Find("HeaderText").GetComponent<Text>();
+		nextButton = GameObject.Find("ButtonBorder");
 
 		headerSize = headerText.fontSize;
 		bodySize = bodyText1.fontSize;
@@ -66,7 +70,9 @@ public class IntroScreen : MonoBehaviour
 		foreach (Image body in bodyIcons)
 		{
 			SetIconsToZeroAlpha(body);
-		}		
+		}
+
+		nextButton.SetActive(false);		
 
 	}
 	
@@ -74,12 +80,18 @@ public class IntroScreen : MonoBehaviour
 	void Update () 
 	{
 		textDelay -= Time.deltaTime;
+		buttonDelay -= Time.deltaTime;
 
 		if (textDelay <= 0f && listIndex < 3)
 		{
 			StartCoroutine(FadeTextAndIconsToFullAlpha(1f, bodyTexts[listIndex], bodyIcons[listIndex]));
 			listIndex++;
 			textDelay = 3f;
+		}
+
+		if (buttonDelay <= 0)
+		{
+			nextButton.SetActive(true);
 		}
 	}
 
