@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: f59d4a1e6f8ef4743a5a9bad1793e7ef
+timeCreated: 1535560470
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Marvel
+  fontNames:
+  - Marvel
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6a39c0a09f834c84a8754fa9dc1211e7, type: 3}
+  - {fileID: 12800000, guid: 550e59645c862c4469fde284fd9e6653, type: 3}
+  - {fileID: 12800000, guid: bf55ea1fa5fca014d82c448b2443f9c7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
