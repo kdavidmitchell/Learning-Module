@@ -1,0 +1,13 @@
+<PreQuestions>
+	<PreQuestion>
+		<QuestionText>Dyslexia is a disorder in which people read backwards.</QuestionText>
+		<CorrectAnswer>false</CorrectAnswer>
+		<ID>1</ID>
+	</PreQuestion>
+
+	<PreQuestion>
+		<QuestionText>Broca's area is devoted to the production of speech.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
+		<ID>2</ID>
+	</PreQuestion>
+</PreQuestions>
