@@ -14,3 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pretest1.unity
     guid: 238b41650cea51042b8791b5a1480cfa
+  - enabled: 1
+    path: Assets/Scenes/Pretest2.unity
+    guid: 2ee48f713b5eaba43a12a96afb9bb5a6
+  - enabled: 1
+    path: Assets/Scenes/Info1.unity
+    guid: caf910f14cf09204dae79a886290ec23
+  - enabled: 1
+    path: Assets/Scenes/Info2.unity
+    guid: 7f6e92ba6b3514d4c9e5d4847e6c7539

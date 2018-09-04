@@ -11,6 +11,7 @@ public class Pretest : MonoBehaviour
 	private Text questionText;
 	private Toggle trueToggle;
 	private Toggle falseToggle;
+	private GameObject nextSceneButton;
 
 	private int questionIndex = 0;
 	private bool currentAnswer = false;
@@ -22,7 +23,9 @@ public class Pretest : MonoBehaviour
 		questionText = GameObject.Find("Question").GetComponent<Text>();
 		trueToggle = GameObject.Find("TrueToggle").GetComponent<Toggle>();
 		falseToggle = GameObject.Find("FalseToggle").GetComponent<Toggle>();
+		nextSceneButton = GameObject.Find("NextSceneButton");
 
+		nextSceneButton.SetActive(false);
 		ShuffleQuestions();
 		DisplayNextQuestion();
 	}
@@ -35,7 +38,7 @@ public class Pretest : MonoBehaviour
 
 	public void DisplayNextQuestion()
 	{
-		questionText.text = "Question " + shuffledQuestions[questionIndex].ID.ToString() + ": " + 
+		questionText.text = "Question " + (questionIndex+1) + ": " + 
 			shuffledQuestions[questionIndex].QuestionText;
 
 		currentAnswer = shuffledQuestions[questionIndex].CorrectAnswer;
@@ -73,6 +76,9 @@ public class Pretest : MonoBehaviour
 		if (questionIndex != shuffledQuestions.Count)
 		{
 			DisplayNextQuestion();
+		} else 
+		{
+			nextSceneButton.SetActive(true);	
 		}
 	}
 }
