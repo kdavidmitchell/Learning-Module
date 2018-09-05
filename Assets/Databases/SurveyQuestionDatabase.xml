@@ -1,0 +1,23 @@
+<SurveyQuestions>
+	<SurveyQuestion>
+		<QuestionText>I am:</QuestionText>
+		<ID>1</ID>
+		<NumResponses>4</NumResponses>
+		<Response1>18 - 24</Response1>
+		<Response2>25 - 34</Response2>
+		<Response3>35 - 44</Response3>
+		<Response4>45+</Response4>
+		<HasWriteIn>false</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>I am using this module because:</QuestionText>
+		<ID>2</ID>
+		<NumResponses>4</NumResponses>
+		<Response1>I am a teacher</Response1>
+		<Response2>I am a parent</Response2>
+		<Response3>I have been diagnosed with dyslexia</Response3>
+		<Response4>Other:</Response4>
+		<HasWriteIn>true</HasWriteIn>
+	</SurveyQuestion>
+</SurveyQuestions>
