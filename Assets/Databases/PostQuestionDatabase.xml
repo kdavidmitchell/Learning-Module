@@ -1,0 +1,13 @@
+<PostQuestions>
+	<PostQuestion>
+		<QuestionText>The TPJ helps readers decode words.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
+		<ID>1</ID>
+	</PostQuestion>
+
+	<PostQuestion>
+		<QuestionText>The visual word form area allows readers to recognize and process orthography.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
+		<ID>2</ID>
+	</PostQuestion>
+</PostQuestions>
