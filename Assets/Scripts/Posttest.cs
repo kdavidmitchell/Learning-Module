@@ -60,7 +60,8 @@ public class Posttest : MonoBehaviour
 				Debug.Log("Correct!");
 			} else 
 			{
-				Debug.Log("Incorrect. :(");	
+				Debug.Log("Incorrect. :(");
+				GameInformation.PostQuestions.Add(shuffledQuestions[questionIndex - 1]);	
 			}
 		} else 
 		{
@@ -69,7 +70,8 @@ public class Posttest : MonoBehaviour
 				Debug.Log("Correct!");
 			} else 
 			{
-				Debug.Log("Incorrect. :(");	
+				Debug.Log("Incorrect. :(");
+				GameInformation.PostQuestions.Add(shuffledQuestions[questionIndex - 1]);	
 			}	
 		}
 
@@ -80,5 +82,8 @@ public class Posttest : MonoBehaviour
 		{
 			nextSceneButton.SetActive(true);	
 		}
+
+		SaveInformation.SaveAllInformation();
+		Debug.Log(GameInformation.PostQuestions.Count);
 	}
 }
