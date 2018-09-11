@@ -3,11 +3,13 @@
 		<QuestionText>Dyslexia is a disorder in which people read backwards.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
 		<ID>1</ID>
+		<Explanation>False. Dyslexia does not  cause an individual to read backwards.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Broca's area is devoted to the production of speech.</QuestionText>
+		<QuestionText>Broca's area is involved in the production of speech.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
 		<ID>2</ID>
+		<Explanation>True. Broca's area is highly involved in speech production, processing, and the linking of phonological sequences.</Explanation>
 	</PreQuestion>
 </PreQuestions>

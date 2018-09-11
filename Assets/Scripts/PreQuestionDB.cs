@@ -50,6 +50,9 @@ public class PreQuestionDB : MonoBehaviour
 						break;
 					case "ID":
 						preQuestionDictionary.Add("ID", content.InnerText);
+						break;
+					case "Explanation":
+						preQuestionDictionary.Add("Explanation", content.InnerText);
 						break;			
 				}
 			}

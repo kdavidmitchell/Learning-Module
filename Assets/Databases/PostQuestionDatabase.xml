@@ -3,11 +3,13 @@
 		<QuestionText>The TPJ helps readers decode words.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
 		<ID>1</ID>
+		<Explanation>True. The TPJ is responsible for the decoding of words.</Explanation>
 	</PostQuestion>
 
 	<PostQuestion>
 		<QuestionText>The visual word form area allows readers to recognize and process orthography.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
 		<ID>2</ID>
+		<Explanation>True. The visual word form area helps us recognize the forms of written words.</Explanation>
 	</PostQuestion>
 </PostQuestions>

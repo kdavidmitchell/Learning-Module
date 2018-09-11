@@ -10,12 +10,14 @@ public class PreQuestion
 	private string _questionText;
 	private bool _correctAnswer;
 	private int _ID;
+	private string _explanation;
 
 	public PreQuestion(Dictionary<string, string> preQuestionDictionary)
 	{
 		_questionText = preQuestionDictionary["QuestionText"];
 		_correctAnswer = bool.Parse(preQuestionDictionary["CorrectAnswer"]);
 		_ID = int.Parse(preQuestionDictionary["ID"]);
+		_explanation = preQuestionDictionary["Explanation"];
 	}
 
 	public string QuestionText
@@ -34,5 +36,11 @@ public class PreQuestion
 	{
 		get { return _ID; }
 		set { _ID = value; }
+	}
+
+	public string Explanation
+	{
+		get { return _explanation; }
+		set { _explanation = value; }
 	}
 }

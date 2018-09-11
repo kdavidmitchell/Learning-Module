@@ -50,6 +50,9 @@ public class PostQuestionDB : MonoBehaviour
 						break;
 					case "ID":
 						postQuestionDictionary.Add("ID", content.InnerText);
+						break;
+					case "Explanation":
+						postQuestionDictionary.Add("Explanation", content.InnerText);
 						break;			
 				}
 			}
