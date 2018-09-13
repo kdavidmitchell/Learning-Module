@@ -501,6 +501,7 @@ MonoBehaviour:
   posttestButton: {fileID: 540984444}
   help1: {fileID: 704683869}
   help2: {fileID: 85841960}
+  completeColor: {r: 0.07363093, g: 0.9705882, b: 0, a: 0}
 --- !u!1 &704683869
 GameObject:
   m_ObjectHideFlags: 0

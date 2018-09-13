@@ -19,6 +19,16 @@ public class SaveInformation
         	PPSerialization.Save("POST_QUESTIONS", GameInformation.PostQuestions);
         }
 
+        if (GameInformation.PreCertainty != null)
+        {
+            PPSerialization.Save("PRE_CERTAINTY", GameInformation.PreCertainty);
+        }
+
+        if (GameInformation.PostCertainty != null)
+        {
+            PPSerialization.Save("POST_CERTAINTY", GameInformation.PostCertainty);
+        }
+
         if (GameInformation.TPJComplete != null)
         {
             PlayerPrefs.SetInt("TPJ_COMPLETE", Convert.ToInt32(GameInformation.TPJComplete));

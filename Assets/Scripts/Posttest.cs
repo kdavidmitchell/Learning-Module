@@ -12,6 +12,11 @@ public class Posttest : MonoBehaviour
 	private Toggle trueToggle;
 	private Toggle falseToggle;
 	private GameObject nextSceneButton;
+	private GameObject submitButton;
+	private GameObject certaintyRating;
+	private Toggle rating0;
+	private Toggle rating1;
+	private Toggle rating2;
 
 	private int questionIndex = 0;
 	private bool currentAnswer = false;
@@ -24,8 +29,15 @@ public class Posttest : MonoBehaviour
 		trueToggle = GameObject.Find("TrueToggle").GetComponent<Toggle>();
 		falseToggle = GameObject.Find("FalseToggle").GetComponent<Toggle>();
 		nextSceneButton = GameObject.Find("NextSceneButton");
+		submitButton = GameObject.Find("SubmitButtonBorder");
+		certaintyRating = GameObject.Find("CertaintyRatingBorder");
+		rating0 = GameObject.Find("NotConfidentToggle").GetComponent<Toggle>();
+		rating1 = GameObject.Find("SomewhatConfidentToggle").GetComponent<Toggle>();
+		rating2 = GameObject.Find("VeryConfidentToggle").GetComponent<Toggle>();
 
 		nextSceneButton.SetActive(false);
+		submitButton.SetActive(false);
+		certaintyRating.SetActive(false);
 		ShuffleQuestions();
 		DisplayNextQuestion();	
 	}
@@ -75,15 +87,42 @@ public class Posttest : MonoBehaviour
 			}	
 		}
 
+		SaveCertaintyRating();
+		trueToggle.isOn = false;
+		falseToggle.isOn = false;
+		rating0.isOn = false;
+		rating1.isOn = false;
+		rating2.isOn = false;
+
 		if (questionIndex != shuffledQuestions.Count)
 		{
 			DisplayNextQuestion();
 		} else 
 		{
+			for (int i = 0; i < GameInformation.PreCertainty.Length; i++) 
+			{
+				Debug.Log(GameInformation.PreCertainty[i].ToString());
+			}
+
 			nextSceneButton.SetActive(true);	
 		}
 
 		SaveInformation.SaveAllInformation();
 		Debug.Log(GameInformation.PostQuestions.Count);
+	}
+
+	public void SaveCertaintyRating()
+	{
+		if (rating0.isOn)
+		{
+			GameInformation.PreCertainty[questionIndex - 1] = 0;
+		} else if (rating1.isOn)
+		{
+			GameInformation.PreCertainty[questionIndex - 1] = 1;
+		} else if (rating2.isOn)
+		{
+			GameInformation.PreCertainty[questionIndex - 1] = 2;
+		}
+
 	}
 }

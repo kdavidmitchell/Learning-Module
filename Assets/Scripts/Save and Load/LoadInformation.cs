@@ -19,6 +19,16 @@ public class LoadInformation
             GameInformation.PostQuestions = (List<PostQuestion>)PPSerialization.Load("POST_QUESTIONS");
         }
 
+        if (PlayerPrefs.GetString("PRE_CERTAINTY") != null)
+        {
+            GameInformation.PreCertainty = (int[])PPSerialization.Load("PRE_CERTAINTY");
+        }
+
+        if (PlayerPrefs.GetString("POST_CERTAINTY") != null)
+        {
+            GameInformation.PostCertainty = (int[])PPSerialization.Load("POST_CERTAINTY");
+        }
+
         if (PlayerPrefs.GetInt("TPJ_COMPLETE") != null)
         {
             GameInformation.TPJComplete = Convert.ToBoolean(PlayerPrefs.GetInt("TPJ_COMPLETE"));

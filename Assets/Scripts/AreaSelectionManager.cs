@@ -9,6 +9,11 @@ public class AreaSelectionManager : MonoBehaviour
 	public GameObject help1;
 	public GameObject help2;
 
+	public Color completeColor;
+
+	private Renderer areaRenderer;
+	private Fade areaFade;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -33,6 +38,10 @@ public class AreaSelectionManager : MonoBehaviour
 	{
 		if (GameInformation.TPJComplete)
 		{
+			areaRenderer = GameObject.Find("TPJ").GetComponent<Renderer>();
+			areaRenderer.material.SetColor("_EmissionColor", completeColor);
+			areaFade = GameObject.Find("TPJ").GetComponent<Fade>();
+			Destroy(areaFade);
 			GameInformation.AllAreasComplete = true;
 			SaveInformation.SaveAllInformation();
 		}

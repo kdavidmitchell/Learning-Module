@@ -8,6 +8,8 @@ public class GameInformation : MonoBehaviour
 
 	private static List<PreQuestion> _preQuestions = new List<PreQuestion>();
 	private static List<PostQuestion> _postQuestions = new List<PostQuestion>();
+	private static int[] _preCertainty = new int[2];
+	private static int[] _postCertainty = new int[2];
 	private static bool _TPJComplete = false;
 	private static bool _allAreasComplete = false;
 
@@ -33,6 +35,18 @@ public class GameInformation : MonoBehaviour
 	{
 		get { return _allAreasComplete; }
 		set { _allAreasComplete = value; }
+	}
+
+	public static int[] PreCertainty
+	{
+		get { return _preCertainty; }
+		set { _preCertainty = value; }
+	}
+
+	public static int[] PostCertainty
+	{
+		get { return _postCertainty; }
+		set { _postCertainty = value; }
 	}
 
 	void Awake()
