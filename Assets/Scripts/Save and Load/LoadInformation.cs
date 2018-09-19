@@ -39,6 +39,13 @@ public class LoadInformation
             GameInformation.AllAreasComplete = Convert.ToBoolean(PlayerPrefs.GetInt("ALL_AREAS_COMPLETE"));
         }
 
+        //Options
+
+        if (PlayerPrefs.GetInt("COLORBLIND_MODE") != null)
+        {
+            GameInformation.ColorblindMode = Convert.ToBoolean(PlayerPrefs.GetInt("COLORBLIND_MODE"));
+        }
+
         Debug.Log("LOADED ALL INFORMATION.");
     }
 }

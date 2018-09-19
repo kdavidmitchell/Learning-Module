@@ -38,6 +38,13 @@ public class SaveInformation
         {
             PlayerPrefs.SetInt("ALL_AREAS_COMPLETE", Convert.ToInt32(GameInformation.AllAreasComplete));
         }
+
+        //Options
+
+        if (GameInformation.ColorblindMode != null)
+        {
+            PlayerPrefs.SetInt("COLORBLIND_MODE", Convert.ToInt32(GameInformation.ColorblindMode));
+        }
         
         Debug.Log("SAVED ALL INFORMATION.");
     }

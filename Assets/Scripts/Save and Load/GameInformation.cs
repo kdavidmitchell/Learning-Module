@@ -13,6 +13,11 @@ public class GameInformation : MonoBehaviour
 	private static bool _TPJComplete = false;
 	private static bool _allAreasComplete = false;
 
+	private static GameInformation instance = null;
+
+	//Options
+	private static bool _colorblindMode = false;
+
 	public static List<PreQuestion> PreQuestions
 	{
 		get { return _preQuestions; }
@@ -49,8 +54,23 @@ public class GameInformation : MonoBehaviour
 		set { _postCertainty = value; }
 	}
 
+	//Options
+
+	public static bool ColorblindMode
+	{
+		get { return _colorblindMode; }
+		set { _colorblindMode = value; }
+	}
+
 	void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+    	if (instance == null)
+    	{
+    		instance = this;
+    		DontDestroyOnLoad(gameObject);
+    	} else 
+    	{
+    		Destroy(gameObject);	
+    	}
     }
 }
