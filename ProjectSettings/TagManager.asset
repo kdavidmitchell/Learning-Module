@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Destroy
+  - LightBorder
+  - DarkBorder
+  - LightBG
+  - DarkBG
+  - Highlight
   layers:
   - Default
   - TransparentFX

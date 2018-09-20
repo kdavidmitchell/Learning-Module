@@ -139,6 +139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11509fc5ae34dc2468204f169e5eb6f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  darkBG: {r: 0.26666668, g: 0.011764706, b: 0.34117648, a: 1}
+  lightBG: {r: 0.22745098, g: 0.3254902, b: 0.54509807, a: 1}
+  darkBorder: {r: 0.12941177, g: 0.54901963, b: 0.5529412, a: 1}
+  lightBorder: {r: 0.26666668, g: 0.74509805, b: 0.4392157, a: 1}
+  highlight: {r: 0.9529412, g: 0.8980392, b: 0.11764706, a: 1}
+  skyboxCB: {fileID: 2100000, guid: b59bf5523da4af149a2330373d6d306d, type: 2}
 --- !u!4 &339206032
 Transform:
   m_ObjectHideFlags: 0
@@ -278,7 +284,7 @@ GameObject:
   - component: {fileID: 389831614}
   m_Layer: 5
   m_Name: BodyContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -582,7 +588,7 @@ GameObject:
   - component: {fileID: 937214415}
   m_Layer: 5
   m_Name: BodyBorder1
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -651,7 +657,7 @@ GameObject:
   - component: {fileID: 1253969920}
   m_Layer: 5
   m_Name: ButtonBorder
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -797,7 +803,7 @@ GameObject:
   - component: {fileID: 1379650230}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -943,7 +949,7 @@ GameObject:
   - component: {fileID: 1433568461}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1220,7 +1226,7 @@ GameObject:
   - component: {fileID: 2071231606}
   m_Layer: 5
   m_Name: OptionsButtonBorder
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
