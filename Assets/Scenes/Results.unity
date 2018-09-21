@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 711393191}
   m_Layer: 5
   m_Name: HeaderBorder
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 1121839682}
   m_Layer: 5
   m_Name: HeaderContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 1167616698}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -855,7 +855,7 @@ GameObject:
   - component: {fileID: 1252286178}
   m_Layer: 5
   m_Name: BodyContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1192,7 +1192,7 @@ GameObject:
   - component: {fileID: 1680621760}
   m_Layer: 5
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: DarkBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1733,7 +1733,7 @@ GameObject:
   - component: {fileID: 1966569067}
   m_Layer: 5
   m_Name: BodyBorder
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1803,7 +1803,7 @@ GameObject:
   - component: {fileID: 2111810430}
   m_Layer: 5
   m_Name: NextSceneButton
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

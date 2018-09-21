@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 85841962}
   m_Layer: 0
   m_Name: HelpText2
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 540984446}
   m_Layer: 0
   m_Name: PosttestButton
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 589668166}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 704683871}
   m_Layer: 0
   m_Name: HelpText1
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -583,7 +583,7 @@ GameObject:
   - component: {fileID: 771307376}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1081,7 +1081,7 @@ GameObject:
   - component: {fileID: 1870031028}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

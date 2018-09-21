@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 24505220}
   m_Layer: 0
   m_Name: ReadingBodyText
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 207234908}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 246669827}
   m_Layer: 0
   m_Name: Wrong
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 262042496}
   m_Layer: 0
   m_Name: Intervention
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -838,11 +838,11 @@ GameObject:
   - component: {fileID: 337647155}
   m_Layer: 0
   m_Name: WrongBodyText
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &337647155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,7 +907,7 @@ GameObject:
   - component: {fileID: 347606639}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1187,7 +1187,7 @@ GameObject:
   - component: {fileID: 532126877}
   m_Layer: 0
   m_Name: TopicReturnButton
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1256,7 +1256,7 @@ GameObject:
   - component: {fileID: 595829807}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1399,11 +1399,11 @@ GameObject:
   - component: {fileID: 618618916}
   m_Layer: 0
   m_Name: InterventionBodyText
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &618618915
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 667600053}
   m_Layer: 0
   m_Name: AreaTitleBG
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1732,7 +1732,7 @@ GameObject:
   - component: {fileID: 787197349}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1864,7 +1864,7 @@ GameObject:
   - component: {fileID: 814166678}
   m_Layer: 0
   m_Name: AreaSelectReturnButton
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1933,7 +1933,7 @@ GameObject:
   - component: {fileID: 931249860}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2003,7 +2003,7 @@ GameObject:
   - component: {fileID: 983194870}
   m_Layer: 0
   m_Name: Differences
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2072,7 +2072,7 @@ GameObject:
   - component: {fileID: 1006194923}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2216,7 +2216,7 @@ GameObject:
   - component: {fileID: 1181546273}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2400,7 +2400,7 @@ GameObject:
   - component: {fileID: 1225199536}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2623,7 +2623,7 @@ GameObject:
   - component: {fileID: 1447409804}
   m_Layer: 0
   m_Name: AreaTitleContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2693,7 +2693,7 @@ GameObject:
   - component: {fileID: 1504035732}
   m_Layer: 0
   m_Name: TopicReturnContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2899,7 +2899,7 @@ GameObject:
   - component: {fileID: 1715781693}
   m_Layer: 0
   m_Name: HelpText
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3105,7 +3105,7 @@ GameObject:
   - component: {fileID: 1778569505}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3239,7 +3239,7 @@ GameObject:
   - component: {fileID: 1838512178}
   m_Layer: 0
   m_Name: AreaSelectReturnContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3543,11 +3543,11 @@ GameObject:
   - component: {fileID: 1883296547}
   m_Layer: 0
   m_Name: DifferencesBodyText
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1883296546
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3612,7 +3612,7 @@ GameObject:
   - component: {fileID: 1895755391}
   m_Layer: 0
   m_Name: SelectedTopicTitle
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3755,7 +3755,7 @@ GameObject:
   - component: {fileID: 2008893404}
   m_Layer: 0
   m_Name: TextContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3824,7 +3824,7 @@ GameObject:
   - component: {fileID: 2133788119}
   m_Layer: 0
   m_Name: Reading
-  m_TagString: Untagged
+  m_TagString: DarkBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
