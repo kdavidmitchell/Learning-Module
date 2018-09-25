@@ -667,8 +667,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Before you go, we would appreciate it if you told us a little bit about
-    yourself!
+  m_Text: Please tell us a little bit about yourself to see your results and additional
+    resources!
 --- !u!222 &1217183487
 CanvasRenderer:
   m_ObjectHideFlags: 0

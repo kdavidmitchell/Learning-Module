@@ -47,6 +47,11 @@ public class TopicManager : MonoBehaviour
 		helpText.SetActive(false);
 	}
 
+	public void ShowFullBrainReturnButton()
+	{
+		areaReturnButton.SetActive(true);
+	}
+
 	public void ReturnToTopicSelect()
 	{
 		selectedTopicTitle.SetActive(false);
