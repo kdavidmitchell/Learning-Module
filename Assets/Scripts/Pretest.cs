@@ -17,6 +17,8 @@ public class Pretest : MonoBehaviour
 	private Toggle rating0;
 	private Toggle rating1;
 	private Toggle rating2;
+	private GameObject endText;
+	private GameObject paper;
 
 	private int questionIndex = 0;
 	private bool currentAnswer = false;
@@ -34,10 +36,13 @@ public class Pretest : MonoBehaviour
 		rating0 = GameObject.Find("NotConfidentToggle").GetComponent<Toggle>();
 		rating1 = GameObject.Find("SomewhatConfidentToggle").GetComponent<Toggle>();
 		rating2 = GameObject.Find("VeryConfidentToggle").GetComponent<Toggle>();
+		endText = GameObject.Find("BodyBorder");
+		paper = GameObject.Find("Paper");
 
 		nextSceneButton.SetActive(false);
 		submitButton.SetActive(false);
 		certaintyRating.SetActive(false);
+		endText.SetActive(false);
 		ShuffleQuestions();
 		DisplayNextQuestion();
 	}
@@ -103,7 +108,8 @@ public class Pretest : MonoBehaviour
 			{
 				Debug.Log(GameInformation.PreCertainty[i].ToString());
 			}
-
+			paper.SetActive(false);
+			endText.SetActive(true);
 			nextSceneButton.SetActive(true);	
 		}
 
