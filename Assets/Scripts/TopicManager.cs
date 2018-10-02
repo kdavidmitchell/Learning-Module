@@ -19,6 +19,9 @@ public class TopicManager : MonoBehaviour
 	public GameObject topicReturnButton;
 	public GameObject areaReturnButton;
 
+	public GameObject topicSelectSpeechButton;
+	public GameObject readingSpeechButton;
+
 	private bool readingDone = false;
 	private bool interventionDone = false;
 	private bool differencesDone = false;
@@ -34,6 +37,7 @@ public class TopicManager : MonoBehaviour
 		wrongBodyText.SetActive(false);
 		topicReturnButton.SetActive(false);
 		areaReturnButton.SetActive(false);
+		readingSpeechButton.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -59,11 +63,13 @@ public class TopicManager : MonoBehaviour
 		interventionBodyText.SetActive(false);
 		differencesBodyText.SetActive(false);
 		wrongBodyText.SetActive(false);
+		readingSpeechButton.SetActive(false);
 
 		readingButton.SetActive(true);
 		interventionButton.SetActive(true);
 		differencesButton.SetActive(true);
 		wrongButton.SetActive(true);
+		topicSelectSpeechButton.SetActive(true);
 
 		topicReturnButton.SetActive(false);
 	}
@@ -73,6 +79,7 @@ public class TopicManager : MonoBehaviour
 		interventionButton.SetActive(false);
 		differencesButton.SetActive(false);
 		wrongButton.SetActive(false);
+		topicSelectSpeechButton.SetActive(false);
 
 		selectedTopicTitle.SetActive(true);
 		Text topicTitleText = selectedTopicTitle.GetComponentInChildren<Text>();
@@ -81,6 +88,7 @@ public class TopicManager : MonoBehaviour
 		readingBodyText.SetActive(true);
 
 		topicReturnButton.SetActive(true);
+		readingSpeechButton.SetActive(true);
 		readingButton.SetActive(false);
 
 		readingDone = true;
