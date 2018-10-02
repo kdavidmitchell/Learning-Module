@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 51955311}
   m_Layer: 5
   m_Name: BodyBorder2
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 246481947}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 270987643}
   m_Layer: 5
   m_Name: BodyContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -727,7 +727,7 @@ GameObject:
   - component: {fileID: 535192877}
   m_Layer: 5
   m_Name: ReturnButton
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -881,7 +881,7 @@ GameObject:
   - component: {fileID: 713735146}
   m_Layer: 5
   m_Name: ApplyChangesButton
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 929003133}
   m_Layer: 5
   m_Name: BodyContainer
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1132,7 +1132,7 @@ GameObject:
   - component: {fileID: 1140084500}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: LightBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1417,7 +1417,7 @@ GameObject:
   - component: {fileID: 1515701125}
   m_Layer: 5
   m_Name: BodyBorder1
-  m_TagString: Untagged
+  m_TagString: LightBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1551,18 +1551,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 713735144}
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -1578,7 +1567,7 @@ GameObject:
   - component: {fileID: 1733462376}
   m_Layer: 5
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: DarkBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,7 +12,7 @@ public class OptionsManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		changesButton.SetActive(false);	
+		//changesButton.SetActive(false);	
 	}
 	
 	// Update is called once per frame
@@ -26,6 +26,10 @@ public class OptionsManager : MonoBehaviour
 		{
 			GameInformation.ColorblindMode = true;
 			SaveInformation.SaveAllInformation();
+		} else 
+		{
+			GameInformation.ColorblindMode = false;
+			SaveInformation.SaveAllInformation();	
 		}
 	}
 }
