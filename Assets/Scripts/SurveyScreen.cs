@@ -54,7 +54,7 @@ public class SurveyScreen : MonoBehaviour
 			for (int i = 0; i < numResponses; i++) 
 			{
 				GameObject currentToggle = Instantiate(togglePrefab, answerText.transform.position, Quaternion.identity);
-				currentToggle.transform.parent = answerText.transform;
+				currentToggle.transform.SetParent(answerText.transform, false);
 				Toggle toggleComponent = currentToggle.GetComponent<Toggle>();
 				toggleComponent.group = answerText.GetComponent<ToggleGroup>();
 				toggleComponent.onValueChanged.AddListener((bool on) => submitButton.SetActive(true));

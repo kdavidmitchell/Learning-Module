@@ -29,8 +29,8 @@ public class ResultsScreen : MonoBehaviour
 			GameObject questionToBeInstantiated = Instantiate(questionPrefab, pretestContent.transform.position, Quaternion.identity);
 			GameObject explanationToBeInstantiated = Instantiate(explanationPrefab, pretestContent.transform.position, Quaternion.identity);
 
-			questionToBeInstantiated.transform.parent = pretestContent.transform;
-			explanationToBeInstantiated.transform.parent = pretestContent.transform;
+			questionToBeInstantiated.transform.SetParent(pretestContent.transform, false);
+			explanationToBeInstantiated.transform.SetParent(pretestContent.transform, false);
 
 			Text questionText = questionToBeInstantiated.GetComponent<Text>();
 			questionText.text = GameInformation.PreQuestions[i].QuestionText;
@@ -43,8 +43,8 @@ public class ResultsScreen : MonoBehaviour
 			GameObject questionToBeInstantiated = Instantiate(questionPrefab, posttestConent.transform.position, Quaternion.identity);
 			GameObject explanationToBeInstantiated = Instantiate(explanationPrefab, posttestConent.transform.position, Quaternion.identity);
 
-			questionToBeInstantiated.transform.parent = posttestConent.transform;
-			explanationToBeInstantiated.transform.parent = posttestConent.transform;
+			questionToBeInstantiated.transform.SetParent(posttestConent.transform, false);
+			explanationToBeInstantiated.transform.SetParent(posttestConent.transform, false);
 
 			Text questionText = questionToBeInstantiated.GetComponent<Text>();
 			questionText.text = GameInformation.PostQuestions[i].QuestionText;
