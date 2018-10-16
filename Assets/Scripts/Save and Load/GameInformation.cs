@@ -11,6 +11,8 @@ public class GameInformation : MonoBehaviour
 	private static int[] _preCertainty = new int[2];
 	private static int[] _postCertainty = new int[2];
 	private static bool _TPJComplete = false;
+	private static bool _OTComplete = false;
+	private static bool _RHComplete = false;
 	private static bool _allAreasComplete = false;
 
 	private static GameInformation instance = null;
@@ -34,6 +36,18 @@ public class GameInformation : MonoBehaviour
 	{
 		get { return _TPJComplete; }
 		set { _TPJComplete = value; }
+	}
+
+	public static bool OTComplete
+	{
+		get { return _OTComplete; }
+		set { _OTComplete = value; }
+	}
+
+	public static bool RHComplete
+	{
+		get { return _RHComplete; }
+		set { _RHComplete = value; }
 	}
 
 	public static bool AllAreasComplete

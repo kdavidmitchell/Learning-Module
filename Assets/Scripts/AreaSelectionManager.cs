@@ -42,6 +42,26 @@ public class AreaSelectionManager : MonoBehaviour
 			areaRenderer.material.SetColor("_EmissionColor", completeColor);
 			areaFade = GameObject.Find("TPJ").GetComponent<Fade>();
 			Destroy(areaFade);
+		}
+
+		if (GameInformation.OTComplete)
+		{
+			areaRenderer = GameObject.Find("OT").GetComponent<Renderer>();
+			areaRenderer.material.SetColor("_EmissionColor", completeColor);
+			areaFade = GameObject.Find("OT").GetComponent<Fade>();
+			Destroy(areaFade);
+		}
+
+		if (GameInformation.RHComplete)
+		{
+			areaRenderer = GameObject.Find("RH").GetComponent<Renderer>();
+			areaRenderer.material.SetColor("_EmissionColor", completeColor);
+			areaFade = GameObject.Find("RH").GetComponent<Fade>();
+			Destroy(areaFade);
+		}
+
+		if (GameInformation.TPJComplete && GameInformation.OTComplete && GameInformation.RHComplete)
+		{
 			GameInformation.AllAreasComplete = true;
 			SaveInformation.SaveAllInformation();
 		}

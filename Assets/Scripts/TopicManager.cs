@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TopicManager : MonoBehaviour 
 {
@@ -153,7 +154,20 @@ public class TopicManager : MonoBehaviour
 		if (readingDone && interventionDone && differencesDone && wrongDone)
 		{
 			areaReturnButton.SetActive(true);
-			GameInformation.TPJComplete = true;
+
+			Scene currentScene = SceneManager.GetActiveScene();
+			int buildIndex = currentScene.buildIndex;
+			if (buildIndex == 8)
+			{
+				GameInformation.TPJComplete = true;
+			} else if (buildIndex == 15)
+			{
+				GameInformation.OTComplete = true;
+			} else if (buildIndex == 16)
+			{
+				GameInformation.RHComplete = true;
+			}
+			
 			SaveInformation.SaveAllInformation();
 		}
 	}

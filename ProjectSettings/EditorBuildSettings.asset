@@ -50,3 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: 60dff9036fb06a44890c7f8b20831b43
+  - enabled: 1
+    path: Assets/Scenes/OT_Area.unity
+    guid: 9a88329c88c281943b62a88bb73faac6
+  - enabled: 1
+    path: Assets/Scenes/RH_Area.unity
+    guid: 6e0b968b903e4b047b87a2551dd57076
