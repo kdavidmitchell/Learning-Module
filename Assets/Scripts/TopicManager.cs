@@ -23,6 +23,8 @@ public class TopicManager : MonoBehaviour
 	public GameObject topicSelectSpeechButton;
 	public GameObject readingSpeechButton;
 
+	private GameObject[] topicButtons = new GameObject[4];
+	private GameObject[] topicTexts = new GameObject[4];
 	private bool readingDone = false;
 	private bool interventionDone = false;
 	private bool differencesDone = false;
@@ -30,12 +32,26 @@ public class TopicManager : MonoBehaviour
 
 	// Use this for initialization
 	void Start () 
-	{
+	{	
+		topicButtons[0] = readingButton;
+		topicButtons[1] = interventionButton;
+		topicButtons[2] = differencesButton;
+		topicButtons[3] = wrongButton;
+
+		topicTexts[0] = readingBodyText;
+		topicTexts[1] = interventionBodyText;
+		topicTexts[2] = differencesBodyText;
+		topicTexts[3] = wrongBodyText;
+
+		for (int i = 0; i < topicTexts.Length; i++) 
+		{
+			if (topicTexts[i] != null)
+			{
+				topicTexts[i].SetActive(false);
+			}
+		}
+		
 		selectedTopicTitle.SetActive(false);
-		readingBodyText.SetActive(false);
-		interventionBodyText.SetActive(false);
-		differencesBodyText.SetActive(false);
-		wrongBodyText.SetActive(false);
 		topicReturnButton.SetActive(false);
 		areaReturnButton.SetActive(false);
 		readingSpeechButton.SetActive(false);
@@ -59,34 +75,49 @@ public class TopicManager : MonoBehaviour
 
 	public void ReturnToTopicSelect()
 	{
-		selectedTopicTitle.SetActive(false);
-		readingBodyText.SetActive(false);
-		interventionBodyText.SetActive(false);
-		differencesBodyText.SetActive(false);
-		wrongBodyText.SetActive(false);
 		readingSpeechButton.SetActive(false);
-
-		readingButton.SetActive(true);
-		interventionButton.SetActive(true);
-		differencesButton.SetActive(true);
-		wrongButton.SetActive(true);
-		topicSelectSpeechButton.SetActive(true);
-
+		selectedTopicTitle.SetActive(false);
 		topicReturnButton.SetActive(false);
+		
+		for (int i = 0; i < topicTexts.Length; i++) 
+		{
+			if (topicTexts[i] != null)
+			{
+				topicTexts[i].SetActive(false);
+			}
+		}
+
+		for (int i = 0; i < topicButtons.Length; i++) 
+		{
+			if (topicButtons[i] != null)
+			{
+				topicButtons[i].SetActive(true);
+			}
+		}
+		
+		topicSelectSpeechButton.SetActive(true);
 	}
 
 	public void ReadingClicked()
 	{
-		interventionButton.SetActive(false);
-		differencesButton.SetActive(false);
-		wrongButton.SetActive(false);
+		for (int i = 0; i < topicButtons.Length; i++) 
+		{
+			if (topicButtons[i] != null && i != 0)
+			{
+				topicButtons[i].SetActive(false);
+			}
+		}
+		
 		topicSelectSpeechButton.SetActive(false);
 
 		selectedTopicTitle.SetActive(true);
 		Text topicTitleText = selectedTopicTitle.GetComponentInChildren<Text>();
 		topicTitleText.text = "Role in reading";
 
-		readingBodyText.SetActive(true);
+		if (readingBodyText != null)
+		{
+			readingBodyText.SetActive(true);
+		}
 
 		topicReturnButton.SetActive(true);
 		readingSpeechButton.SetActive(true);
