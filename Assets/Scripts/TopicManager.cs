@@ -50,6 +50,14 @@ public class TopicManager : MonoBehaviour
 				topicTexts[i].SetActive(false);
 			}
 		}
+
+		for (int i = 1; i < topicButtons.Length; i++) 
+		{
+			if (topicButtons[i] != null)
+			{
+				topicButtons[i].SetActive(false);
+			}
+		}
 		
 		selectedTopicTitle.SetActive(false);
 		topicReturnButton.SetActive(false);
@@ -87,12 +95,17 @@ public class TopicManager : MonoBehaviour
 			}
 		}
 
-		for (int i = 0; i < topicButtons.Length; i++) 
+		if (readingDone)
 		{
-			if (topicButtons[i] != null)
-			{
-				topicButtons[i].SetActive(true);
-			}
+			topicButtons[0].SetActive(true);
+			topicButtons[3].SetActive(true);
+		}
+
+		if (readingDone && wrongDone)
+		{
+			topicButtons[0].SetActive(true);
+			topicButtons[3].SetActive(true);
+			topicButtons[2].SetActive(true);
 		}
 		
 		topicSelectSpeechButton.SetActive(true);
@@ -182,7 +195,7 @@ public class TopicManager : MonoBehaviour
 
 	public void CheckIfAllTopicsAreDone()
 	{
-		if (readingDone && interventionDone && differencesDone && wrongDone)
+		if (readingDone && differencesDone && wrongDone)
 		{
 			areaReturnButton.SetActive(true);
 
