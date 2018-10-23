@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +22,7 @@ public class TopicManager : MonoBehaviour
 
 	public GameObject topicSelectSpeechButton;
 	public GameObject readingSpeechButton;
+	public GameObject exampleSpace;
 
 	private GameObject[] topicButtons = new GameObject[4];
 	private GameObject[] topicTexts = new GameObject[4];
@@ -109,6 +110,12 @@ public class TopicManager : MonoBehaviour
 		}
 		
 		topicSelectSpeechButton.SetActive(true);
+
+		if (ExampleManager.exampleIsActive)
+		{
+			exampleSpace.SetActive(false);
+			ExampleManager.exampleIsActive = false;
+		}
 	}
 
 	public void ReadingClicked()
@@ -133,6 +140,7 @@ public class TopicManager : MonoBehaviour
 		}
 
 		topicReturnButton.SetActive(true);
+		areaReturnButton.SetActive(false);
 		readingSpeechButton.SetActive(true);
 		readingButton.SetActive(false);
 
@@ -170,6 +178,7 @@ public class TopicManager : MonoBehaviour
 		differencesBodyText.SetActive(true);
 
 		topicReturnButton.SetActive(true);
+		areaReturnButton.SetActive(false);
 		differencesButton.SetActive(false);
 
 		differencesDone = true;
@@ -188,6 +197,7 @@ public class TopicManager : MonoBehaviour
 		wrongBodyText.SetActive(true);
 
 		topicReturnButton.SetActive(true);
+		areaReturnButton.SetActive(false);
 		wrongButton.SetActive(false);
 
 		wrongDone = true;

@@ -487,10 +487,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'A definition of dyslexia is provided here.
-
-
-    Characteristics of dyslexia are also provided here.'
+  m_Text: Dyslexia is a specific learning disability that is neurobiological in origin.
+    It is characterized by difficulties with accurate and/or fluent word recognition
+    and by poor spelling and decoding abilities. These difficulties typically result
+    from a deficit in the phonological component of language that is often unexpected
+    in relation to other cognitive abilities and the provision of effective classroom
+    instruction. Secondary consequences may include problems in reading comprehension
+    and reduced reading experience that can impede growth of vocabulary and background
+    knowledge.
 --- !u!222 &402983732
 CanvasRenderer:
   m_ObjectHideFlags: 0
