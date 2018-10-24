@@ -24,6 +24,9 @@ public class TopicManager : MonoBehaviour
 	public GameObject readingSpeechButton;
 	public GameObject exampleSpace;
 
+	public GameObject readingGraphic;
+	public GameObject differencesGraphic;
+
 	private GameObject[] topicButtons = new GameObject[4];
 	private GameObject[] topicTexts = new GameObject[4];
 	private bool readingDone = false;
@@ -64,6 +67,16 @@ public class TopicManager : MonoBehaviour
 		topicReturnButton.SetActive(false);
 		areaReturnButton.SetActive(false);
 		readingSpeechButton.SetActive(false);
+
+		if (readingGraphic != null)
+		{
+			readingGraphic.SetActive(false);
+		}
+
+		if (differencesGraphic != null)
+		{
+			differencesGraphic.SetActive(false);
+		}
 	}
 	
 	// Update is called once per frame
@@ -116,6 +129,16 @@ public class TopicManager : MonoBehaviour
 			exampleSpace.SetActive(false);
 			ExampleManager.exampleIsActive = false;
 		}
+
+		if (readingGraphic != null)
+		{
+			readingGraphic.SetActive(false);
+		}
+
+		if (differencesGraphic != null)
+		{
+			differencesGraphic.SetActive(false);
+		}
 	}
 
 	public void ReadingClicked()
@@ -133,6 +156,11 @@ public class TopicManager : MonoBehaviour
 		selectedTopicTitle.SetActive(true);
 		Text topicTitleText = selectedTopicTitle.GetComponentInChildren<Text>();
 		topicTitleText.text = "Role in reading";
+
+		if (readingGraphic != null)
+		{
+			readingGraphic.SetActive(true);
+		}
 
 		if (readingBodyText != null)
 		{
@@ -174,6 +202,11 @@ public class TopicManager : MonoBehaviour
 		selectedTopicTitle.SetActive(true);
 		Text topicTitleText = selectedTopicTitle.GetComponentInChildren<Text>();
 		topicTitleText.text = "Differences between typical readers and those with dyslexia";
+
+		if (differencesGraphic != null)
+		{
+			differencesGraphic.SetActive(true);
+		}
 
 		differencesBodyText.SetActive(true);
 
