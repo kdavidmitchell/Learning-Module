@@ -5,7 +5,8 @@ using UnityEngine;
 public class AreaSelectionManager : MonoBehaviour 
 {
 
-	public GameObject posttestButton;
+	public GameObject interventionButton;
+	public GameObject testButton;
 	public GameObject help1;
 	public GameObject help2;
 
@@ -18,13 +19,19 @@ public class AreaSelectionManager : MonoBehaviour
 	void Start () 
 	{
 		LoadInformation.LoadAllInformation();
-		posttestButton.SetActive(false);
+		interventionButton.SetActive(false);
+		testButton.SetActive(false);
 
 		CheckIfAllAreasAreComplete();
 
 		if (GameInformation.AllAreasComplete)
 		{
-			EnablePosttest();
+			EnableInterventionButton();
+		}
+
+		if (GameInformation.InterventionComplete)
+		{
+			EnableTestButton();
 		}	
 	}
 	
@@ -67,9 +74,16 @@ public class AreaSelectionManager : MonoBehaviour
 		}
 	}
 
-	private void EnablePosttest()
+	private void EnableInterventionButton()
 	{
-		posttestButton.SetActive(true);
+		interventionButton.SetActive(true);
+		help1.SetActive(false);
+		help2.SetActive(false);
+	}
+
+	private void EnableTestButton()
+	{
+		testButton.SetActive(true);
 		help1.SetActive(false);
 		help2.SetActive(false);
 	}

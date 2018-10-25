@@ -14,6 +14,7 @@ public class GameInformation : MonoBehaviour
 	private static bool _OTComplete = false;
 	private static bool _RHComplete = false;
 	private static bool _allAreasComplete = false;
+	private static bool _interventionComplete = false;
 
 	private static GameInformation instance = null;
 
@@ -66,6 +67,12 @@ public class GameInformation : MonoBehaviour
 	{
 		get { return _postCertainty; }
 		set { _postCertainty = value; }
+	}
+
+	public static bool InterventionComplete 
+	{
+		get { return _interventionComplete; }
+		set { _interventionComplete = value; }
 	}
 
 	//Options
