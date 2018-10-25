@@ -11,6 +11,7 @@ public class MoviePlayer : MonoBehaviour
 	public Camera videoCam;
 	public VideoPlayer player;
 	public Canvas can;
+	public AudioSource audioSource;
 
 	// Use this for initialization
 	void Start () {
@@ -31,7 +32,10 @@ public class MoviePlayer : MonoBehaviour
 
 	public void PlayMovie()
 	{
+		player.url = System.IO.Path.Combine(Application.streamingAssetsPath, "visual_system.mp4");
+		player.SetTargetAudioSource(0, audioSource);
 		player.loopPointReached += EndReached;
+		player.Prepare();
 		player.Play();
 	}
 
