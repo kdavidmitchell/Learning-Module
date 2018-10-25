@@ -26,6 +26,7 @@ public class HoverText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 	{
 		instance = Instantiate(hoverTextPrefab, Input.mousePosition, Quaternion.identity);
 		instance.transform.SetParent(transform, false);
+		instance.transform.position = Input.mousePosition;
 		Text definitionText = GameObject.Find("Definition").GetComponent<Text>();
 		definitionText.text = definition;
 	}
