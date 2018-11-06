@@ -26,9 +26,9 @@ public class IntroScreen : MonoBehaviour
 	private int headerSize;
 	private int bodySize;
 
-	private float textDelay = 1f;
+	private float textDelay = 2f;
 	private int listIndex = 0;
-	private float buttonDelay = 5f;
+	private float buttonDelay = 6f;
 
 	// Use this for initialization
 	void Start () 
@@ -86,7 +86,7 @@ public class IntroScreen : MonoBehaviour
 		{
 			StartCoroutine(FadeTextAndIconsToFullAlpha(1f, bodyTexts[listIndex], bodyIcons[listIndex]));
 			listIndex++;
-			textDelay = 1f;
+			textDelay = 2f;
 		}
 
 		if (buttonDelay <= 0)

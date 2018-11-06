@@ -32,7 +32,7 @@ public class MoviePlayer : MonoBehaviour
 
 	public void PlayMovie()
 	{
-		player.url = System.IO.Path.Combine(Application.streamingAssetsPath, "visual_system.mp4");
+		player.url = System.IO.Path.Combine(Application.streamingAssetsPath, "trimmed_visual_system.mp4");
 		player.SetTargetAudioSource(0, audioSource);
 		player.loopPointReached += EndReached;
 		player.Prepare();

@@ -584,7 +584,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverTextPrefab: {fileID: 1342605267861700, guid: 7a1a60624ecde844788584a442d81906,
     type: 2}
-  definition: This is the definition for sight words.
+  definition: Sight words occur frequently in text but can't easily be sounded out
+    so they are taught by sight (the, of, to, this, was, for)
 --- !u!114 &150307775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,7 +1883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &707426302
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5054,7 +5055,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverTextPrefab: {fileID: 1342605267861700, guid: 7a1a60624ecde844788584a442d81906,
     type: 2}
-  definition: This is the definition for irregulars.
+  definition: "Irregular words (e.g., should, mother) cannot be decoded because they
+    are phonetically irregular as they do not follow the phonic or spelling \u201Crules\u201D"
 --- !u!114 &1910854521
 MonoBehaviour:
   m_ObjectHideFlags: 0
