@@ -1,0 +1,206 @@
+<TeacherQuestions>
+	<TeacherQuestion>
+		<QuestionText>In what country are you employed as a teacher/educational administrator?</QuestionText>
+		<ID>1</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please elaborate:</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>If you are employed in the USA, which state?</QuestionText>
+		<ID>2</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please elaborate (or leave blank if this does not apply to you):</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>In what country did you train for teaching/educational administration?</QuestionText>
+		<ID>3</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please elaborate:</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>I am a: (check all that apply)</QuestionText>
+		<ID>4</ID>
+		<NumResponses>9</NumResponses>
+		<Response1>General education teacher</Response1>
+		<Response2>Special education teacher</Response2>
+		<Response3>Gifted/Talented teacher</Response3>
+		<Response4>Director of program</Response4>
+		<Response5>Principal</Response5>
+		<Response6>Superintendent</Response6>
+		<Response7>Trainee teacher</Response7>
+		<Response8>Higher education college/university professor</Response8>
+		<Response9>Other (please specify):</Response9>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>Which ages are the focus of your teaching or administrative duties?  Descriptions refer to the US and UK system terms, respectively (i.e., US grade/UK year).  (check all that apply)</QuestionText>
+		<ID>5</ID>
+		<NumResponses>18</NumResponses>
+		<Response1>Ages 0-4: Early childhood / Nursery</Response1>
+		<Response2>Ages 4-5: Pre-K / Reception</Response2>
+		<Response3>Ages 5-6: Kindergarten / Year 1</Response3>
+		<Response4>Ages 6-7: Grade 1 / Year 2</Response4>
+		<Response5>Ages 7-8: Grade 2 / Year 3</Response5>
+		<Response6>Ages 8-9: Grade 3 / Year 4</Response6>
+		<Response7>Ages 9-10: Grade 4 / Year 5</Response7>
+		<Response8>Ages 10-11: Grade 5 / Year 6</Response8>
+		<Response9>Ages 11-12: Grade 6 / Year 7</Response9>
+		<Response10>Ages 12-13: Grade 7 / Year 8</Response10>
+		<Response11>Ages 13-14: Grade 8 / Year 9</Response11>
+		<Response12>Ages 14-15: Grade 9 / Year 10</Response12>
+		<Response13>Ages 15-16: Grade 10 / Year 11</Response13>
+		<Response14>Ages 16-17: Grade 11 / Year 12</Response14>
+		<Response15>Ages 17-18: Grade 12 / Year 13</Response15>
+		<Response16>Higher education college/university</Response16>
+		<Response17>Adult learning</Response17>
+		<Response18>Other (please specify):</Response18>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>If you did not select higher education college/university, please indicate what specific discplines you teach in. (check all that apply)</QuestionText>
+		<ID>6</ID>
+		<NumResponses>13</NumResponses>
+		<Response1>Science</Response1>
+		<Response2>Social Science</Response2>
+		<Response3>English/Language Arts</Response3>
+		<Response4>Mathematics</Response4>
+		<Response5>Creative Arts</Response5>
+		<Response6>Physical Education</Response6>
+		<Response7>Library</Response7>
+		<Response8>Technology</Response8>
+		<Response9>Health</Response9>
+		<Response10>Life skills</Response10>
+		<Response11>Vocational skills</Response11>
+		<Response12>Not relevant to me</Response12>
+		<Response13>Other (please specify):</Response13>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>If you did select higher education college/university, please indicate what specific discplines you teach in. (check all that apply)</QuestionText>
+		<ID>7</ID>
+		<NumResponses>19</NumResponses>
+		<Response1>Business</Response1>
+		<Response2>Communications</Response2>
+		<Response3>Divinity</Response3>
+		<Response4>Education</Response4>
+		<Response5>Engineering</Response5>
+		<Response6>Fine Arts</Response6>
+		<Response7>Health and Rehabilitation</Response7>
+		<Response8>Hospitality</Response8>
+		<Response9>Humanities</Response9>
+		<Response10>International Studies</Response10>
+		<Response11>Law</Response11>
+		<Response12>Mathematics/Statistics</Response12>
+		<Response13>Medicine</Response13>
+		<Response14>Nursing</Response14>
+		<Response15>Public Health</Response15>
+		<Response16>Public Policy</Response16>
+		<Response17>Science</Response17>
+		<Response18>Social Science</Response18>
+		<Response19>Other (please specify):</Response19>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>How many hours a week do you spend teaching or in administration, including preparation time?  (If you do both, provide cumulative hours.)</QuestionText>
+		<ID>8</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please enter a number (of hours):</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>How long have you been a teacher/administrator?  (If you have been both a teacher and administrator, give cumulative years.)</QuestionText>
+		<ID>9</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please enter a number (of years):</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>How would you characterize the financial resources of your school?</QuestionText>
+		<ID>10</ID>
+		<NumResponses>5</NumResponses>
+		<Response1>Excellent</Response1>
+		<Response2>Above average</Response2>
+		<Response3>Average</Response3>
+		<Response4>Below average</Response4>
+		<Response5>Extremely limited</Response5>
+		<HasWriteIn>false</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>What is your highest degree in education? (If you switched careers into education from another field, please indicate the highest level of coursework you completed in education.)</QuestionText>
+		<ID>11</ID>
+		<NumResponses>7</NumResponses>
+		<Response1>High school degree</Response1>
+		<Response2>Some college classes in education</Response2>
+		<Response3>Bachelor (e.g., BEd, BA, BS)</Response3>
+		<Response4>Master (e.g., MEd, MA, MS)</Response4>
+		<Response5>Post-graduate qualification (e.g., CAGS, PGCE)</Response5>
+		<Response6>Doctorate (PhD, EdD)</Response6>
+		<Response7>Other (please specify):</Response7>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>I graduated with this education degree in the year...</QuestionText>
+		<ID>12</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please enter a year (e.g. 19XX or 20XX):</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>Please rate your agreement with the following statement: I find scientific knowledge about the brain and its influence on learning valuable for my teaching practice.</QuestionText>
+		<ID>13</ID>
+		<NumResponses>7</NumResponses>
+		<Response1>Strongly agree</Response1>
+		<Response2>Agree</Response2>
+		<Response3>Tend to agree</Response3>
+		<Response4>Undecided</Response4>
+		<Response5>Tend to disagree</Response5>
+		<Response6>Disagree</Response6>
+		<Response7>Strongly disagree</Response7>
+		<HasWriteIn>false</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>Have you participated in any in-service, continuing education, or other training about the brain and its influence on learning?</QuestionText>
+		<ID>14</ID>
+		<NumResponses>2</NumResponses>
+		<Response1>No</Response1>
+		<Response2>Yes (please specify):</Response2>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>Please indicate if you have encountered any of the following educational approaches in your school. (check all that apply)</QuestionText>
+		<ID>15</ID>
+		<NumResponses>6</NumResponses>
+		<Response1>Learning styles (e.g., visual, auditory, kinesthetic)</Response1>
+		<Response2>Multiple intelligences</Response2>
+		<Response3>Left brain/right brain dominance</Response3>
+		<Response4>Brain Gym</Response4>
+		<Response5>CogMed</Response5>
+		<Response6>Tools of the Mind</Response6>
+		<HasWriteIn>false</HasWriteIn>
+	</TeacherQuestion>
+
+	<TeacherQuestion>
+		<QuestionText>If you would like to share any other information, please do so here (or leave blank).</QuestionText>
+		<ID>16</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please share your information in this box:</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</TeacherQuestion>
+</TeacherQuestions>
