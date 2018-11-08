@@ -1,23 +1,252 @@
 <SurveyQuestions>
 	<SurveyQuestion>
-		<QuestionText>I am:</QuestionText>
+		<QuestionText>What led you to the dyslexia learning module?</QuestionText>
 		<ID>1</ID>
-		<NumResponses>4</NumResponses>
-		<Response1>18 - 24</Response1>
-		<Response2>25 - 34</Response2>
-		<Response3>35 - 44</Response3>
-		<Response4>45+</Response4>
+		<NumResponses>6</NumResponses>
+		<Response1>search engine</Response1>
+		<Response2>social networking site referral</Response2>
+		<Response3>a social or professional connection recommended it to me</Response3>
+		<Response4>news article</Response4>
+		<Response5>a link on a blog or other type of site</Response5>
+		<Response6>Other (please elaborate):</Response6>
+		<HasWriteIn>true</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>Why did you choose to participate in this module?</QuestionText>
+		<ID>2</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please elaborate:</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>What led you to the dyslexia learning module?</QuestionText>
+		<ID>3</ID>
+		<NumResponses>5</NumResponses>
+		<Response1>Male</Response1>
+		<Response2>Female</Response2>
+		<Response3>Nonbinary</Response3>
+		<Response4>Transgender</Response4>
+		<Response5>I choose not to respond</Response5>
 		<HasWriteIn>false</HasWriteIn>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>I am using this module because:</QuestionText>
-		<ID>2</ID>
-		<NumResponses>4</NumResponses>
-		<Response1>I am a teacher</Response1>
-		<Response2>I am a parent</Response2>
-		<Response3>I have been diagnosed with dyslexia</Response3>
-		<Response4>Other:</Response4>
+		<QuestionText>Which of the following best describes your age at the time of this survey?</QuestionText>
+		<ID>4</ID>
+		<NumResponses>8</NumResponses>
+		<Response1>Under 18 years</Response1>
+		<Response2>18 to 24 years</Response2>
+		<Response3>25 to 34 years</Response3>
+		<Response4>35 to 44 years</Response4>
+		<Response5>45 to 54 years</Response5>
+		<Response6>55 to 64 years</Response6>
+		<Response7>65 years or older</Response7>
+		<Response8>I choose not to respond</Response8>
+		<HasWriteIn>false</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>What is the highest level of education you have completed?</QuestionText>
+		<ID>5</ID>
+		<NumResponses>11</NumResponses>
+		<Response1>Associate’s Degree</Response1>
+		<Response2>Bachelor’s Degree</Response2>
+		<Response3>Completed some postgraduate</Response3>
+		<Response4>Master’s Degree</Response4>
+		<Response5>Doctoral Degree</Response5>
+		<Response6>PhD — Doctor of Philosophy</Response6>
+		<Response7>EdD — Doctor of Education</Response7>
+		<Response8>DBA — Doctor of Business Administration</Response8>
+		<Response9>JD — Juris Doctor</Response9>
+		<Response10>MD — Doctor of Medicine</Response10>
+		<Response11>Other (please elaborate):</Response11>
 		<HasWriteIn>true</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>What about your current employment situation or education status?  (check all that apply)</QuestionText>
+		<ID>6</ID>
+		<NumResponses>10</NumResponses>
+		<Response1>part-time student</Response1>
+		<Response2>full-time student</Response2>
+		<Response3>working part-time for pay</Response3>
+		<Response4>working full-time for pay</Response4>
+		<Response5>looking for work</Response5>
+		<Response6>not working due to disability</Response6>
+		<Response7>temporarily laid off</Response7>
+		<Response8>retired</Response8>
+		<Response9>raising children or keeping house full-time</Response9>
+		<Response10>something else (please elaborate):</Response10>
+		<HasWriteIn>true</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>If you are currently working either full-time or part-time for pay, what is your current occupation?<QuestionText>
+		<ID>7</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please elaborate (or leave blank if this does not apply to you):</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>How long have you been in this occupation?<QuestionText>
+		<ID>8</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please elaborate (or leave blank if this does not apply to you):</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>Would any of the categories below describe your current occupation (check all that apply)?</QuestionText>
+		<ID>9</ID>
+		<NumResponses>8</NumResponses>
+		<Response1>Teacher or Educational leadership position</Response1>
+		<Response2>Speech-Language Pathologist</Response2>
+		<Response3>Occupational Therapist</Response3>
+		<Response4>Therapist, Counselor, Social Worker, or Clinical Psychologist</Response4>
+		<Response5>Research Scientist in a field related to the mind /brain</Response5>
+		<Response6>Nurse</Response6>
+		<Response7>Medical doctor / physician</Response7>
+		<Response8>None of the above</Response8>
+		<HasWriteIn>false</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>Are you a parent?<QuestionText>
+		<ID>10</ID>
+		<NumResponses>2</NumResponses>
+		<Response1>Yes</Response1>
+		<Response2>No</Response2>
+		<HasWriteIn>false</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>If you are a parent, how many children do you have?<QuestionText>
+		<ID>11</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please elaborate (or leave blank if this does not apply to you):</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>If you are a parent, what are the ages of your children?<QuestionText>
+		<ID>12</ID>
+		<NumResponses>1</NumResponses>
+		<Response1>Please elaborate (or leave blank if this does not apply to you):</Response1>
+		<HasWriteIn>true</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>Have you completed a bachelor’s or higher degree?<QuestionText>
+		<ID>13</ID>
+		<NumResponses>2</NumResponses>
+		<Response1>Yes</Response1>
+		<Response2>No</Response2>
+		<HasWriteIn>false</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>If you have completed a bachelor's or higher degree, check the discipline that best describes your highest degree (or leave blank if this does not apply to you).</QuestionText>
+		<ID>14</ID>
+		<NumResponses>19</NumResponses>
+		<Response1>Business</Response1>
+		<Response2>Communications</Response2>
+		<Response3>Divinity</Response3>
+		<Response4>Education</Response4>
+		<Response5>Engineering</Response5>
+		<Response6>Fine Arts</Response6>
+		<Response7>Health and Rehabilitation</Response7>
+		<Response8>Hospitality</Response8>
+		<Response9>Humanities</Response9>
+		<Response10>International Studies</Response10>
+		<Response11>Law</Response11>
+		<Response12>Mathematics/Statistics</Response12>
+		<Response13>Medicine</Response13>
+		<Response14>Nursing</Response14>
+		<Response15>Public Health</Response15>
+		<Response16>Public Policy</Response16>
+		<Response17>Science</Response17>
+		<Response18>Social Science</Response18>
+		<Response19>Other (please elaborate):</Response19>
+		<HasWriteIn>true</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>Please indicate which of the following you read regularly.  Check all that apply.</QuestionText>
+		<ID>15</ID>
+		<NumResponses>6</NumResponses>
+		<Response1>Newspaper</Response1>
+		<Response2>Career-relevant blogs and websites</Response2>
+		<Response3>Career-relevant magazines and publications (non-peer-reviewed)</Response3>
+		<Response4>Popular science magazines (e.g., Scientific American, Psychology Today, National Geographic)</Response4>
+		<Response5>Peer-reviewed scientific journals (e.g., Science, Nature, Cell, Neuron, Child Development, Journal of Educational Psychology, Journal of Special Education)</Response5>
+		<Response6>If you selected peer-reviewed scientific journals, please name a frequently read journal:</Response6>
+		<HasWriteIn>true</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>Have you ever taken a college/university course related to the brain or neuroscience?<QuestionText>
+		<ID>16</ID>
+		<NumResponses>4</NumResponses>
+		<Response1>Yes, many</Response1>
+		<Response2>Yes, a few</Response2>
+		<Response3>Yes, one</Response3>
+		<Response4>No</Response4>
+		<HasWriteIn>false</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>How often do you encounter information about the brain and its influence on learning in your daily life? (e.g. newspaper, television, internet, work, colleagues, friends and family)</QuestionText>
+		<ID>17</ID>
+		<NumResponses>6</NumResponses>
+		<Response1>Frequently (about 1X per week)</Response1>
+		<Response2>Often (about 1X per month)</Response2>
+		<Response3>Sometimes (about 1X every 3-6 months)</Response3>
+		<Response4>Not often (about 1X per year)</Response4>
+		<Response5>Hardly ever</Response5>
+		<Response6>Never</Response6>
+		<HasWriteIn>false</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>Please rate your agreement with the following statement: I find scientific knowledge about the brain and its influence on learning interesting.</QuestionText>
+		<ID>18</ID>
+		<NumResponses>7</NumResponses>
+		<Response1>Strongly agree</Response1>
+		<Response2>Agree</Response2>
+		<Response3>Tend to agree</Response3>
+		<Response4>Undecided</Response4>
+		<Response5>Tend to disagree</Response5>
+		<Response6>Disagree</Response6>
+		<Response7>Strongly disagree</Response7>
+		<HasWriteIn>false</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>Please rate your agreement with the following statement: There is no biological limit to what most individuals can achieve in their education.</QuestionText>
+		<ID>19</ID>
+		<NumResponses>7</NumResponses>
+		<Response1>Strongly agree</Response1>
+		<Response2>Agree</Response2>
+		<Response3>Tend to agree</Response3>
+		<Response4>Undecided</Response4>
+		<Response5>Tend to disagree</Response5>
+		<Response6>Disagree</Response6>
+		<Response7>Strongly disagree</Response7>
+		<HasWriteIn>false</HasWriteIn>
+	</SurveyQuestion>
+
+	<SurveyQuestion>
+		<QuestionText>To what degree do you think a child’s learning and educational success is influenced by genes (nature) and/or environment (nurture):</QuestionText>
+		<ID>20</ID>
+		<NumResponses>5</NumResponses>
+		<Response1>All environment</Response1>
+		<Response2>More environment than genes</Response2>
+		<Response3>About half genes, half environment</Response3>
+		<Response4>More genes than the environment</Response4>
+		<Response5>All genes</Response5>
+		<HasWriteIn>false</HasWriteIn>
 	</SurveyQuestion>
 </SurveyQuestions>
