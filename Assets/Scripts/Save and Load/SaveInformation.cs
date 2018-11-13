@@ -24,6 +24,16 @@ public class SaveInformation
             PPSerialization.Save("CORRECT_POST_QUESTIONS", GameInformation.CorrectPostQuestions);
         }
 
+        if (GameInformation.SurveyQuestions != null)
+        {
+            PPSerialization.Save("SURVEY_QUESTIONS", GameInformation.SurveyQuestions);
+        }
+
+        if (GameInformation.TeacherQuestions != null)
+        {
+            PPSerialization.Save("TEACHER_QUESTIONS", GameInformation.TeacherQuestions);
+        }
+
         if (GameInformation.PreCertainty != null)
         {
             PPSerialization.Save("PRE_CERTAINTY", GameInformation.PreCertainty);

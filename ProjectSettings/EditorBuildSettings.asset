@@ -62,3 +62,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Posttest1.unity
     guid: 57bf8a161accdce469d0eaa41f540f4a
+  - enabled: 1
+    path: Assets/Scenes/Demographics2.unity
+    guid: 972ccaeecf92df8409160f5fa688166f

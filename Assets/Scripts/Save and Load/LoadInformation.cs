@@ -24,6 +24,16 @@ public class LoadInformation
             GameInformation.CorrectPostQuestions = (List<PostQuestion>)PPSerialization.Load("CORRECT_POST_QUESTIONS");
         }
 
+        if (PlayerPrefs.GetString("SURVEY_QUESTIONS") != null)
+        {
+            GameInformation.SurveyQuestions = (Dictionary<int, List<string>>)PPSerialization.Load("SURVEY_QUESTIONS");
+        }
+
+        if (PlayerPrefs.GetString("TEACHER_QUESTIONS") != null)
+        {
+            GameInformation.TeacherQuestions = (Dictionary<int, List<string>>)PPSerialization.Load("TEACHER_QUESTIONS");
+        }
+
         if (PlayerPrefs.GetString("PRE_CERTAINTY") != null)
         {
             GameInformation.PreCertainty = (int[])PPSerialization.Load("PRE_CERTAINTY");

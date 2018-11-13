@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SurveyScreen : MonoBehaviour 
+public class TeacherScreen : MonoBehaviour 
 {
 
 	private GameObject submitButton;
@@ -22,7 +22,6 @@ public class SurveyScreen : MonoBehaviour
 	public GameObject togglePrefab;
 	public GameObject inputPrefab;
 	public GameObject skipAlert;
-	public GameObject endSurveyAlert;
 	public GameObject finishedSurveyAlert;
 
 	// Use this for initialization
@@ -32,10 +31,9 @@ public class SurveyScreen : MonoBehaviour
 		questionText = GameObject.Find("QuestionText").GetComponent<Text>();
 		answerText = GameObject.Find("AnswerText");
 		nextSceneButton = GameObject.Find("NextSceneButton");
-		questions = SurveyQuestionDB.surveyQuestions;
+		questions = TeacherQuestionDB.teacherQuestions;
 
 		skipAlert.SetActive(false);
-		endSurveyAlert.SetActive(false);
 		finishedSurveyAlert.SetActive(false);
 		
 		Continue();	
@@ -128,7 +126,7 @@ public class SurveyScreen : MonoBehaviour
 		} else 
 		{
 			submitButton.SetActive(false);
-			endSurveyAlert.SetActive(true);
+			finishedSurveyAlert.SetActive(true);
 		}
 	}
 
@@ -173,7 +171,7 @@ public class SurveyScreen : MonoBehaviour
 			}
 		}
 
-		GameInformation.SurveyQuestions.Add(questionNum, answers);
+		GameInformation.TeacherQuestions.Add(questionNum, answers);
 		SaveInformation.SaveAllInformation();
 	}
 

@@ -9,6 +9,8 @@ public class GameInformation : MonoBehaviour
 	private static List<PreQuestion> _preQuestions = new List<PreQuestion>();
 	private static List<PostQuestion> _postQuestions = new List<PostQuestion>();
 	private static List<PostQuestion> _correctPostQuestions = new List<PostQuestion>();
+	private static Dictionary<int, List<string>> _surveyQuestions = new Dictionary<int, List<string>>();
+	private static Dictionary<int, List<string>> _teacherQuestions = new Dictionary<int, List<string>>();
 	private static int[] _preCertainty = new int[2];
 	private static int[] _postCertainty = new int[32];
 	private static bool _TPJComplete = false;
@@ -38,6 +40,18 @@ public class GameInformation : MonoBehaviour
 	{
 		get { return _correctPostQuestions; }
 		set { _correctPostQuestions = value; }
+	}
+
+	public static Dictionary<int, List<string>> SurveyQuestions
+	{
+		get { return _surveyQuestions; }
+		set { _surveyQuestions = value; }
+	}
+
+	public static Dictionary<int, List<string>> TeacherQuestions
+	{
+		get { return _teacherQuestions; }
+		set { _teacherQuestions = value; }
 	}
 
 	public static bool TPJComplete
