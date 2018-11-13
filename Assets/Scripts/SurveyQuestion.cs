@@ -12,6 +12,8 @@ public class SurveyQuestion
 	private int _numResponses;
 	private List<string> _responses;
 	private bool _hasWriteIn;
+	private bool _canSkip;
+	private bool _allowsMultipleAnswers;
 
 	public SurveyQuestion(Dictionary<string, string> surveyQuestionDictionary)
 	{
@@ -20,6 +22,8 @@ public class SurveyQuestion
 		_ID = int.Parse(surveyQuestionDictionary["ID"]);
 		_numResponses = int.Parse(surveyQuestionDictionary["NumResponses"]);
 		_responses = new List<string>();
+		_canSkip = bool.Parse(surveyQuestionDictionary["CanSkip"]);
+		_allowsMultipleAnswers = bool.Parse(surveyQuestionDictionary["AllowsMultipleAnswers"]);
 
 		for (int i = 1; i < _numResponses + 1; i++) 
 		{
@@ -55,5 +59,17 @@ public class SurveyQuestion
 	{
 		get { return _hasWriteIn; }
 		set {_hasWriteIn = value; }
+	}
+
+	public bool CanSkip
+	{
+		get { return _canSkip; }
+		set { _canSkip = value; }
+	}
+
+	public bool AllowsMultipleAnswers
+	{
+		get { return _allowsMultipleAnswers; }
+		set { _allowsMultipleAnswers = value; }
 	}
 }

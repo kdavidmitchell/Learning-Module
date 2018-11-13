@@ -53,6 +53,12 @@ public class SurveyQuestionDB : MonoBehaviour
 						break;
 					case "HasWriteIn":
 						surveyQuestionDictionary.Add("HasWriteIn", content.InnerText);
+						break;
+					case "CanSkip":
+						surveyQuestionDictionary.Add("CanSkip", content.InnerText);
+						break;
+					case "AllowsMultipleAnswers":
+						surveyQuestionDictionary.Add("AllowsMultipleAnswers", content.InnerText);
 						break;			
 				}
 

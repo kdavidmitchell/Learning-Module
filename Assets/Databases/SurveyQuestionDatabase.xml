@@ -10,6 +10,8 @@
 		<Response5>a link on a blog or other type of site</Response5>
 		<Response6>Other (please elaborate):</Response6>
 		<HasWriteIn>true</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
@@ -18,10 +20,12 @@
 		<NumResponses>1</NumResponses>
 		<Response1>Please elaborate:</Response1>
 		<HasWriteIn>true</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>What led you to the dyslexia learning module?</QuestionText>
+		<QuestionText>Which best describes your gender?</QuestionText>
 		<ID>3</ID>
 		<NumResponses>5</NumResponses>
 		<Response1>Male</Response1>
@@ -30,6 +34,8 @@
 		<Response4>Transgender</Response4>
 		<Response5>I choose not to respond</Response5>
 		<HasWriteIn>false</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
@@ -45,6 +51,8 @@
 		<Response7>65 years or older</Response7>
 		<Response8>I choose not to respond</Response8>
 		<HasWriteIn>false</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
@@ -63,10 +71,12 @@
 		<Response10>MD — Doctor of Medicine</Response10>
 		<Response11>Other (please elaborate):</Response11>
 		<HasWriteIn>true</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>What about your current employment situation or education status?  (check all that apply)</QuestionText>
+		<QuestionText>What about your current employment situation or education status? (check all that apply)</QuestionText>
 		<ID>6</ID>
 		<NumResponses>10</NumResponses>
 		<Response1>part-time student</Response1>
@@ -80,22 +90,28 @@
 		<Response9>raising children or keeping house full-time</Response9>
 		<Response10>something else (please elaborate):</Response10>
 		<HasWriteIn>true</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>true</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>If you are currently working either full-time or part-time for pay, what is your current occupation?<QuestionText>
+		<QuestionText>If you are currently working either full-time or part-time for pay, what is your current occupation? Please leave blank if this does not apply to you.</QuestionText>
 		<ID>7</ID>
 		<NumResponses>1</NumResponses>
-		<Response1>Please elaborate (or leave blank if this does not apply to you):</Response1>
+		<Response1>Please elaborate:</Response1>
 		<HasWriteIn>true</HasWriteIn>
+		<CanSkip>true</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>How long have you been in this occupation?<QuestionText>
+		<QuestionText>How long have you been in this occupation? Please leave blank if this does not apply to you.</QuestionText>
 		<ID>8</ID>
 		<NumResponses>1</NumResponses>
-		<Response1>Please elaborate (or leave blank if this does not apply to you):</Response1>
+		<Response1>Please elaborate:</Response1>
 		<HasWriteIn>true</HasWriteIn>
+		<CanSkip>true</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
@@ -111,40 +127,50 @@
 		<Response7>Medical doctor / physician</Response7>
 		<Response8>None of the above</Response8>
 		<HasWriteIn>false</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>true</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>Are you a parent?<QuestionText>
+		<QuestionText>Are you a parent?</QuestionText>
 		<ID>10</ID>
 		<NumResponses>2</NumResponses>
 		<Response1>Yes</Response1>
 		<Response2>No</Response2>
 		<HasWriteIn>false</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>If you are a parent, how many children do you have?<QuestionText>
+		<QuestionText>If you are a parent, how many children do you have? Please leave blank if this does not apply to you.</QuestionText>
 		<ID>11</ID>
 		<NumResponses>1</NumResponses>
-		<Response1>Please elaborate (or leave blank if this does not apply to you):</Response1>
+		<Response1>Please elaborate:</Response1>
 		<HasWriteIn>true</HasWriteIn>
+		<CanSkip>true</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>If you are a parent, what are the ages of your children?<QuestionText>
+		<QuestionText>If you are a parent, what are the ages of your children? Please leave blank if this does not apply to you.</QuestionText>
 		<ID>12</ID>
 		<NumResponses>1</NumResponses>
-		<Response1>Please elaborate (or leave blank if this does not apply to you):</Response1>
+		<Response1>Please elaborate:</Response1>
 		<HasWriteIn>true</HasWriteIn>
+		<CanSkip>true</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>Have you completed a bachelor’s or higher degree?<QuestionText>
+		<QuestionText>Have you completed a bachelor’s or higher degree?</QuestionText>
 		<ID>13</ID>
 		<NumResponses>2</NumResponses>
 		<Response1>Yes</Response1>
 		<Response2>No</Response2>
 		<HasWriteIn>false</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
@@ -171,10 +197,12 @@
 		<Response18>Social Science</Response18>
 		<Response19>Other (please elaborate):</Response19>
 		<HasWriteIn>true</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>Please indicate which of the following you read regularly.  Check all that apply.</QuestionText>
+		<QuestionText>Please indicate which of the following you read regularly. (check all that apply)</QuestionText>
 		<ID>15</ID>
 		<NumResponses>6</NumResponses>
 		<Response1>Newspaper</Response1>
@@ -184,10 +212,12 @@
 		<Response5>Peer-reviewed scientific journals (e.g., Science, Nature, Cell, Neuron, Child Development, Journal of Educational Psychology, Journal of Special Education)</Response5>
 		<Response6>If you selected peer-reviewed scientific journals, please name a frequently read journal:</Response6>
 		<HasWriteIn>true</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>true</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>Have you ever taken a college/university course related to the brain or neuroscience?<QuestionText>
+		<QuestionText>Have you ever taken a college/university course related to the brain or neuroscience?</QuestionText>
 		<ID>16</ID>
 		<NumResponses>4</NumResponses>
 		<Response1>Yes, many</Response1>
@@ -195,6 +225,8 @@
 		<Response3>Yes, one</Response3>
 		<Response4>No</Response4>
 		<HasWriteIn>false</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
@@ -208,6 +240,8 @@
 		<Response5>Hardly ever</Response5>
 		<Response6>Never</Response6>
 		<HasWriteIn>false</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
@@ -222,6 +256,8 @@
 		<Response6>Disagree</Response6>
 		<Response7>Strongly disagree</Response7>
 		<HasWriteIn>false</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
@@ -236,6 +272,8 @@
 		<Response6>Disagree</Response6>
 		<Response7>Strongly disagree</Response7>
 		<HasWriteIn>false</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 
 	<SurveyQuestion>
@@ -248,5 +286,7 @@
 		<Response4>More genes than the environment</Response4>
 		<Response5>All genes</Response5>
 		<HasWriteIn>false</HasWriteIn>
+		<CanSkip>false</CanSkip>
+		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
 	</SurveyQuestion>
 </SurveyQuestions>

@@ -75,6 +75,8 @@ public class Posttest : MonoBehaviour
 			if (trueToggle.isOn)
 			{
 				Debug.Log("Correct!");
+				GameInformation.CorrectPostQuestions.Add(shuffledQuestions[questionIndex - 1]);
+				Debug.Log(GameInformation.CorrectPostQuestions.Count);
 			} else 
 			{
 				Debug.Log("Incorrect. :(");
@@ -85,6 +87,8 @@ public class Posttest : MonoBehaviour
 			if (falseToggle.isOn)
 			{
 				Debug.Log("Correct!");
+				GameInformation.CorrectPostQuestions.Add(shuffledQuestions[questionIndex - 1]);
+				Debug.Log(GameInformation.CorrectPostQuestions.Count);
 			} else 
 			{
 				Debug.Log("Incorrect. :(");
@@ -104,9 +108,9 @@ public class Posttest : MonoBehaviour
 			DisplayNextQuestion();
 		} else 
 		{
-			for (int i = 0; i < GameInformation.PreCertainty.Length; i++) 
+			for (int i = 0; i < GameInformation.PostCertainty.Length; i++) 
 			{
-				Debug.Log(GameInformation.PreCertainty[i].ToString());
+				Debug.Log(GameInformation.PostCertainty[i].ToString());
 			}
 			paper.SetActive(false);
 			endText.SetActive(true);
@@ -121,13 +125,13 @@ public class Posttest : MonoBehaviour
 	{
 		if (rating0.isOn)
 		{
-			GameInformation.PreCertainty[questionIndex - 1] = 0;
+			GameInformation.PostCertainty[questionIndex - 1] = 0;
 		} else if (rating1.isOn)
 		{
-			GameInformation.PreCertainty[questionIndex - 1] = 1;
+			GameInformation.PostCertainty[questionIndex - 1] = 1;
 		} else if (rating2.isOn)
 		{
-			GameInformation.PreCertainty[questionIndex - 1] = 2;
+			GameInformation.PostCertainty[questionIndex - 1] = 2;
 		}
 
 	}

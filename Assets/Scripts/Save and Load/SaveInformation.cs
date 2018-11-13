@@ -19,6 +19,11 @@ public class SaveInformation
         	PPSerialization.Save("POST_QUESTIONS", GameInformation.PostQuestions);
         }
 
+        if (GameInformation.CorrectPostQuestions != null)
+        {
+            PPSerialization.Save("CORRECT_POST_QUESTIONS", GameInformation.CorrectPostQuestions);
+        }
+
         if (GameInformation.PreCertainty != null)
         {
             PPSerialization.Save("PRE_CERTAINTY", GameInformation.PreCertainty);
