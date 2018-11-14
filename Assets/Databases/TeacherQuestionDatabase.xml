@@ -10,10 +10,10 @@
 	</TeacherQuestion>
 
 	<TeacherQuestion>
-		<QuestionText>If you are employed in the USA, which state?</QuestionText>
+		<QuestionText>If you are employed in the USA, which state? Leave blank if this does not apply to you.</QuestionText>
 		<ID>2</ID>
 		<NumResponses>1</NumResponses>
-		<Response1>Please elaborate (or leave blank if this does not apply to you):</Response1>
+		<Response1>Please elaborate:</Response1>
 		<HasWriteIn>true</HasWriteIn>
 		<CanSkip>true</CanSkip>
 		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
@@ -68,7 +68,7 @@
 		<Response15>Ages 17-18: Grade 12 / Year 13</Response15>
 		<Response16>Higher education college/university</Response16>
 		<Response17>Adult learning</Response17>
-		<Response18>Other (please specify):</Response18>
+		<Response18>Other (specify):</Response18>
 		<HasWriteIn>true</HasWriteIn>
 		<CanSkip>false</CanSkip>
 		<AllowsMultipleAnswers>true</AllowsMultipleAnswers>
@@ -90,7 +90,7 @@
 		<Response10>Life skills</Response10>
 		<Response11>Vocational skills</Response11>
 		<Response12>Not relevant to me</Response12>
-		<Response13>Other (please specify):</Response13>
+		<Response13>Other (specify):</Response13>
 		<HasWriteIn>true</HasWriteIn>
 		<CanSkip>true</CanSkip>
 		<AllowsMultipleAnswers>true</AllowsMultipleAnswers>
@@ -118,7 +118,7 @@
 		<Response16>Public Policy</Response16>
 		<Response17>Science</Response17>
 		<Response18>Social Science</Response18>
-		<Response19>Other (please specify):</Response19>
+		<Response19>Other (specify):</Response19>
 		<HasWriteIn>true</HasWriteIn>
 		<CanSkip>true</CanSkip>
 		<AllowsMultipleAnswers>true</AllowsMultipleAnswers>
@@ -168,7 +168,7 @@
 		<Response4>Master (e.g., MEd, MA, MS)</Response4>
 		<Response5>Post-graduate qualification (e.g., CAGS, PGCE)</Response5>
 		<Response6>Doctorate (PhD, EdD)</Response6>
-		<Response7>Other (please specify):</Response7>
+		<Response7>Other (specify):</Response7>
 		<HasWriteIn>true</HasWriteIn>
 		<CanSkip>false</CanSkip>
 		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
@@ -230,7 +230,7 @@
 		<QuestionText>If you would like to share any other information, please do so here (or leave blank).</QuestionText>
 		<ID>16</ID>
 		<NumResponses>1</NumResponses>
-		<Response1>Please share your information in this box:</Response1>
+		<Response1>Please share here:</Response1>
 		<HasWriteIn>true</HasWriteIn>
 		<CanSkip>true</CanSkip>
 		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>

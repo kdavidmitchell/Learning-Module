@@ -195,7 +195,7 @@
 		<Response16>Public Policy</Response16>
 		<Response17>Science</Response17>
 		<Response18>Social Science</Response18>
-		<Response19>Other (please elaborate):</Response19>
+		<Response19>Other (specify):</Response19>
 		<HasWriteIn>true</HasWriteIn>
 		<CanSkip>false</CanSkip>
 		<AllowsMultipleAnswers>false</AllowsMultipleAnswers>
