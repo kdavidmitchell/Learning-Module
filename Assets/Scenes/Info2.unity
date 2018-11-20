@@ -383,6 +383,8 @@ MonoBehaviour:
   player: {fileID: 734323177}
   can: {fileID: 1734527661}
   audioSource: {fileID: 734323178}
+  clip: {fileID: 8300000, guid: 2dd0fcd77c897a54298b4df65e1e3d19, type: 3}
+  videoName: trimmed_visual_system.mp4
 --- !u!114 &417374793
 MonoBehaviour:
   m_ObjectHideFlags: 0

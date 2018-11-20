@@ -12,6 +12,9 @@ public class MoviePlayer : MonoBehaviour
 	public VideoPlayer player;
 	public Canvas can;
 	public AudioSource audioSource;
+	public AudioClip clip;
+
+	public string videoName;
 
 	// Use this for initialization
 	void Start () {
@@ -27,12 +30,13 @@ public class MoviePlayer : MonoBehaviour
 	{
 		mainCam.gameObject.SetActive(false);
 		videoCam.gameObject.SetActive(true);
+		videoCam.gameObject.GetComponent<AudioSource>().clip = clip;
 		can.gameObject.SetActive(false);
 	}
 
 	public void PlayMovie()
 	{
-		player.url = System.IO.Path.Combine(Application.streamingAssetsPath, "trimmed_visual_system.mp4");
+		player.url = System.IO.Path.Combine(Application.streamingAssetsPath, videoName);
 		player.SetTargetAudioSource(0, audioSource);
 		player.loopPointReached += EndReached;
 		player.Prepare();
