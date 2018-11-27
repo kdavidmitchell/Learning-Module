@@ -26,6 +26,7 @@ public class TopicManager : MonoBehaviour
 
 	public GameObject readingGraphic;
 	public GameObject differencesGraphic;
+	public GameObject wrongGraphic;
 
 	private GameObject[] topicButtons = new GameObject[4];
 	private GameObject[] topicTexts = new GameObject[4];
@@ -76,6 +77,11 @@ public class TopicManager : MonoBehaviour
 		if (differencesGraphic != null)
 		{
 			differencesGraphic.SetActive(false);
+		}
+
+		if (wrongGraphic != null)
+		{
+			wrongGraphic.SetActive(false);
 		}
 	}
 	
@@ -138,6 +144,11 @@ public class TopicManager : MonoBehaviour
 		if (differencesGraphic != null)
 		{
 			differencesGraphic.SetActive(false);
+		}
+
+		if (wrongGraphic != null)
+		{
+			wrongGraphic.SetActive(false);
 		}
 	}
 
@@ -227,6 +238,11 @@ public class TopicManager : MonoBehaviour
 		Text topicTitleText = selectedTopicTitle.GetComponentInChildren<Text>();
 		topicTitleText.text = "When things go wrong";
 
+		if (wrongGraphic != null)
+		{
+			wrongGraphic.SetActive(true);
+		}
+
 		wrongBodyText.SetActive(true);
 
 		topicReturnButton.SetActive(true);
@@ -253,6 +269,9 @@ public class TopicManager : MonoBehaviour
 			} else if (buildIndex == 16)
 			{
 				GameInformation.RHComplete = true;
+			} else if (buildIndex == 20)
+			{
+				GameInformation.IFGComplete = true;
 			}
 			
 			SaveInformation.SaveAllInformation();

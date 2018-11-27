@@ -16,6 +16,7 @@ public class GameInformation : MonoBehaviour
 	private static bool _TPJComplete = false;
 	private static bool _OTComplete = false;
 	private static bool _RHComplete = false;
+	private static bool _IFGComplete = false;
 	private static bool _allAreasComplete = false;
 	private static bool _interventionComplete = false;
 
@@ -70,6 +71,12 @@ public class GameInformation : MonoBehaviour
 	{
 		get { return _RHComplete; }
 		set { _RHComplete = value; }
+	}
+
+	public static bool IFGComplete
+	{
+		get { return _IFGComplete; }
+		set { _IFGComplete = value; }
 	}
 
 	public static bool AllAreasComplete

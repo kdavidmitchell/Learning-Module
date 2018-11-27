@@ -48,6 +48,21 @@ public class SaveInformation
         {
             PlayerPrefs.SetInt("TPJ_COMPLETE", Convert.ToInt32(GameInformation.TPJComplete));
         }
+        
+        if (GameInformation.OTComplete != null)
+        {
+            PlayerPrefs.SetInt("OT_COMPLETE", Convert.ToInt32(GameInformation.OTComplete));
+        }
+
+        if (GameInformation.RHComplete != null)
+        {
+            PlayerPrefs.SetInt("RH_COMPLETE", Convert.ToInt32(GameInformation.RHComplete));
+        }
+
+        if (GameInformation.IFGComplete != null)
+        {
+            PlayerPrefs.SetInt("IFG_COMPLETE", Convert.ToInt32(GameInformation.IFGComplete));
+        }
 
         if (GameInformation.AllAreasComplete != null)
         {

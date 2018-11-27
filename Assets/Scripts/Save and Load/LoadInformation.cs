@@ -49,6 +49,21 @@ public class LoadInformation
             GameInformation.TPJComplete = Convert.ToBoolean(PlayerPrefs.GetInt("TPJ_COMPLETE"));
         }
 
+        if (PlayerPrefs.GetInt("OT_COMPLETE") != null)
+        {
+            GameInformation.OTComplete = Convert.ToBoolean(PlayerPrefs.GetInt("OT_COMPLETE"));
+        }
+
+        if (PlayerPrefs.GetInt("RH_COMPLETE") != null)
+        {
+            GameInformation.RHComplete = Convert.ToBoolean(PlayerPrefs.GetInt("RH_COMPLETE"));
+        }
+
+        if (PlayerPrefs.GetInt("IFG_COMPLETE") != null)
+        {
+            GameInformation.IFGComplete = Convert.ToBoolean(PlayerPrefs.GetInt("IFG_COMPLETE"));
+        }
+
         if (PlayerPrefs.GetInt("ALL_AREAS_COMPLETE") != null)
         {
             GameInformation.AllAreasComplete = Convert.ToBoolean(PlayerPrefs.GetInt("ALL_AREAS_COMPLETE"));

@@ -67,7 +67,15 @@ public class AreaSelectionManager : MonoBehaviour
 			Destroy(areaFade);
 		}
 
-		if (GameInformation.TPJComplete && GameInformation.OTComplete && GameInformation.RHComplete)
+		if (GameInformation.IFGComplete)
+		{
+			areaRenderer = GameObject.Find("IFG").GetComponent<Renderer>();
+			areaRenderer.material.SetColor("_EmissionColor", completeColor);
+			areaFade = GameObject.Find("IFG").GetComponent<Fade>();
+			Destroy(areaFade);
+		}
+
+		if (GameInformation.TPJComplete && GameInformation.OTComplete && GameInformation.RHComplete && GameInformation.IFGComplete)
 		{
 			GameInformation.AllAreasComplete = true;
 			SaveInformation.SaveAllInformation();

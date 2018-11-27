@@ -65,3 +65,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demographics2.unity
     guid: 972ccaeecf92df8409160f5fa688166f
+  - enabled: 1
+    path: Assets/Scenes/IFG_Area.unity
+    guid: b75ccf4f73a65064dadfb32d53306a7d
