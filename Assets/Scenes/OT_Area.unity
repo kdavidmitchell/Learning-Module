@@ -4339,6 +4339,7 @@ MonoBehaviour:
   exampleSpace: {fileID: 1781274629}
   readingGraphic: {fileID: 629440398}
   differencesGraphic: {fileID: 0}
+  wrongGraphic: {fileID: 0}
 --- !u!4 &1441940848
 Transform:
   m_ObjectHideFlags: 0
