@@ -45,6 +45,7 @@ public class MoviePlayer : MonoBehaviour
 
 	void EndReached(VideoPlayer player)
 	{
+		player.Stop();
 		mainCam.gameObject.SetActive(true);
 		videoCam.gameObject.SetActive(false);
 		can.gameObject.SetActive(true);
