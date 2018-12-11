@@ -10,10 +10,12 @@ public class HoverText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 	public GameObject hoverTextPrefab;
 	public string definition;
 	private GameObject instance;
+	//private GameObject prefabHolder;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start () 
+	{
+		//prefabHolder = GameObject.Find("HoverPrefabHolder");	
 	}
 	
 	// Update is called once per frame
