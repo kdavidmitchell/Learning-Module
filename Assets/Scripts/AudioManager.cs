@@ -32,11 +32,16 @@ public class AudioManager : MonoBehaviour
         efxSource.clip = clip;
         
         //Play the clip.
-        efxSource.Play ();
+        efxSource.Play();
     }
 	
 	public void SearchAndPlaySpeechClip(int index)
 	{
 		PlaySingle(speechClips[index]);
 	}
+
+    private void OnLevelWasLoaded()
+    {
+        efxSource.Stop();
+    }
 }

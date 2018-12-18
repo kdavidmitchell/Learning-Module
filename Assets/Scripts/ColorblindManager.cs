@@ -39,52 +39,57 @@ public class ColorblindManager : MonoBehaviour
 	{
 		if (GameInformation.ColorblindMode)
 		{
-			RenderSettings.skybox = skyboxCB;
+			UpdateColorScheme();
+		}
+	}
 
-			GameObject[] lightBorderObj = GameObject.FindGameObjectsWithTag("LightBorder");
-			for (int i = 0; i < lightBorderObj.Length; i++) 
+	public void UpdateColorScheme()
+	{
+		RenderSettings.skybox = skyboxCB;
+
+		GameObject[] lightBorderObj = GameObject.FindGameObjectsWithTag("LightBorder");
+		for (int i = 0; i < lightBorderObj.Length; i++) 
+		{
+			lightBorderObj[i].GetComponent<Image>().color = lightBorder;
+		}
+
+		GameObject[] darkBorderObj = GameObject.FindGameObjectsWithTag("DarkBorder");
+		for (int i = 0; i < darkBorderObj.Length; i++) 
+		{
+			darkBorderObj[i].GetComponent<Image>().color = darkBorder;
+		}
+
+		GameObject[] lightBGObj = GameObject.FindGameObjectsWithTag("LightBG");
+		for (int i = 0; i < lightBGObj.Length; i++) 
+		{
+			if (lightBGObj[i].GetComponent<Button>() != null)
 			{
-				lightBorderObj[i].GetComponent<Image>().color = lightBorder;
+				ColorBlock buttonColors = lightBGObj[i].GetComponent<Button>().colors;
+				buttonColors.normalColor = lightBG;
+				lightBGObj[i].GetComponent<Button>().colors = buttonColors;
+			} else if (lightBGObj[i].GetComponent<Image>() != null)
+			{
+				lightBGObj[i].GetComponent<Image>().color = lightBG;
 			}
+		}
 
-			GameObject[] darkBorderObj = GameObject.FindGameObjectsWithTag("DarkBorder");
-			for (int i = 0; i < darkBorderObj.Length; i++) 
-			{
-				darkBorderObj[i].GetComponent<Image>().color = darkBorder;
-			}
+		GameObject[] darkBGObj = GameObject.FindGameObjectsWithTag("DarkBG");
+		for (int i = 0; i < darkBGObj.Length; i++) 
+		{
+			darkBGObj[i].GetComponent<Image>().color = darkBG;
+		}
 
-			GameObject[] lightBGObj = GameObject.FindGameObjectsWithTag("LightBG");
-			for (int i = 0; i < lightBGObj.Length; i++) 
+		GameObject[] highlightObj = GameObject.FindGameObjectsWithTag("Highlight");
+		for (int i = 0; i < highlightObj.Length; i++) 
+		{
+			if (highlightObj[i].GetComponent<Button>() != null)
 			{
-				if (lightBGObj[i].GetComponent<Button>() != null)
-				{
-					ColorBlock buttonColors = lightBGObj[i].GetComponent<Button>().colors;
-					buttonColors.normalColor = lightBG;
-					lightBGObj[i].GetComponent<Button>().colors = buttonColors;
-				} else if (lightBGObj[i].GetComponent<Image>() != null)
-				{
-					lightBGObj[i].GetComponent<Image>().color = lightBG;
-				}
-			}
-
-			GameObject[] darkBGObj = GameObject.FindGameObjectsWithTag("DarkBG");
-			for (int i = 0; i < darkBGObj.Length; i++) 
+				ColorBlock buttonColors = highlightObj[i].GetComponent<Button>().colors;
+				buttonColors.normalColor = highlight;
+				highlightObj[i].GetComponent<Button>().colors = buttonColors;
+			} else if (highlightObj[i].GetComponent<Image>() != null)
 			{
-				darkBGObj[i].GetComponent<Image>().color = darkBG;
-			}
-
-			GameObject[] highlightObj = GameObject.FindGameObjectsWithTag("Highlight");
-			for (int i = 0; i < highlightObj.Length; i++) 
-			{
-				if (highlightObj[i].GetComponent<Button>() != null)
-				{
-					ColorBlock buttonColors = highlightObj[i].GetComponent<Button>().colors;
-					buttonColors.normalColor = highlight;
-					highlightObj[i].GetComponent<Button>().colors = buttonColors;
-				} else if (highlightObj[i].GetComponent<Image>() != null)
-				{
-					highlightObj[i].GetComponent<Image>().color = highlight;
-				}
+				highlightObj[i].GetComponent<Image>().color = highlight;
 			}
 		}
 	}

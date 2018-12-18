@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OptionsManager : MonoBehaviour 
 {
 
 	public GameObject changesButton;
-	public Toggle colorblindModeToggle; 
+	public Toggle colorblindModeToggle;
+
+	private ColorblindManager cbm; 
 
 	// Use this for initialization
 	void Start () 
@@ -26,10 +29,13 @@ public class OptionsManager : MonoBehaviour
 		{
 			GameInformation.ColorblindMode = true;
 			SaveInformation.SaveAllInformation();
+			cbm = GameObject.Find("ColorblindManager").GetComponent<ColorblindManager>();
+			cbm.UpdateColorScheme();
 		} else 
 		{
 			GameInformation.ColorblindMode = false;
-			SaveInformation.SaveAllInformation();	
+			SaveInformation.SaveAllInformation();
+			SceneManager.LoadScene(14);	
 		}
 	}
 }
