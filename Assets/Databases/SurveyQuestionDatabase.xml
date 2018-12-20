@@ -153,7 +153,7 @@
 	</SurveyQuestion>
 
 	<SurveyQuestion>
-		<QuestionText>If you are a parent, what are the ages of your children? Please leave blank if this does not apply to you.</QuestionText>
+		<QuestionText>If you are a parent, what are the ages of your children (separate by commas)? Please leave blank if this does not apply to you.</QuestionText>
 		<ID>12</ID>
 		<NumResponses>1</NumResponses>
 		<Response1>Please elaborate:</Response1>
