@@ -36,6 +36,7 @@ public class MoviePlayer : MonoBehaviour
 
 	public void PlayMovie()
 	{
+		SetActivePlayer();
 		player.url = System.IO.Path.Combine(Application.streamingAssetsPath, videoName);
 		player.SetTargetAudioSource(0, audioSource);
 		player.loopPointReached += EndReached;
@@ -49,5 +50,22 @@ public class MoviePlayer : MonoBehaviour
 		mainCam.gameObject.SetActive(true);
 		videoCam.gameObject.SetActive(false);
 		can.gameObject.SetActive(true);
+		VideoController.videoIsPlaying = false;
+	}
+
+	public void SetActivePlayer()
+	{
+		VideoController.activePlayer = player;
+		VideoController.activeMoviePlayer = this;
+		VideoController.videoIsPlaying = true;
+	}
+
+	public void EndPlaybackAndReturn()
+	{
+		player.Stop();
+		mainCam.gameObject.SetActive(true);
+		videoCam.gameObject.SetActive(false);
+		can.gameObject.SetActive(true);
+		VideoController.videoIsPlaying = false;
 	}
 }

@@ -19,6 +19,7 @@ public class Pretest : MonoBehaviour
 	private Toggle rating2;
 	private GameObject endText;
 	private GameObject paper;
+	private Image progressFill;
 
 	private int questionIndex = 0;
 	private bool currentAnswer = false;
@@ -38,6 +39,7 @@ public class Pretest : MonoBehaviour
 		rating2 = GameObject.Find("VeryConfidentToggle").GetComponent<Toggle>();
 		endText = GameObject.Find("BodyBorder");
 		paper = GameObject.Find("Paper");
+		progressFill = GameObject.Find("Fill").GetComponent<Image>();
 
 		nextSceneButton.SetActive(false);
 		submitButton.SetActive(false);
@@ -100,7 +102,8 @@ public class Pretest : MonoBehaviour
 		rating2.isOn = false;
 
 		if (questionIndex != shuffledQuestions.Count)
-		{ 
+		{
+			progressFill.fillAmount = ((float)questionIndex / (float)shuffledQuestions.Count);
 			DisplayNextQuestion();
 		} else 
 		{
@@ -108,13 +111,14 @@ public class Pretest : MonoBehaviour
 			{
 				Debug.Log(GameInformation.PreCertainty[i].ToString());
 			}
+			progressFill.fillAmount = ((float)questionIndex / (float)shuffledQuestions.Count);
 			paper.SetActive(false);
 			endText.SetActive(true);
 			nextSceneButton.SetActive(true);	
 		}
 
 		SaveInformation.SaveAllInformation();
-		Debug.Log(GameInformation.PreQuestions.Count);
+		Debug.Log(GameInformation.PreQuestions.Count); 
 	}
 
 	public void SaveCertaintyRating()

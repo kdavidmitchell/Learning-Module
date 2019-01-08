@@ -10,6 +10,7 @@ TagManager:
   - LightBG
   - DarkBG
   - Highlight
+  - Camera
   layers:
   - Default
   - TransparentFX

@@ -744,7 +744,7 @@ GameObject:
   - component: {fileID: 227872667}
   m_Layer: 0
   m_Name: Camera2
-  m_TagString: Untagged
+  m_TagString: Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1412,7 +1412,7 @@ GameObject:
   - component: {fileID: 297294440}
   m_Layer: 0
   m_Name: Camera3
-  m_TagString: Untagged
+  m_TagString: Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5123,7 +5123,7 @@ GameObject:
   - component: {fileID: 1444893390}
   m_Layer: 0
   m_Name: Camera1
-  m_TagString: Untagged
+  m_TagString: Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
