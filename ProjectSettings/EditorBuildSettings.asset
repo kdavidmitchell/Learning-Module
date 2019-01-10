@@ -80,4 +80,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intervention4.unity
     guid: 301134e06cc0b704b984d4e9db75bbea
+  - enabled: 1
+    path: Assets/Scenes/Resources.unity
+    guid: e297ffd8fcdee4b498ef4e978991bb48
+  - enabled: 1
+    path: Assets/Scenes/Resources2.unity
+    guid: 49cede47b7bff4f4281fa8829ceedf40
   m_configObjects: {}
