@@ -189,17 +189,17 @@
 	</PostQuestion>
 
 	<PostQuestion>
-		<QuestionText>Children are less attentive after consuming sugary drinks and/or snacks.</QuestionText>
-		<CorrectAnswer>false</CorrectAnswer>
+		<QuestionText>Consuming sugary drinks and/or snacks does not make children less attentive.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
 		<ID>28</ID>
-		<Explanation>False.</Explanation>
+		<Explanation>True.</Explanation>
 	</PostQuestion>
 
 	<PostQuestion>
-		<QuestionText>Exercises that rehearse coordination of motor-perception skills can improve literacy skills.</QuestionText>
-		<CorrectAnswer>false</CorrectAnswer>
+		<QuestionText>Exercises that rehearse coordination of motor-perception skills do not improve literacy skills.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
 		<ID>29</ID>
-		<Explanation>False.</Explanation>
+		<Explanation>True.</Explanation>
 	</PostQuestion>
 
 	<PostQuestion>
@@ -210,16 +210,16 @@
 	</PostQuestion>
 
 	<PostQuestion>
-		<QuestionText>Short bouts of motor coordination exercises can improve integration of left and right hemisphere brain function.</QuestionText>
-		<CorrectAnswer>false</CorrectAnswer>
+		<QuestionText>Short bouts of motor coordination exercises do not improve integration of left and right hemisphere brain function.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
 		<ID>31</ID>
-		<Explanation>False.</Explanation>
+		<Explanation>True.</Explanation>
 	</PostQuestion>
 
 	<PostQuestion>
-		<QuestionText>Listening to classical music increases children’s reasoning ability.</QuestionText>
-		<CorrectAnswer>false</CorrectAnswer>
+		<QuestionText>Listening to classical music does not increase children’s reasoning ability.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
 		<ID>32</ID>
-		<Explanation>False.</Explanation>
+		<Explanation>True.</Explanation>
 	</PostQuestion>
 </PostQuestions>

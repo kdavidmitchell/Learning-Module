@@ -2346,7 +2346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d9b7af4f7bac24ab7e20501b25861f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechClip: {fileID: 8300000, guid: 7facba24698b1444e978324550512d62, type: 3}
+  speechClip: {fileID: 8300000, guid: 74fbb255444dc7c40bf5255f63d16ebc, type: 3}
 --- !u!114 &704312553
 MonoBehaviour:
   m_ObjectHideFlags: 0
