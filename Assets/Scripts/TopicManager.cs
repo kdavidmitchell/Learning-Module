@@ -21,7 +21,7 @@ public class TopicManager : MonoBehaviour
 	public GameObject areaReturnButton;
 
 	public GameObject topicSelectSpeechButton;
-	public GameObject readingSpeechButton;
+	public SpeechButton sb;
 	public GameObject exampleSpace;
 
 	public GameObject readingGraphic;
@@ -48,6 +48,8 @@ public class TopicManager : MonoBehaviour
 		topicTexts[2] = differencesBodyText;
 		topicTexts[3] = wrongBodyText;
 
+		sb = topicSelectSpeechButton.GetComponentInChildren<SpeechButton>();
+
 		for (int i = 0; i < topicTexts.Length; i++) 
 		{
 			if (topicTexts[i] != null)
@@ -67,7 +69,6 @@ public class TopicManager : MonoBehaviour
 		selectedTopicTitle.SetActive(false);
 		topicReturnButton.SetActive(false);
 		areaReturnButton.SetActive(false);
-		readingSpeechButton.SetActive(false);
 
 		if (readingGraphic != null)
 		{
@@ -103,7 +104,6 @@ public class TopicManager : MonoBehaviour
 
 	public void ReturnToTopicSelect()
 	{
-		readingSpeechButton.SetActive(false);
 		selectedTopicTitle.SetActive(false);
 		topicReturnButton.SetActive(false);
 		
@@ -127,8 +127,6 @@ public class TopicManager : MonoBehaviour
 			topicButtons[3].SetActive(true);
 			topicButtons[2].SetActive(true);
 		}
-		
-		topicSelectSpeechButton.SetActive(true);
 
 		if (ExampleManager.exampleIsActive)
 		{
@@ -161,8 +159,6 @@ public class TopicManager : MonoBehaviour
 				topicButtons[i].SetActive(false);
 			}
 		}
-		
-		topicSelectSpeechButton.SetActive(false);
 
 		selectedTopicTitle.SetActive(true);
 		Text topicTitleText = selectedTopicTitle.GetComponentInChildren<Text>();
@@ -180,7 +176,6 @@ public class TopicManager : MonoBehaviour
 
 		topicReturnButton.SetActive(true);
 		areaReturnButton.SetActive(false);
-		readingSpeechButton.SetActive(true);
 		readingButton.SetActive(false);
 
 		readingDone = true;
@@ -276,6 +271,11 @@ public class TopicManager : MonoBehaviour
 			
 			SaveInformation.SaveAllInformation();
 		}
+	}
+
+	public void SwitchAudioClip(AudioClip clip)
+	{
+		sb.speechClip = clip;
 	}
 
 	
