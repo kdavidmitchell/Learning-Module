@@ -13,6 +13,11 @@ public class InterventionManager : MonoBehaviour
 	public GameObject backward;
 	public GameObject nextSceneButton;
 
+	public GameObject topicSelectSpeechButton;
+	public SpeechButton sb;
+
+	public AudioClip[] clips = new AudioClip[5];
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -26,6 +31,8 @@ public class InterventionManager : MonoBehaviour
 		}
 
 		nextSceneButton.SetActive(false);
+
+		sb = topicSelectSpeechButton.GetComponentInChildren<SpeechButton>();
 	}
 
 	void Update()
@@ -56,6 +63,8 @@ public class InterventionManager : MonoBehaviour
 			index++;
 			activeText = texts[index];
 			activeText.SetActive(true);
+
+			SwitchAudioClip();
 		}
 	}
 
@@ -67,6 +76,13 @@ public class InterventionManager : MonoBehaviour
 			index--;
 			activeText = texts[index];
 			activeText.SetActive(true);
+
+			SwitchAudioClip();
 		}
+	}
+
+	public void SwitchAudioClip()
+	{
+		sb.speechClip = clips[index];
 	}
 }

@@ -458,6 +458,14 @@ MonoBehaviour:
   forward: {fileID: 1546258655}
   backward: {fileID: 635852161}
   nextSceneButton: {fileID: 1029860740}
+  topicSelectSpeechButton: {fileID: 186836340}
+  sb: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: 351a35d9acab9a440b4695aced9ec952, type: 3}
+  - {fileID: 8300000, guid: 23a7b5de9f37bdc4384dda28d90401ed, type: 3}
+  - {fileID: 8300000, guid: 73f84cbdb7aed0f44bba94bd8ca8b020, type: 3}
+  - {fileID: 8300000, guid: c6cd905e4d67f1548bf86ebc7cebf5f4, type: 3}
+  - {fileID: 8300000, guid: 43cb832eed9cee84d93b9c4b5d92141e, type: 3}
 --- !u!4 &300424960
 Transform:
   m_ObjectHideFlags: 0
@@ -2742,7 +2750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d9b7af4f7bac24ab7e20501b25861f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechClip: {fileID: 8300000, guid: 63900897f6e61fa449f935e7d8be5964, type: 3}
+  speechClip: {fileID: 8300000, guid: 351a35d9acab9a440b4695aced9ec952, type: 3}
 --- !u!114 &2146141288
 MonoBehaviour:
   m_ObjectHideFlags: 0
