@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
 	public AudioSource efxSource;
 	public AudioSource musicSource;
 	public static AudioManager instance = null;
+    public static bool isMute = true;
 
 	public AudioClip[] speechClips = new AudioClip[11];
 
@@ -24,6 +25,17 @@ public class AudioManager : MonoBehaviour
         
         //Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
         DontDestroyOnLoad (gameObject);
+    }
+
+    void Update()
+    {
+        if (isMute)
+        {
+            efxSource.mute = true;
+        } else 
+        {
+            efxSource.mute = false;    
+        }
     }
 
     public void PlaySingle(AudioClip clip)

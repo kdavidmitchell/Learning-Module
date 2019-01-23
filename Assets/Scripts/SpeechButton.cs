@@ -21,5 +21,10 @@ public class SpeechButton : MonoBehaviour
 	public void PlaySpeechClip()
 	{
 		am.PlaySingle(speechClip);
+	}
+
+	public void ToggleMute()
+	{
+		AudioManager.isMute = !AudioManager.isMute;
 	} 
 }
