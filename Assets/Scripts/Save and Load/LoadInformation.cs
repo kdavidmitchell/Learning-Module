@@ -81,6 +81,11 @@ public class LoadInformation
             GameInformation.ColorblindMode = Convert.ToBoolean(PlayerPrefs.GetInt("COLORBLIND_MODE"));
         }
 
+        if (PlayerPrefs.GetInt("SPEECH_AUTOPLAY") != null)
+        {
+            GameInformation.SpeechAutoPlay = Convert.ToBoolean(PlayerPrefs.GetInt("SPEECH_AUTOPLAY"));
+        }
+
         Debug.Log("LOADED ALL INFORMATION.");
     }
 }

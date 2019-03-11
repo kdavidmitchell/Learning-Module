@@ -11,7 +11,7 @@ public class GameInformation : MonoBehaviour
 	private static List<PostQuestion> _correctPostQuestions = new List<PostQuestion>();
 	private static Dictionary<int, List<string>> _surveyQuestions = new Dictionary<int, List<string>>();
 	private static Dictionary<int, List<string>> _teacherQuestions = new Dictionary<int, List<string>>();
-	private static int[] _preCertainty = new int[2];
+	private static int[] _preCertainty = new int[32];
 	private static int[] _postCertainty = new int[32];
 	private static bool _TPJComplete = false;
 	private static bool _OTComplete = false;
@@ -24,6 +24,7 @@ public class GameInformation : MonoBehaviour
 
 	//Options
 	private static bool _colorblindMode = false;
+	private static bool _speechAutoPlay = false;
 
 	public static List<PreQuestion> PreQuestions
 	{
@@ -109,6 +110,12 @@ public class GameInformation : MonoBehaviour
 	{
 		get { return _colorblindMode; }
 		set { _colorblindMode = value; }
+	}
+
+	public static bool SpeechAutoPlay
+	{
+		get { return _speechAutoPlay; }
+		set { _speechAutoPlay = value; }
 	}
 
 	void Awake()

@@ -9,6 +9,7 @@ public class OptionsManager : MonoBehaviour
 
 	public GameObject changesButton;
 	public Toggle colorblindModeToggle;
+	public Toggle speechAutoPlayToggle;
 
 	private ColorblindManager cbm; 
 
@@ -25,6 +26,18 @@ public class OptionsManager : MonoBehaviour
 
 	public void ApplyChanges()
 	{
+
+		if (speechAutoPlayToggle.isOn)
+		{
+			GameInformation.SpeechAutoPlay = true;
+			SaveInformation.SaveAllInformation();
+			Debug.Log(GameInformation.SpeechAutoPlay);
+		} else 
+		{
+			GameInformation.SpeechAutoPlay = false;
+			SaveInformation.SaveAllInformation();
+		}
+
 		if (colorblindModeToggle.isOn)
 		{
 			GameInformation.ColorblindMode = true;
@@ -35,7 +48,8 @@ public class OptionsManager : MonoBehaviour
 		{
 			GameInformation.ColorblindMode = false;
 			SaveInformation.SaveAllInformation();
-			SceneManager.LoadScene(14);	
+			SceneManager.LoadScene(14);
+			Debug.Log(GameInformation.SpeechAutoPlay);	
 		}
 	}
 }

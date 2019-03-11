@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 	public AudioSource efxSource;
 	public AudioSource musicSource;
 	public static AudioManager instance = null;
-    public static bool isMute = true;
+    public static bool isMute = false;
 
 	public AudioClip[] speechClips = new AudioClip[11];
 
@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad (gameObject);
     }
 
-    void Update()
+    /*void Update()
     {
         if (isMute)
         {
@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
         {
             efxSource.mute = false;    
         }
-    }
+    }*/
 
     public void PlaySingle(AudioClip clip)
     {
@@ -55,5 +55,15 @@ public class AudioManager : MonoBehaviour
     private void OnLevelWasLoaded()
     {
         efxSource.Stop();
+        efxSource.mute = false;
+        LoadInformation.LoadAllInformation();
+
+        if (GameInformation.SpeechAutoPlay)
+        {
+            Debug.Log("auto play is on");
+            SpeechButton currentSpeechButton = GameObject.Find("SpeechButtonBorder").GetComponentInChildren<SpeechButton>();
+            Debug.Log(currentSpeechButton.name);
+            currentSpeechButton.PlaySpeechClip();
+        }
     }
 }

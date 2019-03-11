@@ -80,6 +80,11 @@ public class SaveInformation
         {
             PlayerPrefs.SetInt("COLORBLIND_MODE", Convert.ToInt32(GameInformation.ColorblindMode));
         }
+
+        if (GameInformation.SpeechAutoPlay != null)
+        {
+            PlayerPrefs.SetInt("SPEECH_AUTOPLAY", Convert.ToInt32(GameInformation.SpeechAutoPlay));
+        }
         
         Debug.Log("SAVED ALL INFORMATION.");
     }

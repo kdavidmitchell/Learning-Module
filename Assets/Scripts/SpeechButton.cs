@@ -8,7 +8,7 @@ public class SpeechButton : MonoBehaviour
 	public AudioClip speechClip;
 
 	// Use this for initialization
-	void Start () 
+	void Awake () 
 	{
 		am = GameObject.Find("AudioManager").GetComponent<AudioManager>();	
 	}
