@@ -27,16 +27,13 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad (gameObject);
     }
 
-    /*void Update()
+    void Update()
     {
-        if (isMute)
+        if (Input.GetKeyDown("m"))
         {
-            efxSource.mute = true;
-        } else 
-        {
-            efxSource.mute = false;    
+            efxSource.Stop();
         }
-    }*/
+    }
 
     public void PlaySingle(AudioClip clip)
     {
