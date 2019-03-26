@@ -3,10 +3,10 @@
   header('Access-Control-Allow-Origin: *');
   header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
   header('Access-Control-Allow-Headers: Accept, X-Access-Token, X-Application-Name, X-Request-Sent-Time');
-  $servername = "sqldatabaseurl";
-  $server_username =  "sqllogin";
-  $server_password = "sqlpassword";
-  $dbName = "DatabaseName";
+  $servername = "localhost"; 
+  $server_username = "id8964988_kdavidmitchell"; 
+  $server_password = "leetness1"; 
+  $dbName = "id8964988_module_db";
   
     // Strings must be escaped to prevent SQL injection attack. 
     $name = $_POST["namePost"];
