@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class SQL_Handler : MonoBehaviour
 {
-    private string secretKey = "thisshouldbethesameinthefiles"; 
-    public string addScoreURL = "http://yoururl.com/game/HighScore/addscore.php";
-    public string highscoreURL = "http://yoururl.com/game/HighScore/display.php";
+    private string secretKey = "avocadotoast"; 
+    public string postDataURL = "https://dyslexia-learning-module.000webhostapp.com/postdata.php";
+    public string getDataURL = "https://dyslexia-learning-module.000webhostapp.com/getdata.php";
     public Text highscorelist;
     //We start by just getting the HighScores, this should be removed, when you are done setting up.
     void Start()
@@ -16,10 +16,11 @@ public class SQL_Handler : MonoBehaviour
     }
     // This is for debugging purposes, you can run this when clicking
     // on a button, to see that scores are added. Remove when done setting up.
-    public void PostRandomScore()
+    public void PostRandomData()
     {
-        int randomscore = (int)Random.RandomRange(15.0f, 400.0f);
-        PostScores("tester", randomscore);
+        int randomCorrect = (int)Random.RandomRange(0.0f, 32.0f);
+        int randomIncorrect = 32 - randomCorrect;
+        PostData(0, randomCorrect, randomIncorrect);
     }
     // This is for debugging purposes, you can run this when clicking on 
     // a button, to see the highscores that have been added. Remove when done setting up.
@@ -28,19 +29,20 @@ public class SQL_Handler : MonoBehaviour
         StartCoroutine(GetScores());
     }
     //This is where we post 
-    public void PostScores(string name, int score)
+    public void PostData(int id, int correct, int incorrect)
     {
-        string hash = Md5Sum(name + score + secretKey);
+        string hash = Md5Sum(id + correct + incorrect + secretKey);
         WWWForm form = new WWWForm();
-        form.AddField("namePost", name);
-        form.AddField("scorePost", score);
+        form.AddField("idPost", id);
+        form.AddField("correctPost", correct);
+        form.AddField("incorrectPost", incorrect);
         form.AddField("hashPost", hash);
-        WWW www = new WWW(addScoreURL, form);
+        WWW www = new WWW(postDataURL, form);
     }
     //This co-rutine gets the score, and print it to a text UI element.
     IEnumerator GetScores()
     {
-        WWW wwwHighscores = new WWW(highscoreURL);
+        WWW wwwHighscores = new WWW(getDataURL);
         yield return wwwHighscores;
         if (wwwHighscores.error != null)
         {

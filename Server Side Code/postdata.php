@@ -9,8 +9,9 @@
   $dbName = "id8964988_module_db";
   
     // Strings must be escaped to prevent SQL injection attack. 
-    $name = $_POST["namePost"];
-    $score = $_POST["scorePost"]; 
+    $id = $_POST["idPost"];
+    $correct = $_POST["correctPost"];
+    $incorrect = $_POST["incorrectPost"]; 
     $hash = $_POST["hashPost"];
   //make connection
   $conn = new mysqli($servername, $server_username, $server_password, $dbName);
@@ -18,12 +19,12 @@
     die("Connection failed: " . mysqli_connect_error());
   }
   
-  $secretKey="insertsecretcodehere";
-  $real_hash = md5($name . $score . $secretKey);
+  $secretKey="avocadotoast";
+  $real_hash = md5($id . $correct . $incorrect . $secretKey);
   
   if($real_hash == $hash){
-    $sql = "INSERT INTO SuperBao_SP_Easy (name, score)
-      VALUES ('".$name."','".$score."')";
+    $sql = "INSERT INTO pretest_stats
+      VALUES ('".$id."','".$correct."','".$incorrect."')";
       $result = mysqli_query($conn ,$sql);
   }
   
