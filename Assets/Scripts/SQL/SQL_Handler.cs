@@ -15,45 +15,47 @@ public class SQL_Handler : MonoBehaviour
     	PostRandomData();
         StartCoroutine(GetData());
     }
-    // This is for debugging purposes, you can run this when clicking
-    // on a button, to see that scores are added. Remove when done setting up.
+    
     public void PostRandomData()
     {
         int randomCorrect = (int)Random.RandomRange(0.0f, 32.0f);
         int randomIncorrect = 32 - randomCorrect;
-        PostData(0, randomCorrect, randomIncorrect);
+        StartCoroutine(PostData(0, randomCorrect, randomIncorrect));
     }
-    // This is for debugging purposes, you can run this when clicking on 
-    // a button, to see the highscores that have been added. Remove when done setting up.
-    public void GetTheScores()
-    {
-        StartCoroutine(GetData());
-    }
+
     //This is where we post 
-    public void PostData(int id, int correct, int incorrect)
+    IEnumerator PostData(int id, int correct, int incorrect)
     {
         string hash = Md5Sum(id + correct + incorrect + secretKey);
-        WWWForm form = new WWWForm();
-        form.AddField("idPost", id);
-        form.AddField("correctPost", correct);
-        form.AddField("incorrectPost", incorrect);
-        form.AddField("hashPost", hash);
-        WWW www = new WWW(postDataURL, form);
+        string post_url = postDataURL + "?id=" + id + "&correct=" + correct + "&incorrect=" + incorrect + "&hash=" + hash;
+        Debug.Log(post_url);
+
+        WWW data_post = new WWW(post_url);
+        yield return data_post;
+
+        if (data_post.error != null)
+        {
+        	print("There was an error posting the data: " + data_post.error);
+        }
     }
+
     //This co-rutine gets the score, and print it to a text UI element.
     IEnumerator GetData()
     {
-        WWW wwwwData = new WWW(getDataURL);
-        yield return wwwwData;
-        if (wwwwData.error != null)
+    	Debug.Log("Getting data...");
+        WWW data_get = new WWW(getDataURL);
+        yield return data_get;
+
+        if (data_get.error != null)
         {
-            print("There was an error getting the high score: " + wwwwData.error);
+            print("There was an error getting the data: " + data_get.error);
         }
         else
         {
-            Debug.Log(wwwwData.text);
+            Debug.Log(data_get.text);
         }
     }
+
     // This is used to create a md5sum - so that we are sure that only legit scores are submitted.
     // We use this when we post the scores.
     // This should probably be placed in a seperate class. But isplaced here to make it simple to understand.

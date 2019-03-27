@@ -3,33 +3,34 @@
   header('Access-Control-Allow-Origin: *');
   header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
   header('Access-Control-Allow-Headers: Accept, X-Access-Token, X-Application-Name, X-Request-Sent-Time');
-  $servername = "localhost"; 
-  $server_username = "id8964988_kdavidmitchell"; 
-  $server_password = "leetness1"; 
-  $dbName = "id8964988_module_db";
-  
-    // Strings must be escaped to prevent SQL injection attack. 
-    $id = $_POST["idPost"];
-    $correct = $_POST["correctPost"];
-    $incorrect = $_POST["incorrectPost"]; 
-    $hash = $_POST["hashPost"];
-  //make connection
-  $conn = new mysqli($servername, $server_username, $server_password, $dbName);
-  if(!conn){
-    die("Connection failed: " . mysqli_connect_error());
-  }
-  
-  $secretKey="avocadotoast";
-  $real_hash = md5($id . $correct . $incorrect . $secretKey);
-  
-  if($real_hash == $hash){
-    $sql = "INSERT INTO pretest_stats
-      VALUES ('".$id."','".$correct."','".$incorrect."')";
-      $result = mysqli_query($conn ,$sql);
-  }
-  
-  //Check Connection
-  if(!$conn){
-    die("Connection Failed. ". mysqli_connect_error());
-  }
+
+    // Configuration
+   $hostname = 'localhost';
+   $username = 'id8964988_kdavidmitchell';
+   $password = 'leetness1';
+   $database = 'id8964988_module_db';
+
+   $secretKey = "avocadotoast"; // Change this value to match the value stored in the client javascript below 
+
+   try {
+       $dbh = new PDO('mysql:host='. $hostname .';dbname='. $database, $username, $password);
+   } catch(PDOException $e) {
+       echo '<h1>An error has ocurred.</h1><pre>', $e->getMessage() ,'</pre>';
+   }
+
+   $id = $_GET['id'];
+   $correct = $_GET['correct'];
+   $incorrect = $_GET['incorrect'];
+
+   $realHash = md5($_GET['id'] . $_GET['correct'] . $_GET['incorrect'] . $secretKey);
+   $hash = $_GET['hash'];
+
+   if($realHash == $hash) { 
+     $sth = $dbh->prepare('INSERT INTO pretest_stats VALUES (:id, :correct, :incorrect)');
+     try {
+         $sth->execute(['id' => $id, 'correct' => $correct, 'incorrect' => $incorrect]);
+     } catch(Exception $e) {
+         echo '<h1>An error has ocurred.</h1><pre>', $e->getMessage() ,'</pre>';
+     }
+   }
 ?>
