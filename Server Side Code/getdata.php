@@ -10,17 +10,17 @@
   
   //make connection
   $conn = new mysqli($servername, $server_username, $server_password, $dbName);
-  if(!conn){
+  if(!$conn){
     die("Connection failed: " . mysqli_connect_error());
   }
  
-    $query = "SELECT * FROM `tablename` ORDER by `score` DESC LIMIT 10";
+    $query = "SELECT * FROM `pretest_stats` ORDER by `session_id`";
     $result = mysqli_query($conn, $query);
   
   if(mysqli_num_rows($result) > 0){
     //show data for each row
     while($row = mysqli_fetch_assoc($result)){
-      echo " Name: ".$row['name']. " - Score: ".$row['score']."\n";
+      echo " ID: ".$row['session_id']. " - Correct: ".$row['num_correct']. " - Incorrect: ".$row['num_incorrect']."\n";
     }
   }
 ?>

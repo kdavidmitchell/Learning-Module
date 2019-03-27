@@ -8,11 +8,12 @@ public class SQL_Handler : MonoBehaviour
     private string secretKey = "avocadotoast"; 
     public string postDataURL = "https://dyslexia-learning-module.000webhostapp.com/postdata.php";
     public string getDataURL = "https://dyslexia-learning-module.000webhostapp.com/getdata.php";
-    public Text highscorelist;
+    
     //We start by just getting the HighScores, this should be removed, when you are done setting up.
     void Start()
     {
-        StartCoroutine(GetScores());
+    	PostRandomData();
+        StartCoroutine(GetData());
     }
     // This is for debugging purposes, you can run this when clicking
     // on a button, to see that scores are added. Remove when done setting up.
@@ -26,7 +27,7 @@ public class SQL_Handler : MonoBehaviour
     // a button, to see the highscores that have been added. Remove when done setting up.
     public void GetTheScores()
     {
-        StartCoroutine(GetScores());
+        StartCoroutine(GetData());
     }
     //This is where we post 
     public void PostData(int id, int correct, int incorrect)
@@ -40,17 +41,17 @@ public class SQL_Handler : MonoBehaviour
         WWW www = new WWW(postDataURL, form);
     }
     //This co-rutine gets the score, and print it to a text UI element.
-    IEnumerator GetScores()
+    IEnumerator GetData()
     {
-        WWW wwwHighscores = new WWW(getDataURL);
-        yield return wwwHighscores;
-        if (wwwHighscores.error != null)
+        WWW wwwwData = new WWW(getDataURL);
+        yield return wwwwData;
+        if (wwwwData.error != null)
         {
-            print("There was an error getting the high score: " + wwwHighscores.error);
+            print("There was an error getting the high score: " + wwwwData.error);
         }
         else
         {
-            highscorelist.text = wwwHighscores.text;
+            Debug.Log(wwwwData.text);
         }
     }
     // This is used to create a md5sum - so that we are sure that only legit scores are submitted.
