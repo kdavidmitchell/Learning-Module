@@ -26,16 +26,27 @@ public class SQL_Handler : MonoBehaviour
     //This is where we post 
     IEnumerator PostData(int id, int correct, int incorrect)
     {
-        string hash = Md5Sum(id + correct + incorrect + secretKey);
-        string post_url = postDataURL + "?id=" + id + "&correct=" + correct + "&incorrect=" + incorrect + "&hash=" + hash;
-        Debug.Log(post_url);
 
-        WWW data_post = new WWW(post_url);
-        yield return data_post;
+    	string str = id.ToString() + correct.ToString() + incorrect.ToString() + secretKey;
+        string hash = Md5Sum(str);
+        Debug.Log(hash);
 
-        if (data_post.error != null)
+        WWWForm form = new WWWForm();
+        form.AddField("idPost", id);
+        form.AddField("correctPost", correct);
+        form.AddField("incorrectPost", incorrect);
+        form.AddField("hashPost", hash);
+
+        WWW wwwPost = new WWW(postDataURL, form);
+        yield return wwwPost;
+
+        if (wwwPost.error != null)
         {
-        	print("There was an error posting the data: " + data_post.error);
+            print("There was an error getting the data: " + wwwPost.error);
+        }
+        else
+        {
+            Debug.Log(wwwPost.text);
         }
     }
 
@@ -43,16 +54,16 @@ public class SQL_Handler : MonoBehaviour
     IEnumerator GetData()
     {
     	Debug.Log("Getting data...");
-        WWW data_get = new WWW(getDataURL);
-        yield return data_get;
+        WWW wwwGet = new WWW(getDataURL);
+        yield return wwwGet;
 
-        if (data_get.error != null)
+        if (wwwGet.error != null)
         {
-            print("There was an error getting the data: " + data_get.error);
+            print("There was an error getting the data: " + wwwGet.error);
         }
         else
         {
-            Debug.Log(data_get.text);
+            Debug.Log(wwwGet.text);
         }
     }
 

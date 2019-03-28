@@ -10,27 +10,66 @@
    $password = 'leetness1';
    $database = 'id8964988_module_db';
 
-   $secretKey = "avocadotoast"; // Change this value to match the value stored in the client javascript below 
+   // Strings must be escaped to prevent SQL injection attack. 
+    $id = $_POST["idPost"] ?? '';
+    $correct = $_POST["correctPost"] ?? ''; 
+    $incorrect = $_POST["incorrectPost"] ?? '';
+    $hash = $_POST["hashPost"] ?? '';
 
-   try {
-       $dbh = new PDO('mysql:host='. $hostname .';dbname='. $database, $username, $password);
-   } catch(PDOException $e) {
-       echo '<h1>An error has ocurred.</h1><pre>', $e->getMessage() ,'</pre>';
-   }
+    //make connection
+    $conn = new mysqli($hostname, $username, $password, $database);
+    if(!$conn){
+      die("Connection failed: " . mysqli_connect_error());
+    }
 
-   $id = $_GET['id'];
-   $correct = $_GET['correct'];
-   $incorrect = $_GET['incorrect'];
+    $secretKey = "avocadotoast"; // Change this value to match the value stored in the client javascript below
+    $str = $id . $correct . $incorrect . $secretKey;
+    $realHash = md5($str); 
 
-   $realHash = md5($_GET['id'] . $_GET['correct'] . $_GET['incorrect'] . $secretKey);
-   $hash = $_GET['hash'];
+    //echo (string)$id, (string)$correct, (string)$incorrect;
+    echo $realHash;
 
-   if($realHash == $hash) { 
-     $sth = $dbh->prepare('INSERT INTO pretest_stats VALUES (:id, :correct, :incorrect)');
-     try {
-         $sth->execute(['id' => $id, 'correct' => $correct, 'incorrect' => $incorrect]);
-     } catch(Exception $e) {
-         echo '<h1>An error has ocurred.</h1><pre>', $e->getMessage() ,'</pre>';
-     }
-   }
+    if($realHash == $hash)
+    {
+      $sql = "INSERT INTO test (session_id, num_correct, num_incorrect)
+      VALUES ('".$id."','".$correct."','".$incorrect."')";
+      $result = mysqli_query($conn ,$sql);
+    }
+
+     //Check Connection
+    if(!$conn){
+      die("Connection Failed. ". mysqli_connect_error());
+    }
+
+   // try {
+   //     $dbh = new PDO('mysql:host='. $hostname .';dbname='. $database, $username, $password);
+   //     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+   //     echo "Connected successfully";
+   // } catch(PDOException $e) {
+   //     echo '<h1>An error has ocurred A.</h1><pre>', $e->getMessage() ,'</pre>';
+   // }
+
+   // if (isset($_GET['id']) && isset($_GET['correct']) && isset($_GET['incorrect']))
+   // {
+   //    $id = $_GET['id'];
+   //    $correct = $_GET['correct'];
+   //    $incorrect = $_GET['incorrect'];
+   //    $realHash = md5($_GET['id'] . $_GET['correct'] . $_GET['incorrect'] . $secretKey);
+   //    echo (string)$id;
+   // }
+
+   // if (isset($_GET['hash']))
+   // {
+   //    $hash = $_GET['hash'];
+   //    //echo $hash;
+   // }
+
+   // if($realHash == $hash) { 
+   //   $sth = $dbh->prepare('INSERT INTO test VALUES (:id, :correct, :incorrect)');
+   //   try {
+   //       $sth->execute(['id' => $id, 'correct' => $correct, 'incorrect' => $incorrect]);
+   //   } catch(Exception $e) {
+   //       echo '<h1>An error has ocurred B.</h1><pre>', $e->getMessage() ,'</pre>';
+   //   }
+   // }
 ?>
