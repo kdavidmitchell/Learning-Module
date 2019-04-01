@@ -19,9 +19,24 @@ public class LoadInformation
             GameInformation.PostQuestions = (List<PostQuestion>)PPSerialization.Load("POST_QUESTIONS");
         }
 
+        if (PlayerPrefs.GetString("CORRECT_PRE_QUESTIONS") != null)
+        {
+            GameInformation.CorrectPreQuestions = (List<PreQuestion>)PPSerialization.Load("CORRECT_PRE_QUESTIONS");
+        }
+
         if (PlayerPrefs.GetString("CORRECT_POST_QUESTIONS") != null)
         {
             GameInformation.CorrectPostQuestions = (List<PostQuestion>)PPSerialization.Load("CORRECT_POST_QUESTIONS");
+        }
+
+        if (PlayerPrefs.GetString("PRE_ORDER") != null)
+        {
+            GameInformation.PreOrder = (List<PreQuestion>)PPSerialization.Load("PRE_ORDER");
+        }
+
+        if (PlayerPrefs.GetString("POST_ORDER") != null)
+        {
+            GameInformation.PostOrder = (List<PostQuestion>)PPSerialization.Load("POST_ORDER");
         }
 
         if (PlayerPrefs.GetString("SURVEY_QUESTIONS") != null)
@@ -72,6 +87,21 @@ public class LoadInformation
         if (PlayerPrefs.GetInt("INTERVENTION_COMPLETE") != null)
         {
             GameInformation.InterventionComplete = Convert.ToBoolean(PlayerPrefs.GetInt("INTERVENTION_COMPLETE"));
+        }
+
+        if (PlayerPrefs.GetFloat("PRE_COMPLETION_TIME") != null)
+        {
+            GameInformation.PreCompletionTime = PlayerPrefs.GetFloat("PRE_COMPLETION_TIME");
+        }
+
+        if (PlayerPrefs.GetFloat("POST_COMPLETION_TIME") != null)
+        {
+            GameInformation.PostCompletionTime = PlayerPrefs.GetFloat("POST_COMPLETION_TIME");
+        }
+
+        if (PlayerPrefs.GetFloat("TOTAL_COMPLETION_TIME") != null)
+        {
+            GameInformation.TotalCompletionTime = PlayerPrefs.GetFloat("TOTAL_COMPLETION_TIME");
         }
 
         //Options

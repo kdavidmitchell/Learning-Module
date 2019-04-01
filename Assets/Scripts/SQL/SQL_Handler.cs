@@ -9,9 +9,11 @@ public class SQL_Handler : MonoBehaviour
     public string postDataURL = "https://dyslexia-learning-module.000webhostapp.com/postdata.php";
     public string getDataURL = "https://dyslexia-learning-module.000webhostapp.com/getdata.php";
     
-    //We start by just getting the HighScores, this should be removed, when you are done setting up.
     void Start()
     {
+    	GameInformation.TotalCompletionTime = Time.time;
+    	SaveInformation.SaveAllInformation();
+
     	PostRandomData();
         StartCoroutine(GetData());
     }
@@ -50,7 +52,6 @@ public class SQL_Handler : MonoBehaviour
         }
     }
 
-    //This co-rutine gets the score, and print it to a text UI element.
     IEnumerator GetData()
     {
     	Debug.Log("Getting data...");
@@ -67,9 +68,58 @@ public class SQL_Handler : MonoBehaviour
         }
     }
 
-    // This is used to create a md5sum - so that we are sure that only legit scores are submitted.
-    // We use this when we post the scores.
-    // This should probably be placed in a seperate class. But isplaced here to make it simple to understand.
+    IEnumerator PostPreTestData()
+    {
+
+    	WWWForm form = new WWWForm();
+
+    	int correct = GameInformation.CorrectPreQuestions.Count;
+    	int incorrect = GameInformation.PreQuestions.Count;
+    	int time = (int)GameInformation.PreCompletionTime;
+
+    	string str = correct.ToString() + incorrect.ToString() + secretKey;
+        string hash = Md5Sum(str);
+        Debug.Log(hash);
+
+    	form.AddField("correctPost", correct);
+        form.AddField("incorrectPost", incorrect);
+        form.AddField("timePost", time);
+        form.AddField("hashPost", hash);
+
+    	for (int i = 0; i < GameInformation.PreOrder.Count; i++) 
+    	{
+    		form.AddField("q" + i.ToString() + "IDPost", GameInformation.PreOrder[i].ID);
+
+    		for (int j = 0; j < GameInformation.CorrectPreQuestions.Count; j++) 
+    		{
+    			if (GameInformation.CorrectPreQuestions[j].ID == GameInformation.PreOrder[i].ID)
+    			{
+    				form.AddField("q" + i.ToString() + "CorrectPost", 1);
+    			} else
+    			{
+    				form.AddField("q" + i.ToString() + "CorrectPost", 0);
+    			}
+    		}
+    	}
+
+    	for (int i = 0; i < GameInformation.PreCertainty.Length; i++) 
+    	{
+    		form.AddField("q" + i.ToString() + "CertaintyPost", GameInformation.PreCertainty[i]);
+    	}
+
+    	WWW wwwPost = new WWW(postDataURL, form);
+        yield return wwwPost;
+
+        if (wwwPost.error != null)
+        {
+            print("There was an error getting the data: " + wwwPost.error);
+        }
+        else
+        {
+            Debug.Log(wwwPost.text);
+        }
+    }
+
     public string Md5Sum(string strToEncrypt)
     {
         System.Text.UTF8Encoding ue = new System.Text.UTF8Encoding();

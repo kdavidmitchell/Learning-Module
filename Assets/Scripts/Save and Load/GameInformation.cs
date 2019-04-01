@@ -8,7 +8,10 @@ public class GameInformation : MonoBehaviour
 
 	private static List<PreQuestion> _preQuestions = new List<PreQuestion>();
 	private static List<PostQuestion> _postQuestions = new List<PostQuestion>();
+	private static List<PreQuestion> _correctPreQuestions = new List<PreQuestion>();
 	private static List<PostQuestion> _correctPostQuestions = new List<PostQuestion>();
+	private static List<PreQuestion> _preOrder = new List<PreQuestion>();
+	private static List<PostQuestion> _postOrder = new List<PostQuestion>();
 	private static Dictionary<int, List<string>> _surveyQuestions = new Dictionary<int, List<string>>();
 	private static Dictionary<int, List<string>> _teacherQuestions = new Dictionary<int, List<string>>();
 	private static int[] _preCertainty = new int[32];
@@ -19,6 +22,9 @@ public class GameInformation : MonoBehaviour
 	private static bool _IFGComplete = false;
 	private static bool _allAreasComplete = false;
 	private static bool _interventionComplete = false;
+	private static float _preCompletionTime = 0f;
+	private static float _postCompletionTime = 0f;
+	private static float _totalCompletionTime = 0f;
 
 	private static GameInformation instance = null;
 
@@ -38,10 +44,28 @@ public class GameInformation : MonoBehaviour
 		set { _postQuestions = value; }
 	}
 
+	public static List<PreQuestion> CorrectPreQuestions
+	{
+		get { return _correctPreQuestions; }
+		set { _correctPreQuestions = value; }
+	}
+
 	public static List<PostQuestion> CorrectPostQuestions
 	{
 		get { return _correctPostQuestions; }
 		set { _correctPostQuestions = value; }
+	}
+
+	public static List<PreQuestion> PreOrder
+	{
+		get { return _preOrder; }
+		set { _preOrder = value; }
+	}
+
+	public static List<PostQuestion> PostOrder
+	{
+		get { return _postOrder; }
+		set { _postOrder = value; }
 	}
 
 	public static Dictionary<int, List<string>> SurveyQuestions
@@ -102,6 +126,24 @@ public class GameInformation : MonoBehaviour
 	{
 		get { return _interventionComplete; }
 		set { _interventionComplete = value; }
+	}
+
+	public static float PreCompletionTime 
+	{
+		get { return _preCompletionTime; }
+		set { _preCompletionTime = value; }
+	}
+
+	public static float PostCompletionTime 
+	{
+		get { return _postCompletionTime; }
+		set { _postCompletionTime = value; }
+	}
+
+	public static float TotalCompletionTime 
+	{
+		get { return _totalCompletionTime; }
+		set { _totalCompletionTime = value; }
 	}
 
 	//Options

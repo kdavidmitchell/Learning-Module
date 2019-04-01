@@ -24,6 +24,8 @@ public class Posttest : MonoBehaviour
 	private int questionIndex = 0;
 	private bool currentAnswer = false;
 	private List<PostQuestion> shuffledQuestions = new List<PostQuestion>();
+	private float completionTime = 0f;
+	private bool done = false;
 
 	// Use this for initialization
 	void Start () 
@@ -52,7 +54,10 @@ public class Posttest : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		if (!done)
+		{
+			completionTime += Time.deltaTime;
+		}
 	}
 
 	public void DisplayNextQuestion()
@@ -68,6 +73,8 @@ public class Posttest : MonoBehaviour
 	private void ShuffleQuestions()
 	{
 		shuffledQuestions = PostQuestionDB.postQuestions.OrderBy(x => Random.value).ToList();
+		GameInformation.PostOrder = shuffledQuestions;
+		SaveInformation.SaveAllInformation();
 	}
 
 	public void ScoreAnswerAndContinue()
@@ -118,7 +125,9 @@ public class Posttest : MonoBehaviour
 			progressFill.fillAmount = ((float)questionIndex / (float)shuffledQuestions.Count);
 			paper.SetActive(false);
 			endText.SetActive(true);
-			nextSceneButton.SetActive(true);	
+			nextSceneButton.SetActive(true);
+			done = true;
+			GameInformation.PostCompletionTime = completionTime;	
 		}
 
 		SaveInformation.SaveAllInformation();

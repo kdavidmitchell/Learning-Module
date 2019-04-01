@@ -24,6 +24,8 @@ public class Pretest : MonoBehaviour
 	private int questionIndex = 0;
 	private bool currentAnswer = false;
 	private List<PreQuestion> shuffledQuestions = new List<PreQuestion>();
+	private float completionTime = 0f;
+	private bool done = false;
 
 	// Use this for initialization
 	void Start () 
@@ -52,7 +54,10 @@ public class Pretest : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		if (!done)
+		{
+			completionTime += Time.deltaTime;
+		}
 	}
 
 	public void DisplayNextQuestion()
@@ -68,6 +73,8 @@ public class Pretest : MonoBehaviour
 	private void ShuffleQuestions()
 	{
 		shuffledQuestions = PreQuestionDB.preQuestions.OrderBy(x => Random.value).ToList();
+		GameInformation.PreOrder = shuffledQuestions;
+		SaveInformation.SaveAllInformation();
 	}
 
 	public void ScoreAnswerAndContinue()
@@ -77,6 +84,8 @@ public class Pretest : MonoBehaviour
 			if (trueToggle.isOn)
 			{
 				Debug.Log("Correct!");
+				GameInformation.CorrectPreQuestions.Add(shuffledQuestions[questionIndex - 1]);
+				Debug.Log(GameInformation.CorrectPreQuestions.Count);
 			} else 
 			{
 				Debug.Log("Incorrect. :(");
@@ -87,6 +96,8 @@ public class Pretest : MonoBehaviour
 			if (falseToggle.isOn)
 			{
 				Debug.Log("Correct!");
+				GameInformation.CorrectPreQuestions.Add(shuffledQuestions[questionIndex - 1]);
+				Debug.Log(GameInformation.CorrectPreQuestions.Count);
 			} else 
 			{
 				Debug.Log("Incorrect. :(");
@@ -114,7 +125,9 @@ public class Pretest : MonoBehaviour
 			progressFill.fillAmount = ((float)questionIndex / (float)shuffledQuestions.Count);
 			paper.SetActive(false);
 			endText.SetActive(true);
-			nextSceneButton.SetActive(true);	
+			nextSceneButton.SetActive(true);
+			done = true;
+			GameInformation.PreCompletionTime = completionTime;	
 		}
 
 		SaveInformation.SaveAllInformation();

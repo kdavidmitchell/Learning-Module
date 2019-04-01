@@ -25,23 +25,4 @@
       echo " ID: ".$row['session_id']. " - Correct: ".$row['num_correct']. " - Incorrect: ".$row['num_incorrect']."\n";
     }
   }
- 
-    // try {
-    //     $dbh = new PDO('mysql:host='. $hostname .';dbname='. $database, $username, $password);
-    //     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //     echo "Connected successfully";
-    // } catch(PDOException $e) {
-    //     echo '<h1>An error has occurred.</h1><pre>', $e->getMessage() ,'</pre>';
-    // }
- 
-    // $sth = $dbh->query('SELECT * FROM pretest_stats ORDER BY session_id');
-    // $sth->setFetchMode(PDO::FETCH_ASSOC);
- 
-    // $result = $sth->fetchAll();
- 
-    // if(count($result) > 0) {
-    //     foreach($result as $r) {
-    //         echo $r['session_id'], "\t", $r['num_correct'], "\t", $r['num_incorrect'], "\n";
-    //     }
-    // }
 ?>
