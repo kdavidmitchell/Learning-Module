@@ -36,7 +36,7 @@ public class SaveInformation
 
         if (GameInformation.PostOrder != null)
         {
-            PPSerialization.Save("PRE_ORDER", GameInformation.PostOrder);
+            PPSerialization.Save("POST_ORDER", GameInformation.PostOrder);
         }
 
         if (GameInformation.SurveyQuestions != null)

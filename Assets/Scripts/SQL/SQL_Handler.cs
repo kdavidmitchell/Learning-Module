@@ -6,16 +6,14 @@ using UnityEngine.UI;
 public class SQL_Handler : MonoBehaviour
 {
     private string secretKey = "avocadotoast"; 
-    public string postDataURL = "https://dyslexia-learning-module.000webhostapp.com/postdata.php";
-    public string getDataURL = "https://dyslexia-learning-module.000webhostapp.com/getdata.php";
+    public string postDataURL = "https://dyslexia-learning-module.000webhostapp.com/postpretestdata.php";
+    public string getDataURL = "https://dyslexia-learning-module.000webhostapp.com/getpretestdata.php";
     
     void Start()
     {
-    	GameInformation.TotalCompletionTime = Time.time;
-    	SaveInformation.SaveAllInformation();
-
-    	PostRandomData();
-        StartCoroutine(GetData());
+    	//GameInformation.TotalCompletionTime = Time.time;
+    	//SaveInformation.SaveAllInformation();
+    	SendPreTestData();
     }
     
     public void PostRandomData()
@@ -23,6 +21,11 @@ public class SQL_Handler : MonoBehaviour
         int randomCorrect = (int)Random.RandomRange(0.0f, 32.0f);
         int randomIncorrect = 32 - randomCorrect;
         StartCoroutine(PostData(0, randomCorrect, randomIncorrect));
+    }
+
+    public void SendPreTestData()
+    {
+    	StartCoroutine(PostPreTestData());
     }
 
     //This is where we post 
@@ -94,9 +97,16 @@ public class SQL_Handler : MonoBehaviour
     		{
     			if (GameInformation.CorrectPreQuestions[j].ID == GameInformation.PreOrder[i].ID)
     			{
+    				Debug.Log("Question " + GameInformation.CorrectPreQuestions[j].ID.ToString() + " is correct");
     				form.AddField("q" + i.ToString() + "CorrectPost", 1);
-    			} else
+    			}
+    		}
+
+    		for (int j = 0; j < GameInformation.PreQuestions.Count; j++) 
+    		{
+    			if (GameInformation.PreQuestions[j].ID == GameInformation.PreOrder[i].ID)
     			{
+    				Debug.Log("Question " + GameInformation.PreQuestions[j].ID.ToString() + " is incorrect");
     				form.AddField("q" + i.ToString() + "CorrectPost", 0);
     			}
     		}

@@ -170,5 +170,7 @@ public class GameInformation : MonoBehaviour
     	{
     		Destroy(gameObject);	
     	}
+
+    	LoadInformation.LoadAllInformation();
     }
 }
