@@ -174,6 +174,10 @@ public class SurveyScreen : MonoBehaviour
 		}
 
 		GameInformation.SurveyQuestions.Add(questionNum, answers);
+		foreach (string str in GameInformation.SurveyQuestions[questionNum])
+		{
+			Debug.Log(str);
+		}
 		SaveInformation.SaveAllInformation();
 	}
 

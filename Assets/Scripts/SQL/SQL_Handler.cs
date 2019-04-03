@@ -5,8 +5,13 @@ using UnityEngine.UI;
 
 public class SQL_Handler : MonoBehaviour
 {
-    private string secretKey = "avocadotoast"; 
-    public string postDataURL = "https://dyslexia-learning-module.000webhostapp.com/postpretestdata.php";
+    private string secretKey = "avocadotoast";
+
+    public string postPreTestDataURL = "https://dyslexia-learning-module.000webhostapp.com/postpretestdata.php";
+    public string postPostTestDataURL = "https://dyslexia-learning-module.000webhostapp.com/postposttestdata.php";
+    public string postSurveyDataURL = "https://dyslexia-learning-module.000webhostapp.com/postsurveydata.php";
+    public string postTeacherDataURL = "https://dyslexia-learning-module.000webhostapp.com/postteacherdata.php";
+    
     public string getDataURL = "https://dyslexia-learning-module.000webhostapp.com/getpretestdata.php";
     
     void Start()
@@ -15,44 +20,10 @@ public class SQL_Handler : MonoBehaviour
     	//SaveInformation.SaveAllInformation();
     	SendPreTestData();
     }
-    
-    public void PostRandomData()
-    {
-        int randomCorrect = (int)Random.RandomRange(0.0f, 32.0f);
-        int randomIncorrect = 32 - randomCorrect;
-        StartCoroutine(PostData(0, randomCorrect, randomIncorrect));
-    }
 
     public void SendPreTestData()
     {
     	StartCoroutine(PostPreTestData());
-    }
-
-    //This is where we post 
-    IEnumerator PostData(int id, int correct, int incorrect)
-    {
-
-    	string str = id.ToString() + correct.ToString() + incorrect.ToString() + secretKey;
-        string hash = Md5Sum(str);
-        Debug.Log(hash);
-
-        WWWForm form = new WWWForm();
-        form.AddField("idPost", id);
-        form.AddField("correctPost", correct);
-        form.AddField("incorrectPost", incorrect);
-        form.AddField("hashPost", hash);
-
-        WWW wwwPost = new WWW(postDataURL, form);
-        yield return wwwPost;
-
-        if (wwwPost.error != null)
-        {
-            print("There was an error getting the data: " + wwwPost.error);
-        }
-        else
-        {
-            Debug.Log(wwwPost.text);
-        }
     }
 
     IEnumerator GetData()
@@ -117,7 +88,136 @@ public class SQL_Handler : MonoBehaviour
     		form.AddField("q" + i.ToString() + "CertaintyPost", GameInformation.PreCertainty[i]);
     	}
 
-    	WWW wwwPost = new WWW(postDataURL, form);
+    	WWW wwwPost = new WWW(postPreTestDataURL, form);
+        yield return wwwPost;
+
+        if (wwwPost.error != null)
+        {
+            print("There was an error getting the data: " + wwwPost.error);
+        }
+        else
+        {
+            Debug.Log(wwwPost.text);
+        }
+    }
+
+    IEnumerator PostPostTestData()
+    {
+
+    	WWWForm form = new WWWForm();
+
+    	int correct = GameInformation.CorrectPostQuestions.Count;
+    	int incorrect = GameInformation.PostQuestions.Count;
+    	int time = (int)GameInformation.PostCompletionTime;
+
+    	string str = correct.ToString() + incorrect.ToString() + secretKey;
+        string hash = Md5Sum(str);
+        Debug.Log(hash);
+
+    	form.AddField("correctPost", correct);
+        form.AddField("incorrectPost", incorrect);
+        form.AddField("timePost", time);
+        form.AddField("hashPost", hash);
+
+    	for (int i = 0; i < GameInformation.PostOrder.Count; i++) 
+    	{
+    		form.AddField("q" + i.ToString() + "IDPost", GameInformation.PostOrder[i].ID);
+
+    		for (int j = 0; j < GameInformation.CorrectPostQuestions.Count; j++) 
+    		{
+    			if (GameInformation.CorrectPostQuestions[j].ID == GameInformation.PostOrder[i].ID)
+    			{
+    				Debug.Log("Question " + GameInformation.CorrectPostQuestions[j].ID.ToString() + " is correct");
+    				form.AddField("q" + i.ToString() + "CorrectPost", 1);
+    			}
+    		}
+
+    		for (int j = 0; j < GameInformation.PostQuestions.Count; j++) 
+    		{
+    			if (GameInformation.PostQuestions[j].ID == GameInformation.PostOrder[i].ID)
+    			{
+    				Debug.Log("Question " + GameInformation.PostQuestions[j].ID.ToString() + " is incorrect");
+    				form.AddField("q" + i.ToString() + "CorrectPost", 0);
+    			}
+    		}
+    	}
+
+    	for (int i = 0; i < GameInformation.PostCertainty.Length; i++) 
+    	{
+    		form.AddField("q" + i.ToString() + "CertaintyPost", GameInformation.PostCertainty[i]);
+    	}
+
+    	WWW wwwPost = new WWW(postPostTestDataURL, form);
+        yield return wwwPost;
+
+        if (wwwPost.error != null)
+        {
+            print("There was an error getting the data: " + wwwPost.error);
+        }
+        else
+        {
+            Debug.Log(wwwPost.text);
+        }
+    }
+
+    IEnumerator PostSurveyData()
+    {
+    	WWWForm form = new WWWForm();
+
+        string hash = Md5Sum(secretKey);
+        Debug.Log(hash);
+
+        form.AddField("hashPost", hash);
+
+        for (int i = 0; i < GameInformation.SurveyQuestions.Count; i++) 
+        {
+        	string concat = "";
+
+        	foreach (string str in GameInformation.SurveyQuestions[i])
+        	{
+        		concat += str;
+        		concat += "\n";
+        	}
+
+        	form.AddField("q" + i.ToString() + "SurveyPost", concat);
+        }
+
+        WWW wwwPost = new WWW(postSurveyDataURL, form);
+        yield return wwwPost;
+
+        if (wwwPost.error != null)
+        {
+            print("There was an error getting the data: " + wwwPost.error);
+        }
+        else
+        {
+            Debug.Log(wwwPost.text);
+        }
+    }
+
+    IEnumerator PostTeacherData()
+    {
+    	WWWForm form = new WWWForm();
+
+        string hash = Md5Sum(secretKey);
+        Debug.Log(hash);
+
+        form.AddField("hashPost", hash);
+
+        for (int i = 0; i < GameInformation.TeacherQuestions.Count; i++) 
+        {
+        	string concat = "";
+
+        	foreach (string str in GameInformation.TeacherQuestions[i])
+        	{
+        		concat += str;
+        		concat += "\n";
+        	}
+
+        	form.AddField("q" + i.ToString() + "TeacherPost", concat);
+        }
+
+        WWW wwwPost = new WWW(postTeacherDataURL, form);
         yield return wwwPost;
 
         if (wwwPost.error != null)
