@@ -18,12 +18,18 @@ public class SQL_Handler : MonoBehaviour
     {
     	//GameInformation.TotalCompletionTime = Time.time;
     	//SaveInformation.SaveAllInformation();
-    	SendPreTestData();
+    	//SendSurveyData();
+    	SendTeacherData();
     }
 
-    public void SendPreTestData()
+    public void SendSurveyData()
     {
-    	StartCoroutine(PostPreTestData());
+    	StartCoroutine(PostSurveyData());
+    }
+
+     public void SendTeacherData()
+    {
+    	StartCoroutine(PostTeacherData());
     }
 
     IEnumerator GetData()

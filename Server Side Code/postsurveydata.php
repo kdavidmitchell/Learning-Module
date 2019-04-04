@@ -27,11 +27,12 @@
     $secretKey = "avocadotoast"; // Change this value to match the value stored in the client javascript below
     $str = $secretKey;
     $realHash = md5($str);
+    $uid = mysqli_insert_id();
 
     if($realHash == $hash)
     {
 
-      $sql = "INSERT INTO test_survey (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20) VALUES (";
+      $sql = "INSERT INTO test_survey (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20) VALUES ('".$uid."',";
 
       for ($i = 0; $i < 20; $i++) 
       { 
