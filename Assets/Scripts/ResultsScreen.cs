@@ -10,7 +10,7 @@ public class ResultsScreen : MonoBehaviour
 	private GameObject posttestConent;
 	private Text preScore;
 	private Text postScore;
-	private int numPreQuestions = 2;
+	private int numPreQuestions = 32;
 	private int numPostQuestions = 32;
 
 	public GameObject questionPrefab;

@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
     {
         efxSource.Stop();
         efxSource.mute = false;
-        LoadInformation.LoadAllInformation();
+        //LoadInformation.LoadAllInformation();
 
         if (GameInformation.SpeechAutoPlay)
         {

@@ -25,6 +25,7 @@ public class GameInformation : MonoBehaviour
 	private static float _preCompletionTime = 0f;
 	private static float _postCompletionTime = 0f;
 	private static float _totalCompletionTime = 0f;
+	private static string _userID = "";
 
 	private static GameInformation instance = null;
 
@@ -146,6 +147,12 @@ public class GameInformation : MonoBehaviour
 		set { _totalCompletionTime = value; }
 	}
 
+	public static string UserID
+	{
+		get { return _userID; }
+		set { _userID = value; }
+	}
+
 	//Options
 
 	public static bool ColorblindMode
@@ -172,5 +179,6 @@ public class GameInformation : MonoBehaviour
     	}
 
     	LoadInformation.LoadAllInformation();
+    	Debug.Log(GameInformation.CorrectPreQuestions.Count);
     }
 }

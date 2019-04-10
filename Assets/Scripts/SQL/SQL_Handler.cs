@@ -11,16 +11,33 @@ public class SQL_Handler : MonoBehaviour
     public string postPostTestDataURL = "https://dyslexia-learning-module.000webhostapp.com/postposttestdata.php";
     public string postSurveyDataURL = "https://dyslexia-learning-module.000webhostapp.com/postsurveydata.php";
     public string postTeacherDataURL = "https://dyslexia-learning-module.000webhostapp.com/postteacherdata.php";
-    public string postAllDataURL = "https://dyslexia-learning-module.000webhostapp.com/postalldata.php";
     
     public string getDataURL = "https://dyslexia-learning-module.000webhostapp.com/getpretestdata.php";
     
     void Start()
     {
-    	LoadInformation.LoadAllInformation();
+    	//LoadInformation.LoadAllInformation();
 
+    	Debug.Log(GameInformation.PostQuestions.Count.ToString());
     	Debug.Log(GameInformation.PreQuestions.Count.ToString());
-    	SendAllData();
+    	Debug.Log(GameInformation.SurveyQuestions.Count.ToString());
+    	Debug.Log(GameInformation.TeacherQuestions.Count.ToString());
+
+    	AssignID();
+
+    	StartCoroutine(PostPreTestData());
+    	StartCoroutine(PostPostTestData());
+    	StartCoroutine(PostSurveyData());
+    	StartCoroutine(PostTeacherData());
+    }
+
+    public void AssignID()
+    {
+    	GameInformation.UserID = UniqueID.GetID();
+
+    	SaveInformation.SaveAllInformation();
+
+    	Debug.Log(GameInformation.UserID);
     }
 
     public void SendSurveyData()
@@ -31,11 +48,6 @@ public class SQL_Handler : MonoBehaviour
     public void SendTeacherData()
     {
     	StartCoroutine(PostTeacherData());
-    }
-
-    public void SendAllData()
-    {
-    	StartCoroutine(PostAllData());
     }
 
     IEnumerator GetData()
@@ -62,6 +74,7 @@ public class SQL_Handler : MonoBehaviour
     	int correct = GameInformation.CorrectPreQuestions.Count;
     	int incorrect = GameInformation.PreQuestions.Count;
     	int time = (int)GameInformation.PreCompletionTime;
+    	string userid = GameInformation.UserID;
 
     	string str = correct.ToString() + incorrect.ToString() + secretKey;
         string hash = Md5Sum(str);
@@ -70,6 +83,7 @@ public class SQL_Handler : MonoBehaviour
     	form.AddField("correctPost", correct);
         form.AddField("incorrectPost", incorrect);
         form.AddField("timePost", time);
+        form.AddField("userID", userid);
         form.AddField("hashPost", hash);
 
     	for (int i = 0; i < GameInformation.PreOrder.Count; i++) 
@@ -121,6 +135,7 @@ public class SQL_Handler : MonoBehaviour
     	int correct = GameInformation.CorrectPostQuestions.Count;
     	int incorrect = GameInformation.PostQuestions.Count;
     	int time = (int)GameInformation.PostCompletionTime;
+    	string userid = GameInformation.UserID;
 
     	string str = correct.ToString() + incorrect.ToString() + secretKey;
         string hash = Md5Sum(str);
@@ -129,6 +144,7 @@ public class SQL_Handler : MonoBehaviour
     	form.AddField("correctPost", correct);
         form.AddField("incorrectPost", incorrect);
         form.AddField("timePost", time);
+        form.AddField("userID", userid);
         form.AddField("hashPost", hash);
 
     	for (int i = 0; i < GameInformation.PostOrder.Count; i++) 
@@ -176,9 +192,12 @@ public class SQL_Handler : MonoBehaviour
     {
     	WWWForm form = new WWWForm();
 
+    	string userid = GameInformation.UserID;
+
         string hash = Md5Sum(secretKey);
         Debug.Log(hash);
 
+        form.AddField("userID", userid);
         form.AddField("hashPost", hash);
 
         for (int i = 0; i < GameInformation.SurveyQuestions.Count; i++) 
@@ -211,9 +230,12 @@ public class SQL_Handler : MonoBehaviour
     {
     	WWWForm form = new WWWForm();
 
+    	string userid = GameInformation.UserID;
+
         string hash = Md5Sum(secretKey);
         Debug.Log(hash);
 
+        form.AddField("userID", userid);
         form.AddField("hashPost", hash);
 
         for (int i = 0; i < GameInformation.TeacherQuestions.Count; i++) 
@@ -230,132 +252,6 @@ public class SQL_Handler : MonoBehaviour
         }
 
         WWW wwwPost = new WWW(postTeacherDataURL, form);
-        yield return wwwPost;
-
-        if (wwwPost.error != null)
-        {
-            print("There was an error getting the data: " + wwwPost.error);
-        }
-        else
-        {
-            Debug.Log(wwwPost.text);
-        }
-    }
-
-    IEnumerator PostAllData()
-    {
-    	WWWForm form = new WWWForm();
-    	string hash = Md5Sum(secretKey);
-
-    	form.AddField("hashPost", hash);
-
-    	//Pretest data
-
-    	int preCorrect = GameInformation.CorrectPreQuestions.Count;
-    	int preIncorrect = GameInformation.PreQuestions.Count;
-    	int preTime = (int)GameInformation.PreCompletionTime;
-
-    	form.AddField("preCorrectPost", preCorrect);
-        form.AddField("preIncorrectPost", preIncorrect);
-        form.AddField("preTimePost", preTime);
-
-        for (int i = 0; i < GameInformation.PreOrder.Count; i++) 
-    	{
-    		form.AddField("q" + i.ToString() + "PreIDPost", GameInformation.PreOrder[i].ID);
-
-    		for (int j = 0; j < GameInformation.CorrectPreQuestions.Count; j++) 
-    		{
-    			if (GameInformation.CorrectPreQuestions[j].ID == GameInformation.PreOrder[i].ID)
-    			{
-    				Debug.Log("PreQuestion " + GameInformation.CorrectPreQuestions[j].ID.ToString() + " is correct");
-    				form.AddField("q" + i.ToString() + "PreCorrectPost", 1);
-    			}
-    		}
-
-    		for (int j = 0; j < GameInformation.PreQuestions.Count; j++) 
-    		{
-    			if (GameInformation.PreQuestions[j].ID == GameInformation.PreOrder[i].ID)
-    			{
-    				Debug.Log("PreQuestion " + GameInformation.PreQuestions[j].ID.ToString() + " is incorrect");
-    				form.AddField("q" + i.ToString() + "PreCorrectPost", 0);
-    			}
-    		}
-    	}
-
-    	for (int i = 0; i < GameInformation.PreCertainty.Length; i++) 
-    	{
-    		form.AddField("q" + i.ToString() + "PreCertaintyPost", GameInformation.PreCertainty[i]);
-    	}
-
-    	//Posttest data
-
-    	int postCorrect = GameInformation.CorrectPostQuestions.Count;
-    	int postIncorrect = GameInformation.PostQuestions.Count;
-    	int postTime = (int)GameInformation.PostCompletionTime;
-
-    	form.AddField("postCorrectPost", postCorrect);
-        form.AddField("postIncorrectPost", postIncorrect);
-        form.AddField("postTimePost", postTime);
-
-        for (int i = 0; i < GameInformation.PostOrder.Count; i++) 
-    	{
-    		form.AddField("q" + i.ToString() + "PostIDPost", GameInformation.PostOrder[i].ID);
-
-    		for (int j = 0; j < GameInformation.CorrectPostQuestions.Count; j++) 
-    		{
-    			if (GameInformation.CorrectPostQuestions[j].ID == GameInformation.PostOrder[i].ID)
-    			{
-    				Debug.Log("PostQuestion " + GameInformation.CorrectPostQuestions[j].ID.ToString() + " is correct");
-    				form.AddField("q" + i.ToString() + "PostCorrectPost", 1);
-    			}
-    		}
-
-    		for (int j = 0; j < GameInformation.PostQuestions.Count; j++) 
-    		{
-    			if (GameInformation.PostQuestions[j].ID == GameInformation.PostOrder[i].ID)
-    			{
-    				Debug.Log("PostQuestion " + GameInformation.PostQuestions[j].ID.ToString() + " is incorrect");
-    				form.AddField("q" + i.ToString() + "PostCorrectPost", 0);
-    			}
-    		}
-    	}
-
-    	for (int i = 0; i < GameInformation.PostCertainty.Length; i++) 
-    	{
-    		form.AddField("q" + i.ToString() + "PostCertaintyPost", GameInformation.PostCertainty[i]);
-    	}
-
-    	//Survey data
-
-    	for (int i = 0; i < GameInformation.SurveyQuestions.Count; i++) 
-        {
-        	string concat = "";
-
-        	foreach (string str in GameInformation.SurveyQuestions[i])
-        	{
-        		concat += str;
-        		concat += "\n";
-        	}
-
-        	form.AddField("q" + i.ToString() + "SurveyPost", concat);
-        }
-
-        //Teacher survey data
-
-        for (int i = 0; i < GameInformation.TeacherQuestions.Count; i++) 
-        {
-        	string concat = "";
-
-        	foreach (string str in GameInformation.TeacherQuestions[i])
-        	{
-        		concat += str;
-        		concat += "\n";
-        	}
-
-        	form.AddField("q" + i.ToString() + "TeacherPost", concat);
-        }
-
-        WWW wwwPost = new WWW(postAllDataURL, form);
         yield return wwwPost;
 
         if (wwwPost.error != null)

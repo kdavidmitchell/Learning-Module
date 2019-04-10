@@ -104,6 +104,11 @@ public class SaveInformation
             PlayerPrefs.SetFloat("TOTAL_COMPLETION_TIME", GameInformation.TotalCompletionTime);
         }
 
+        if (GameInformation.UserID != null)
+        {
+            PlayerPrefs.SetString("USER_ID", GameInformation.UserID);
+        }
+
         //Options
 
         if (GameInformation.ColorblindMode != null)

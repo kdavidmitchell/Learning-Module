@@ -84,8 +84,9 @@ public class Pretest : MonoBehaviour
 			if (trueToggle.isOn)
 			{
 				Debug.Log("Correct!");
+				
 				GameInformation.CorrectPreQuestions.Add(shuffledQuestions[questionIndex - 1]);
-				Debug.Log(GameInformation.CorrectPreQuestions.Count);
+				
 			} else 
 			{
 				Debug.Log("Incorrect. :(");
@@ -96,8 +97,9 @@ public class Pretest : MonoBehaviour
 			if (falseToggle.isOn)
 			{
 				Debug.Log("Correct!");
+				
 				GameInformation.CorrectPreQuestions.Add(shuffledQuestions[questionIndex - 1]);
-				Debug.Log(GameInformation.CorrectPreQuestions.Count);
+				
 			} else 
 			{
 				Debug.Log("Incorrect. :(");

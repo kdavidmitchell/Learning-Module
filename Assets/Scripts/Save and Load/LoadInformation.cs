@@ -104,6 +104,11 @@ public class LoadInformation
             GameInformation.TotalCompletionTime = PlayerPrefs.GetFloat("TOTAL_COMPLETION_TIME");
         }
 
+        if (PlayerPrefs.GetString("USER_ID") != null)
+        {
+            GameInformation.UserID = PlayerPrefs.GetString("USER_ID");
+        }
+
         //Options
 
         if (PlayerPrefs.GetInt("COLORBLIND_MODE") != null)
