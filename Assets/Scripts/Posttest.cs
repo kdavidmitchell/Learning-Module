@@ -23,6 +23,8 @@ public class Posttest : MonoBehaviour
 
 	private int questionIndex = 0;
 	private bool currentAnswer = false;
+	private List<List<PostQuestion>> blocks = new List<List<PostQuestion>>();
+	private List<List<PostQuestion>> shuffledBlocks = new List<List<PostQuestion>>();
 	private List<PostQuestion> shuffledQuestions = new List<PostQuestion>();
 	private float completionTime = 0f;
 	private bool done = false;
@@ -72,7 +74,21 @@ public class Posttest : MonoBehaviour
 
 	private void ShuffleQuestions()
 	{
-		shuffledQuestions = PostQuestionDB.postQuestions.OrderBy(x => Random.value).ToList();
+		blocks.Add(PostQuestionDB.postDefQuestions.OrderBy(x => Random.value).ToList());
+		blocks.Add(PostQuestionDB.postNeuroQuestions.OrderBy(x => Random.value).ToList());
+		blocks.Add(PostQuestionDB.postAppQuestions.OrderBy(x => Random.value).ToList());
+		blocks.Add(PostQuestionDB.postMythQuestions.OrderBy(x => Random.value).ToList());
+
+		shuffledBlocks = blocks.OrderBy(x => Random.value).ToList();
+
+		foreach (List<PostQuestion> l in shuffledBlocks)
+		{
+			foreach (PostQuestion q in l)
+			{
+				shuffledQuestions.Add(q);
+			}
+		}
+
 		GameInformation.PostOrder = shuffledQuestions;
 		SaveInformation.SaveAllInformation();
 	}

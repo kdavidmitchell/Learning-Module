@@ -13,6 +13,10 @@ public class PreQuestionDB : MonoBehaviour
 
 	public TextAsset preQuestionDatabase;
 	public static List<PreQuestion> preQuestions = new List<PreQuestion>();
+	public static List<PreQuestion> preDefQuestions = new List<PreQuestion>();
+	public static List<PreQuestion> preNeuroQuestions = new List<PreQuestion>();
+	public static List<PreQuestion> preAppQuestions = new List<PreQuestion>();
+	public static List<PreQuestion> preMythQuestions = new List<PreQuestion>();
 
 
 	// Use this for initialization
@@ -24,6 +28,26 @@ public class PreQuestionDB : MonoBehaviour
 		for (int i = 0; i < preQuestionDictionaries.Count; i++)
 		{
 			preQuestions.Add(new PreQuestion(preQuestionDictionaries[i]));
+		}
+
+		for (int i = 0; i < 8; i++)
+		{
+			preDefQuestions.Add(new PreQuestion(preQuestionDictionaries[i]));
+		}
+
+		for (int i = 8; i < 15; i++)
+		{
+			preNeuroQuestions.Add(new PreQuestion(preQuestionDictionaries[i]));
+		}
+
+		for (int i = 15; i < 23; i++)
+		{
+			preAppQuestions.Add(new PreQuestion(preQuestionDictionaries[i]));
+		}
+
+		for (int i = 23; i < 32; i++)
+		{
+			preMythQuestions.Add(new PreQuestion(preQuestionDictionaries[i]));
 		}
 	}
 	

@@ -23,6 +23,8 @@ public class Pretest : MonoBehaviour
 
 	private int questionIndex = 0;
 	private bool currentAnswer = false;
+	private List<List<PreQuestion>> blocks = new List<List<PreQuestion>>();
+	private List<List<PreQuestion>> shuffledBlocks = new List<List<PreQuestion>>();
 	private List<PreQuestion> shuffledQuestions = new List<PreQuestion>();
 	private float completionTime = 0f;
 	private bool done = false;
@@ -72,7 +74,21 @@ public class Pretest : MonoBehaviour
 
 	private void ShuffleQuestions()
 	{
-		shuffledQuestions = PreQuestionDB.preQuestions.OrderBy(x => Random.value).ToList();
+		blocks.Add(PreQuestionDB.preDefQuestions.OrderBy(x => Random.value).ToList());
+		blocks.Add(PreQuestionDB.preNeuroQuestions.OrderBy(x => Random.value).ToList());
+		blocks.Add(PreQuestionDB.preAppQuestions.OrderBy(x => Random.value).ToList());
+		blocks.Add(PreQuestionDB.preMythQuestions.OrderBy(x => Random.value).ToList());
+
+		shuffledBlocks = blocks.OrderBy(x => Random.value).ToList();
+
+		foreach (List<PreQuestion> l in shuffledBlocks)
+		{
+			foreach (PreQuestion q in l)
+			{
+				shuffledQuestions.Add(q);
+			}
+		}
+
 		GameInformation.PreOrder = shuffledQuestions;
 		SaveInformation.SaveAllInformation();
 	}

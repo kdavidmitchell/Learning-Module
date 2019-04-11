@@ -63,101 +63,101 @@
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>A function of the Visual Word Form Area (VWFA) is quickly reading phonetically regular words.</QuestionText>
-		<CorrectAnswer>false</CorrectAnswer>
-		<ID>10</ID>
-		<Explanation>False. The VWFA does not aid in reading phonetically regular words.</Explanation>
-	</PreQuestion>
-
-	<PreQuestion>
-		<QuestionText>A function of the Visual Word Form Area (VWFA) is quickly reading phonetically irregular words.</QuestionText>
+		<QuestionText>A function of the Visual Word Form Area (VWFA) is to quickly recognize letter strings as words.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>11</ID>
-		<Explanation>True. The VWFA helps us quickly read phonetically irregular words.</Explanation>
+		<ID>10</ID>
+		<Explanation>True. The VWFA helps us to quickly understand groups of letters as words.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>The Left Temporo-Parietal Junction (TPJ) connects personal experiences to stories we read.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>12</ID>
+		<ID>11</ID>
 		<Explanation>False. The TPJ is not responsible for connecting personal experience to stories we read.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>The Left Temporo-Parietal Junction (TPJ) connects letters and letter groups to their sounds.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>13</ID>
+		<ID>12</ID>
 		<Explanation>True. The TPJ helps us map graphemes (letters) onto phonemes (sounds).</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>The Left Temporo-Parietal Junction (TPJ) connects the meaning of words in a sentence to aid comprehension.</QuestionText>
-		<CorrectAnswer>false</CorrectAnswer>
-		<ID>14</ID>
-		<Explanation>False. The TPJ is not responsible for constructing the meaning of words.</Explanation>
-	</PreQuestion>
-
-	<PreQuestion>
-		<QuestionText>When people with dyslexia are reading, areas of the reading network in the left hemisphere are hypoactivated.</QuestionText>
+		<QuestionText>When people with dyslexia are reading, areas of the brain in the left hemisphere show less activation.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>15</ID>
+		<ID>13</ID>
 		<Explanation>True. Studies have shown that the left brain areas of the reading network in dyslexic readers are hypoactivated (underactivated).</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>When people with dyslexia are reading, areas of the reading network in the right hemisphere are hyperactivated.</QuestionText>
+		<QuestionText>When people with dyslexia are reading, areas of the brain in the right hemisphere show more activation.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>16</ID>
+		<ID>14</ID>
 		<Explanation>True. Studies have shown that the right brain areas of the reading network in dyslexic readers are hyperactivated (overactivated).</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>With intervention, neural activation patterns in the brains of people with dyslexia become similar to the brains of typical readers.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>17</ID>
+		<ID>15</ID>
 		<Explanation>True. Intervention has been shown to help normalize activation patterns.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is hesitant to read aloud, and tends to read letters backwards and out of order in single words (e.g., “nap” as “pan”, “bad” as “pad”). Based on these characteristics: Noah should be referred for an educational evaluation to determine whether he qualifies for special education services since reading backwards is a main cause of dyslexia.</QuestionText>
+		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is struggling to learn his letter names and letter sounds and is having trouble decoding words. Based on these characteristics: Noah should not be referred for an educational evaluation because he isn’t reversing letters.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>18</ID>
-		<Explanation>False. Reading backwards is not indicative of dyslexia.</Explanation>
+		<ID>16</ID>
+		<Explanation>False. These signs are enough to warrant an educational evaluation.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is hesitant to read aloud, and tends to read letters backwards and out of order in single words (e.g., “nap” as “pan”, “bad” as “pad”). Based on these characteristics: First grade children may still confuse their lettering. The teacher and parent should continue monitor his progress in letter-sound correspondence and early reading acquisition.</QuestionText>
+		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is struggling to learn his letter names and letter sounds and is having trouble decoding words. Based on these characteristics, Noah should be referred for an educational evaluation to determine whether he qualifies for special education services because reading backwards is a main cause of dyslexia.</QuestionText>
+		<CorrectAnswer>false</CorrectAnswer>
+		<ID>17</ID>
+		<Explanation>False. Reading backwards is not a cause of dyslexia.</Explanation>
+	</PreQuestion>
+
+	<PreQuestion>
+		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is struggling to learn his letter names and letter sounds and is having trouble decoding words. Based on these characteristics, Noah should be referred for an educational evaluation to determine whether he qualifies for special education services because he is showing difficulties with phonological awareness and decoding.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
+		<ID>18</ID>
+		<Explanation>True. These signs are enough to warrant an educational evaluation.</Explanation>
+	</PreQuestion>
+
+	<PreQuestion>
+		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is struggling to learn his letter names and letter sounds and is having trouble decoding words. First grade children like Noah may still confuse their lettering. The teacher and parent should continue monitor his progress in letter-sound correspondence and early reading acquisition.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
 		<ID>19</ID>
-		<Explanation>True. Reading backwards is a common occurrence in young children, but the child should be monitored to ensure normal development.</Explanation>
+		<Explanation>True. It is common for young children to experience trouble with letter-sound correspondence, and such trouble should be monitored closely.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is hesitant to read aloud, and tends to read letters backwards and out of order in single words (e.g., “nap” as “pan”, “bad” as “pad”). Based on these characteristics: Noah may develop dyslexia if he does not begin to volunteer more in class and try harder in school.</QuestionText>
+		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is struggling to learn his letter names and letter sounds and is having trouble decoding words. Based on these characteristics, Noah may develop dyslexia if he does not begin to volunteer more in class and try harder in school.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
 		<ID>20</ID>
-		<Explanation>False. Dyslexia does not develop out of lack of effort.</Explanation>
+		<Explanation>False. Effort, or lack thereof, is not a cause of dyslexia..</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>4-year-old Billy struggles in preschool with following directions and staying seated during fine motor activities. Billy’s mom sees that he writes his name backwards and worries that Billy has dyslexia. Based on these characteristics: Billy has dyslexia because reading backwards is its main cause.</QuestionText>
+		<QuestionText>4-year-old Billy struggles in preschool with following directions and staying seated during fine motor activities. Billy’s mom sees that he writes his name backwards and worries that Billy has dyslexia. Other than these reversals, Billy’s early literacy skills are developing age appropriately (i.e., rhyming, learning letters). Based on these characteristics, Billy has dyslexia because reading backwards is its main cause.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
 		<ID>21</ID>
 		<Explanation>False. Reading backwards is not indicative of dyslexia.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>4-year-old Billy struggles in preschool with following directions and staying seated during fine motor activities. Billy’s mom sees that he writes his name backwards and worries that Billy has dyslexia. Based on these characteristics: Reversals in writing are developmentally appropriate through middle childhood (ages 7-8).</QuestionText>
+		<QuestionText>4-year-old Billy struggles in preschool with following directions and staying seated during fine motor activities. Billy’s mom sees that he writes his name backwards and worries that Billy has dyslexia. Other than these reversals, Billy’s early literacy skills are developing age appropriately (i.e., rhyming, learning letters). Billy’s reversals, if unaccompanied by other literacy difficulties, could be considered developmentally appropriate through middle childhood (ages 7-8).</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
 		<ID>22</ID>
-		<Explanation>True. Reading backwards is a common occurrence in young children, but the child should be monitored to ensure normal development.</Explanation>
+		<Explanation>True. Writing backwards is a common occurrence in young children, but the child should be monitored to ensure normal development.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>4-year-old Billy struggles in preschool with following directions and staying seated during fine motor activities. Billy’s mom sees that he writes his name backwards and worries that Billy has dyslexia. Based on these characteristics: Billy may have dyslexia, but if he tries harder in preschool, he will not have any problems.</QuestionText>
+		<QuestionText>4-year-old Billy struggles in preschool with following directions and staying seated during fine motor activities. Billy’s mom sees that he writes his name backwards and worries that Billy has dyslexia. Other than these reversals, Billy’s early literacy skills are developing age appropriately (i.e., rhyming, learning letters). Billy may have dyslexia, but if he tries harder in preschool, he will not have any problems.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
 		<ID>23</ID>
-		<Explanation>False. Dyslexia does not develop out of lack of effort.</Explanation>
+		<Explanation>False. Dyslexia does not develop due to lack of effort, and it is not mitigated by trying harder.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
@@ -189,7 +189,7 @@
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Consuming sugary drinks and/or snacks does not make children less attentive.</QuestionText>
+		<QuestionText>Children are neither more or less attentive after consuming sugary drinks and/or snacks.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
 		<ID>28</ID>
 		<Explanation>True.</Explanation>

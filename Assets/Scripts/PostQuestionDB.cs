@@ -13,6 +13,11 @@ public class PostQuestionDB : MonoBehaviour
 
 	public TextAsset postQuestionDatabase;
 	public static List<PostQuestion> postQuestions = new List<PostQuestion>();
+	public static List<PostQuestion> postDefQuestions = new List<PostQuestion>();
+	public static List<PostQuestion> postNeuroQuestions = new List<PostQuestion>();
+	public static List<PostQuestion> postAppQuestions = new List<PostQuestion>();
+	public static List<PostQuestion> postMythQuestions = new List<PostQuestion>();
+
 
 
 	// Use this for initialization
@@ -24,6 +29,26 @@ public class PostQuestionDB : MonoBehaviour
 		for (int i = 0; i < postQuestionDictionaries.Count; i++)
 		{
 			postQuestions.Add(new PostQuestion(postQuestionDictionaries[i]));
+		}
+
+		for (int i = 0; i < 8; i++)
+		{
+			postDefQuestions.Add(new PostQuestion(postQuestionDictionaries[i]));
+		}
+
+		for (int i = 8; i < 15; i++)
+		{
+			postNeuroQuestions.Add(new PostQuestion(postQuestionDictionaries[i]));
+		}
+
+		for (int i = 15; i < 23; i++)
+		{
+			postAppQuestions.Add(new PostQuestion(postQuestionDictionaries[i]));
+		}
+
+		for (int i = 23; i < 32; i++)
+		{
+			postMythQuestions.Add(new PostQuestion(postQuestionDictionaries[i]));
 		}
 	}
 	
