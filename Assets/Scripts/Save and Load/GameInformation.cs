@@ -26,6 +26,7 @@ public class GameInformation : MonoBehaviour
 	private static float _postCompletionTime = 0f;
 	private static float _totalCompletionTime = 0f;
 	private static string _userID = "";
+	private static bool _firstClear = false;
 
 	private static GameInformation instance = null;
 
@@ -153,6 +154,13 @@ public class GameInformation : MonoBehaviour
 		set { _userID = value; }
 	}
 
+	public static bool FirstClear
+	{
+		get { return _firstClear; }
+		set { _firstClear = value; }
+	}
+
+
 	//Options
 
 	public static bool ColorblindMode
@@ -178,7 +186,14 @@ public class GameInformation : MonoBehaviour
     		Destroy(gameObject);	
     	}
 
-    	LoadInformation.LoadAllInformation();
+    	if (_firstClear = false)
+    	{
+    		PlayerPrefs.DeleteAll();
+    		GameInformation.FirstClear = true;
+    		SaveInformation.SaveAllInformation();
+    	}
+
+    	//LoadInformation.LoadAllInformation();
     	Debug.Log(GameInformation.CorrectPreQuestions.Count);
     }
 }

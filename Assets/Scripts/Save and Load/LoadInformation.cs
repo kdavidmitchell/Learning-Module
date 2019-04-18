@@ -109,6 +109,11 @@ public class LoadInformation
             GameInformation.UserID = PlayerPrefs.GetString("USER_ID");
         }
 
+        if (PlayerPrefs.GetInt("FIRST_CLEAR") != null)
+        {
+        	GameInformation.FirstClear = Convert.ToBoolean(PlayerPrefs.GetInt("FIRST_CLEAR"));
+        }
+
         //Options
 
         if (PlayerPrefs.GetInt("COLORBLIND_MODE") != null)

@@ -109,6 +109,11 @@ public class SaveInformation
             PlayerPrefs.SetString("USER_ID", GameInformation.UserID);
         }
 
+        if (GameInformation.FirstClear != null)
+        {
+            PlayerPrefs.SetInt("FIRST_CLEAR", Convert.ToInt32(GameInformation.FirstClear));
+        }
+
         //Options
 
         if (GameInformation.ColorblindMode != null)
