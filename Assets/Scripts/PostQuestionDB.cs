@@ -31,22 +31,22 @@ public class PostQuestionDB : MonoBehaviour
 			postQuestions.Add(new PostQuestion(postQuestionDictionaries[i]));
 		}
 
-		for (int i = 0; i < 8; i++)
+		for (int i = 0; i < 4; i++)
 		{
 			postDefQuestions.Add(new PostQuestion(postQuestionDictionaries[i]));
 		}
 
-		for (int i = 8; i < 15; i++)
+		for (int i = 4; i < 11; i++)
 		{
 			postNeuroQuestions.Add(new PostQuestion(postQuestionDictionaries[i]));
 		}
 
-		for (int i = 15; i < 23; i++)
+		for (int i = 11; i < 18; i++)
 		{
 			postAppQuestions.Add(new PostQuestion(postQuestionDictionaries[i]));
 		}
 
-		for (int i = 23; i < 32; i++)
+		for (int i = 18; i < 34; i++)
 		{
 			postMythQuestions.Add(new PostQuestion(postQuestionDictionaries[i]));
 		}

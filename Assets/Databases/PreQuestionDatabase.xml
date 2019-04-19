@@ -1,9 +1,9 @@
 <PreQuestions>
 	<PreQuestion>
-		<QuestionText>Dyslexia is caused by low effort.</QuestionText>
-		<CorrectAnswer>false</CorrectAnswer>
+		<QuestionText>Dyslexia is not caused by low effort.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
 		<ID>1</ID>
-		<Explanation>False. Dyslexia is not a result of poor effort or lack of achievement.</Explanation>
+		<Explanation>True. Dyslexia is not a result of poor effort or lack of achievement.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
@@ -21,205 +21,219 @@
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Dyslexia is caused by low effort, reading backwards, and low IQ.</QuestionText>
-		<CorrectAnswer>false</CorrectAnswer>
+		<QuestionText>Dyslexia is not caused by low effort, reading backwards, or low IQ.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
 		<ID>4</ID>
-		<Explanation>False. Dyslexia is not a result of any of the above.</Explanation>
-	</PreQuestion>
-
-	<PreQuestion>
-		<QuestionText>Dyslexia is not caused by low effort.</QuestionText>
-		<CorrectAnswer>true</CorrectAnswer>
-		<ID>5</ID>
-		<Explanation>True. Dyslexia is not a result of poor effort or lack of achievement.</Explanation>
-	</PreQuestion>
-
-	<PreQuestion>
-		<QuestionText>Dyslexia is not caused by reading backwards.</QuestionText>
-		<CorrectAnswer>true</CorrectAnswer>
-		<ID>6</ID>
-		<Explanation>True. Dyslexia is not simply reading backwards.</Explanation>
-	</PreQuestion>
-
-	<PreQuestion>
-		<QuestionText>Dyslexia is not caused by low IQ.</QuestionText>
-		<CorrectAnswer>true</CorrectAnswer>
-		<ID>7</ID>
-		<Explanation>True. Dyslexia is not a result of a low IQ.</Explanation>
-	</PreQuestion>
-
-	<PreQuestion>
-		<QuestionText>Dyslexia is not caused by low effort, reading backwards, and low IQ.</QuestionText>
-		<CorrectAnswer>true</CorrectAnswer>
-		<ID>8</ID>
 		<Explanation>True. Dyslexia is not a result of any of the above.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>A function of the Visual Word Form Area (VWFA) is quickly reading text that is accompanied by pictures.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>9</ID>
+		<ID>5</ID>
 		<Explanation>False. The VWFA has no function related to illustrations at all.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>A function of the Visual Word Form Area (VWFA) is to quickly recognize letter strings as words.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>10</ID>
+		<ID>6</ID>
 		<Explanation>True. The VWFA helps us to quickly understand groups of letters as words.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>The Left Temporo-Parietal Junction (TPJ) connects personal experiences to stories we read.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>11</ID>
+		<ID>7</ID>
 		<Explanation>False. The TPJ is not responsible for connecting personal experience to stories we read.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>The Left Temporo-Parietal Junction (TPJ) connects letters and letter groups to their sounds.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>12</ID>
+		<ID>8</ID>
 		<Explanation>True. The TPJ helps us map graphemes (letters) onto phonemes (sounds).</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>When people with dyslexia are reading, areas of the brain in the left hemisphere show less activation.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>13</ID>
+		<ID>9</ID>
 		<Explanation>True. Studies have shown that the left brain areas of the reading network in dyslexic readers are hypoactivated (underactivated).</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>When people with dyslexia are reading, areas of the brain in the right hemisphere show more activation.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>14</ID>
+		<ID>10</ID>
 		<Explanation>True. Studies have shown that the right brain areas of the reading network in dyslexic readers are hyperactivated (overactivated).</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>With intervention, neural activation patterns in the brains of people with dyslexia become similar to the brains of typical readers.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>15</ID>
+		<ID>11</ID>
 		<Explanation>True. Intervention has been shown to help normalize activation patterns.</Explanation>
-	</PreQuestion>
-
-	<PreQuestion>
-		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is struggling to learn his letter names and letter sounds and is having trouble decoding words. Based on these characteristics: Noah should not be referred for an educational evaluation because he isn’t reversing letters.</QuestionText>
-		<CorrectAnswer>false</CorrectAnswer>
-		<ID>16</ID>
-		<Explanation>False. These signs are enough to warrant an educational evaluation.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is struggling to learn his letter names and letter sounds and is having trouble decoding words. Based on these characteristics, Noah should be referred for an educational evaluation to determine whether he qualifies for special education services because reading backwards is a main cause of dyslexia.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>17</ID>
+		<ID>12</ID>
 		<Explanation>False. Reading backwards is not a cause of dyslexia.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is struggling to learn his letter names and letter sounds and is having trouble decoding words. Based on these characteristics, Noah should be referred for an educational evaluation to determine whether he qualifies for special education services because he is showing difficulties with phonological awareness and decoding.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>18</ID>
+		<ID>13</ID>
 		<Explanation>True. These signs are enough to warrant an educational evaluation.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is struggling to learn his letter names and letter sounds and is having trouble decoding words. First grade children like Noah may still confuse their lettering. The teacher and parent should continue monitor his progress in letter-sound correspondence and early reading acquisition.</QuestionText>
+		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is struggling to learn his letter names and letter sounds and is having trouble decoding words. First grade children like Noah may still confuse their letters. The teacher and parent should continue to monitor his progress in letter-sound correspondence and early reading acquisition.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>19</ID>
+		<ID>14</ID>
 		<Explanation>True. It is common for young children to experience trouble with letter-sound correspondence, and such trouble should be monitored closely.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>Noah is a 6-year old first grader who enjoys looking at picture books while his father reads to him. In school, Noah is struggling to learn his letter names and letter sounds and is having trouble decoding words. Based on these characteristics, Noah may develop dyslexia if he does not begin to volunteer more in class and try harder in school.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>20</ID>
+		<ID>15</ID>
 		<Explanation>False. Effort, or lack thereof, is not a cause of dyslexia..</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>4-year-old Billy struggles in preschool with following directions and staying seated during fine motor activities. Billy’s mom sees that he writes his name backwards and worries that Billy has dyslexia. Other than these reversals, Billy’s early literacy skills are developing age appropriately (i.e., rhyming, learning letters). Based on these characteristics, Billy has dyslexia because reading backwards is its main cause.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>21</ID>
+		<ID>16</ID>
 		<Explanation>False. Reading backwards is not indicative of dyslexia.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>4-year-old Billy struggles in preschool with following directions and staying seated during fine motor activities. Billy’s mom sees that he writes his name backwards and worries that Billy has dyslexia. Other than these reversals, Billy’s early literacy skills are developing age appropriately (i.e., rhyming, learning letters). Billy’s reversals, if unaccompanied by other literacy difficulties, could be considered developmentally appropriate through middle childhood (ages 7-8).</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
-		<ID>22</ID>
+		<ID>17</ID>
 		<Explanation>True. Writing backwards is a common occurrence in young children, but the child should be monitored to ensure normal development.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>4-year-old Billy struggles in preschool with following directions and staying seated during fine motor activities. Billy’s mom sees that he writes his name backwards and worries that Billy has dyslexia. Other than these reversals, Billy’s early literacy skills are developing age appropriately (i.e., rhyming, learning letters). Billy may have dyslexia, but if he tries harder in preschool, he will not have any problems.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>23</ID>
+		<ID>18</ID>
 		<Explanation>False. Dyslexia does not develop due to lack of effort, and it is not mitigated by trying harder.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>We only use 10% of our brain.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>24</ID>
+		<ID>19</ID>
 		<Explanation>False.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>Some of us are “left-brained” and some are “right-brained” and this helps explains differences in how we learn.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>25</ID>
+		<ID>20</ID>
 		<Explanation>False. The two hemispheres of our brains are well-connected and work together constantly.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>Individuals learn better when they receive information in their preferred learning style (e.g., auditory, visual, kinesthetic).</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>26</ID>
+		<ID>21</ID>
 		<Explanation>False.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
 		<QuestionText>A common sign of dyslexia is seeing letters backwards.</QuestionText>
 		<CorrectAnswer>false</CorrectAnswer>
-		<ID>27</ID>
+		<ID>22</ID>
 		<Explanation>False. Seeing letters backwards is not indicative of dyslexia.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Children are neither more or less attentive after consuming sugary drinks and/or snacks.</QuestionText>
+		<QuestionText>Children are less attentive after consuming sugary drinks and/or snacks.</QuestionText>
+		<CorrectAnswer>false</CorrectAnswer>
+		<ID>23</ID>
+		<Explanation>False.</Explanation>
+	</PreQuestion>
+
+	<PreQuestion>
+		<QuestionText>Exercises that rehearse coordination of motor-perception skills can improve literacy skills.</QuestionText>
+		<CorrectAnswer>false</CorrectAnswer>
+		<ID>24</ID>
+		<Explanation>False.</Explanation>
+	</PreQuestion>
+
+	<PreQuestion>
+		<QuestionText>Children have learning styles that are dominated by particular senses (i.e., seeing, hearing, touch).</QuestionText>
+		<CorrectAnswer>false</CorrectAnswer>
+		<ID>25</ID>
+		<Explanation>False.</Explanation>
+	</PreQuestion>
+
+	<PreQuestion>
+		<QuestionText>Short bouts of motor coordination exercises can improve integration of left and right hemisphere brain function.</QuestionText>
+		<CorrectAnswer>false</CorrectAnswer>
+		<ID>26</ID>
+		<Explanation>False.</Explanation>
+	</PreQuestion>
+
+	<PreQuestion>
+		<QuestionText>Listening to classical music increases children’s reasoning ability.</QuestionText>
+		<CorrectAnswer>false</CorrectAnswer>
+		<ID>27</ID>
+		<Explanation>False.</Explanation>
+	</PreQuestion>
+
+	<PreQuestion>
+		<QuestionText>The left and right hemispheres of the brain work together.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
 		<ID>28</ID>
 		<Explanation>True.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Exercises that rehearse coordination of motor-perception skills do not improve literacy skills.</QuestionText>
+		<QuestionText>When a brain region is damaged, other parts of the brain can take up its function.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
 		<ID>29</ID>
 		<Explanation>True.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Children have learning styles that are dominated by particular senses (i.e., seeing, hearing, touch).</QuestionText>
-		<CorrectAnswer>false</CorrectAnswer>
+		<QuestionText>We use our brains 24 hours a day.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
 		<ID>30</ID>
-		<Explanation>False.</Explanation>
+		<Explanation>True.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Short bouts of motor coordination exercises do not improve integration of left and right hemisphere brain function.</QuestionText>
+		<QuestionText>Learning occurs through changes to connections between brain cells.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
 		<ID>31</ID>
 		<Explanation>True.</Explanation>
 	</PreQuestion>
 
 	<PreQuestion>
-		<QuestionText>Listening to classical music does not increase children’s reasoning ability.</QuestionText>
+		<QuestionText>Production of new connections in the brain can continue into old age.</QuestionText>
 		<CorrectAnswer>true</CorrectAnswer>
 		<ID>32</ID>
+		<Explanation>True.</Explanation>
+	</PreQuestion>
+
+	<PreQuestion>
+		<QuestionText>Extended rehearsal of some mental processes can change the structure and function of some parts of the brain.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
+		<ID>33</ID>
+		<Explanation>True.</Explanation>
+	</PreQuestion>
+
+	<PreQuestion>
+		<QuestionText>Vigorous exercise can improve mental function.</QuestionText>
+		<CorrectAnswer>true</CorrectAnswer>
+		<ID>34</ID>
 		<Explanation>True.</Explanation>
 	</PreQuestion>
 </PreQuestions>

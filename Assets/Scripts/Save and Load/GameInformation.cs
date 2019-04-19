@@ -14,8 +14,8 @@ public class GameInformation : MonoBehaviour
 	private static List<PostQuestion> _postOrder = new List<PostQuestion>();
 	private static Dictionary<int, List<string>> _surveyQuestions = new Dictionary<int, List<string>>();
 	private static Dictionary<int, List<string>> _teacherQuestions = new Dictionary<int, List<string>>();
-	private static int[] _preCertainty = new int[32];
-	private static int[] _postCertainty = new int[32];
+	private static int[] _preCertainty = new int[34];
+	private static int[] _postCertainty = new int[34];
 	private static bool _TPJComplete = false;
 	private static bool _OTComplete = false;
 	private static bool _RHComplete = false;
@@ -192,6 +192,9 @@ public class GameInformation : MonoBehaviour
     		GameInformation.FirstClear = true;
     		SaveInformation.SaveAllInformation();
     	}
+
+    	GameInformation.SpeechAutoPlay = true;
+		SaveInformation.SaveAllInformation();
 
     	//LoadInformation.LoadAllInformation();
     	Debug.Log(GameInformation.CorrectPreQuestions.Count);

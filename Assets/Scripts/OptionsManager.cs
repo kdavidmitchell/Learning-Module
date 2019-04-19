@@ -16,7 +16,7 @@ public class OptionsManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		//changesButton.SetActive(false);	
+		
 	}
 	
 	// Update is called once per frame

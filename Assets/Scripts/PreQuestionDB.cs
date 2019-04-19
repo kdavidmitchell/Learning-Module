@@ -30,22 +30,22 @@ public class PreQuestionDB : MonoBehaviour
 			preQuestions.Add(new PreQuestion(preQuestionDictionaries[i]));
 		}
 
-		for (int i = 0; i < 8; i++)
+		for (int i = 0; i < 4; i++)
 		{
 			preDefQuestions.Add(new PreQuestion(preQuestionDictionaries[i]));
 		}
 
-		for (int i = 8; i < 15; i++)
+		for (int i = 4; i < 11; i++)
 		{
 			preNeuroQuestions.Add(new PreQuestion(preQuestionDictionaries[i]));
 		}
 
-		for (int i = 15; i < 23; i++)
+		for (int i = 11; i < 18; i++)
 		{
 			preAppQuestions.Add(new PreQuestion(preQuestionDictionaries[i]));
 		}
 
-		for (int i = 23; i < 32; i++)
+		for (int i = 18; i < 34; i++)
 		{
 			preMythQuestions.Add(new PreQuestion(preQuestionDictionaries[i]));
 		}
