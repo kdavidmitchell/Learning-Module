@@ -19,7 +19,7 @@ public class AreaSelectionManager : MonoBehaviour
 	void Start () 
 	{
 		LoadInformation.LoadAllInformation();
-		interventionButton.SetActive(false);
+		//interventionButton.SetActive(false);
 		testButton.SetActive(false);
 
 		CheckIfAllAreasAreComplete();
